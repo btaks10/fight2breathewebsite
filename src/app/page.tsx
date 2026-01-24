@@ -2,54 +2,8 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Button } from '@/components/ui';
-
-// Timeline data
-const journeyItems = [
-  {
-    year: '1990',
-    title: 'The Beginning',
-    description: 'Born with Cystic Fibrosis. Diagnosed at birth. The fight began on day one.',
-    image: '/images/journey-1.jpg',
-  },
-  {
-    year: '2005',
-    title: 'The Struggle',
-    description: 'Hospital became a second home. But giving up was never an option.',
-    image: '/images/journey-2.jpg',
-  },
-  {
-    year: '2013',
-    title: 'The Wait',
-    description: 'Listed for transplant. Every day became a prayer for a second chance.',
-    gradient: 'from-purple-600 to-purple-800',
-  },
-  {
-    year: '2015',
-    title: 'New Lungs',
-    description: "First double-lung transplant. A stranger's gift of life.",
-    image: '/images/journey-3.jpg',
-  },
-  {
-    year: '2017',
-    title: 'Love',
-    description: 'Married. Proof that life continues, beautifully.',
-    gradient: 'from-rose-400 to-rose-600',
-  },
-  {
-    year: '2018',
-    title: 'Again',
-    description: 'Second transplant. Some fights you have to win twice.',
-    gradient: 'from-purple-500 to-indigo-600',
-  },
-  {
-    year: 'Now',
-    title: 'The Mission',
-    description: 'Advocate. Podcaster. Voice for the voiceless. The fight continues—for everyone.',
-    image: '/images/journey-4.jpg',
-  },
-];
+import { JourneyTimeline } from '@/components/sections';
 
 export default function HomePage() {
   return (
@@ -162,79 +116,8 @@ export default function HomePage() {
         </motion.blockquote>
       </section>
 
-      {/* CHAPTER 3: The Journey (Timeline) */}
-      <section className="py-24 md:py-32 bg-gray-50">
-        <div className="container mx-auto px-8">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">The Journey</h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              A life measured not in years, but in fights won.
-            </p>
-          </motion.div>
-        </div>
-
-        {/* Timeline - horizontal scrolling on mobile, grid on desktop */}
-        <div className="overflow-x-auto pb-8 scrollbar-hide">
-          <div className="flex lg:grid lg:grid-cols-4 gap-6 px-8 min-w-max lg:min-w-0 max-w-7xl mx-auto">
-            {journeyItems.map((item, index) => (
-              <motion.div
-                key={item.year}
-                className="w-72 lg:w-auto flex-shrink-0"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-50px' }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <div
-                  className={`relative aspect-[4/5] rounded-2xl overflow-hidden mb-4 ${
-                    item.gradient ? `bg-gradient-to-br ${item.gradient}` : ''
-                  }`}
-                >
-                  {item.image ? (
-                    <>
-                      <Image
-                        src={item.image}
-                        alt={item.year}
-                        fill
-                        className="object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                    </>
-                  ) : (
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-white/20 text-8xl font-bold">
-                        {item.year}
-                      </span>
-                    </div>
-                  )}
-                  <div className="absolute bottom-4 left-4">
-                    <span className="text-4xl font-bold text-white">{item.year}</span>
-                  </div>
-                </div>
-                <h3 className="font-semibold text-lg text-gray-900">{item.title}</h3>
-                <p className="text-gray-600 mt-1">{item.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        <motion.div
-          className="text-center mt-12"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-        >
-          <Button href="/about" variant="secondary">
-            See Full Timeline
-          </Button>
-        </motion.div>
-      </section>
+      {/* CHAPTER 3: The Journey - Sticky Scroll Timeline */}
+      <JourneyTimeline />
 
       {/* CHAPTER 4: Her Voice (Podcast) */}
       <section className="relative min-h-[80vh] flex items-center">

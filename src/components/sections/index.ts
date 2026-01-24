@@ -3,3 +3,4 @@ export { AboutPreview } from './AboutPreview';
 export { PodcastSection } from './PodcastSection';
 export { InstagramSection } from './InstagramSection';
 export { ShopPreview } from './ShopPreview';
+export { JourneyTimeline } from './JourneyTimeline';
