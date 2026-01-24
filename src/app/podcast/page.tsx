@@ -139,7 +139,7 @@ export default function PodcastPage() {
               <span className="text-accent font-semibold uppercase tracking-wider">
                 The Official Podcast
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-serif mt-4 mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold  mt-4 mb-6">
                 Our Fight to Breathe
               </h1>
               <p className="text-xl text-white/90 mb-8">
@@ -254,7 +254,7 @@ export default function PodcastPage() {
                       <span>{episode.date}</span>
                       <span>{episode.duration}</span>
                     </div>
-                    <h3 className="text-xl font-bold font-serif text-foreground mb-2">
+                    <h3 className="text-xl font-bold  text-foreground mb-2">
                       {episode.title}
                     </h3>
                     <p className="text-muted-foreground">{episode.description}</p>
@@ -283,7 +283,7 @@ export default function PodcastPage() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            <Button href="#" variant="outline">
+            <Button href="#" variant="secondary">
               View All Episodes
             </Button>
           </motion.div>

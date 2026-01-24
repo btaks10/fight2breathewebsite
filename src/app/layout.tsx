@@ -1,16 +1,13 @@
 import type { Metadata } from 'next';
-import { Inter, Playfair_Display } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import { Header, Footer } from '@/components/layout';
 import './globals.css';
 
 const inter = Inter({
-  variable: '--font-sans',
   subsets: ['latin'],
-});
-
-const playfair = Playfair_Display({
-  variable: '--font-serif',
-  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-inter',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -48,7 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${playfair.variable} antialiased`}>
+      <body className={`${inter.variable} font-sans antialiased`}>
         <Header />
         <main>{children}</main>
         <Footer />

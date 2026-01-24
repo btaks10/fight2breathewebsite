@@ -83,7 +83,7 @@ export default function ShopPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-serif mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold  mb-6">
               Support the Mission
             </h1>
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
@@ -237,7 +237,7 @@ export default function ShopPage() {
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-primary/10 text-primary rounded-full mb-6">
                   {item.icon}
                 </div>
-                <h3 className="text-xl font-bold font-serif text-foreground mb-3">
+                <h3 className="text-xl font-bold  text-foreground mb-3">
                   {item.title}
                 </h3>
                 <p className="text-muted-foreground">{item.description}</p>

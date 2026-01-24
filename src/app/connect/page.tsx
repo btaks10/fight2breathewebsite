@@ -91,7 +91,7 @@ export default function ConnectPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-serif mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold  mb-6">
               Connect With Us
             </h1>
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
@@ -182,7 +182,7 @@ export default function ConnectPage() {
             <Button
               href="https://instagram.com/fight2breathe"
               external
-              variant="outline"
+              variant="secondary"
             >
               Follow @fight2breathe
             </Button>
@@ -292,7 +292,7 @@ export default function ConnectPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold font-serif mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold  mb-4">
               Join the Fight2Breathe Community
             </h2>
             <p className="text-white/90 mb-8 max-w-xl mx-auto">

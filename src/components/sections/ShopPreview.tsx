@@ -2,9 +2,8 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Button, Container, SectionHeading } from '../ui';
+import { Button } from '../ui';
 
-// Placeholder products - link to real Shopify store
 const products = [
   {
     id: 1,
@@ -38,15 +37,19 @@ const products = [
 
 export function ShopPreview() {
   return (
-    <section className="py-24 bg-warm-white">
-      <Container>
-        <SectionHeading
-          title="Support the Mission"
-          subtitle="Every purchase helps fund CF research and support programs for the community"
-        />
+    <section className="section-padding bg-warm-white">
+      <div className="container-content">
+        {/* Section Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-section text-foreground mb-4">Support the Mission</h2>
+          <p className="text-body-lg text-muted-foreground max-w-2xl mx-auto">
+            Every purchase helps fund CF research and support programs for the community
+          </p>
+          <div className="mt-6 h-1 w-20 bg-accent rounded-full mx-auto" />
+        </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {products.map((product, index) => (
             <motion.a
               key={product.id}
@@ -57,28 +60,24 @@ export function ShopPreview() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.5, delay: index * 0.08 }}
             >
-              <motion.div
-                className="bg-white rounded-2xl overflow-hidden shadow-lg"
-                whileHover={{ y: -5 }}
-                transition={{ duration: 0.3 }}
-              >
+              <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                 <div className="relative aspect-square overflow-hidden bg-muted">
                   <Image
                     src={product.image}
                     alt={product.name}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-4">
-                  <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                  <h3 className="text-body font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
                     {product.name}
                   </h3>
-                  <p className="text-accent-dark font-bold mt-1">{product.price}</p>
+                  <p className="text-primary font-bold mt-1">{product.price}</p>
                 </div>
-              </motion.div>
+              </div>
             </motion.a>
           ))}
         </div>
@@ -99,7 +98,7 @@ export function ShopPreview() {
             Visit Full Shop
           </Button>
         </motion.div>
-      </Container>
+      </div>
     </section>
   );
 }

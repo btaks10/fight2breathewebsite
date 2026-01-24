@@ -81,7 +81,7 @@ export default function AboutPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-serif mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold  mb-6">
                 Meet Caleigh
               </h1>
               <p className="text-xl text-white/90 mb-4">
@@ -132,7 +132,7 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="text-4xl md:text-5xl font-bold text-primary font-serif">
+                <div className="text-4xl md:text-5xl font-bold text-primary ">
                   {stat.number}
                 </div>
                 <div className="text-muted-foreground mt-2">{stat.label}</div>
@@ -192,7 +192,7 @@ export default function AboutPage() {
               <Button href="/podcast" variant="primary">
                 Listen to the Podcast
               </Button>
-              <Button href="/connect" variant="outline">
+              <Button href="/connect" variant="secondary">
                 Join the Community
               </Button>
             </div>

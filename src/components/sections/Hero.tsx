@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Button, Container } from '../ui';
+import { Button } from '../ui';
 
 export function Hero() {
   const { scrollY } = useScroll();
@@ -9,56 +9,30 @@ export function Hero() {
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-accent opacity-90" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-accent" />
 
-      {/* Animated Background Shapes */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          className="absolute -top-1/2 -right-1/2 w-full h-full rounded-full bg-accent/20"
-          animate={{
-            scale: [1, 1.2, 1],
-            rotate: [0, 90, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: 'linear',
-          }}
-        />
-        <motion.div
-          className="absolute -bottom-1/2 -left-1/2 w-full h-full rounded-full bg-primary-dark/30"
-          animate={{
-            scale: [1.2, 1, 1.2],
-            rotate: [0, -90, 0],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: 'linear',
-          }}
-        />
-      </div>
+      {/* Subtle decorative blob - atmospheric, not attention-seeking */}
+      <div
+        className="absolute top-1/4 -right-32 w-[500px] h-[500px] bg-rose-400/5 rounded-full blur-3xl z-0"
+        aria-hidden="true"
+      />
 
       {/* Content */}
-      <Container className="relative z-10">
-        <motion.div
-          className="text-center text-white"
-          style={{ y, opacity }}
-        >
+      <div className="relative z-10 container-content text-center py-20">
+        <motion.div style={{ y, opacity }}>
           <motion.h1
-            className="text-5xl md:text-6xl lg:text-7xl font-bold font-serif mb-6"
+            className="text-hero text-white mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Fighting for{' '}
-            <span className="text-accent">Every Breath</span>
+            Fighting for <span className="text-rose-300">Every Breath</span>
           </motion.h1>
 
           <motion.p
-            className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-8"
+            className="text-body-lg text-white/90 max-w-2xl mx-auto mb-10"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -68,36 +42,36 @@ export function Hero() {
           </motion.p>
 
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-wrap justify-center gap-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <Button href="/about" variant="secondary" size="lg">
+            <Button href="/about" size="lg" variant="primary">
               Meet Caleigh
             </Button>
-            <Button href="/podcast" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
+            <Button href="/podcast" size="lg" variant="secondary">
               Listen to the Podcast
             </Button>
           </motion.div>
         </motion.div>
-      </Container>
+      </div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll Indicator - more spacing from content */}
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
       >
         <motion.div
-          className="flex flex-col items-center text-white/60"
-          animate={{ y: [0, 10, 0] }}
+          className="flex flex-col items-center"
+          animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <span className="text-sm mb-2">Scroll to explore</span>
+          <span className="text-label mb-2">Scroll to explore</span>
           <svg
-            className="w-6 h-6"
+            className="w-5 h-5"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

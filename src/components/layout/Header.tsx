@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { Container } from '../ui';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -30,23 +29,24 @@ export function Header() {
     <motion.header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-md py-3'
+          ? 'bg-white/95 backdrop-blur-md shadow-sm py-4'
           : 'bg-transparent py-6'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <Container>
+      <div className="container-content">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <motion.div
-              className="text-2xl font-bold font-serif text-primary"
-              whileHover={{ scale: 1.05 }}
+          <Link href="/" className="flex items-center">
+            <span
+              className={`text-xl font-bold tracking-tight transition-colors ${
+                isScrolled ? 'text-primary' : 'text-white'
+              }`}
             >
               Fight2Breathe
-            </motion.div>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -55,17 +55,23 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="relative text-foreground hover:text-primary transition-colors font-medium group"
+                className={`relative text-label font-medium transition-colors group ${
+                  isScrolled
+                    ? 'text-foreground hover:text-primary'
+                    : 'text-white/90 hover:text-white'
+                }`}
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-rose-400 group-hover:w-full transition-all duration-300" />
               </Link>
             ))}
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-foreground"
+            className={`md:hidden p-2 transition-colors ${
+              isScrolled ? 'text-foreground' : 'text-white'
+            }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -104,12 +110,16 @@ export function Header() {
               transition={{ duration: 0.3 }}
               className="md:hidden overflow-hidden"
             >
-              <div className="py-4 flex flex-col gap-4">
+              <div className="py-4 flex flex-col gap-2">
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="text-foreground hover:text-primary transition-colors font-medium py-2"
+                    className={`text-label font-medium py-3 px-2 rounded-lg transition-colors ${
+                      isScrolled
+                        ? 'text-foreground hover:bg-muted'
+                        : 'text-white hover:bg-white/10'
+                    }`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link.label}
@@ -119,7 +129,7 @@ export function Header() {
             </motion.div>
           )}
         </AnimatePresence>
-      </Container>
+      </div>
     </motion.header>
   );
 }

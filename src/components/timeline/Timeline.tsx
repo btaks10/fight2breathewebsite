@@ -110,7 +110,7 @@ function TimelineItem({ event, index }: TimelineItemProps) {
             {!event.image && (
               <span className="text-primary font-bold text-lg">{event.year}</span>
             )}
-            <h3 className="text-xl font-bold font-serif text-foreground mt-1 mb-3">
+            <h3 className="text-xl font-bold  text-foreground mt-1 mb-3">
               {event.title}
             </h3>
             <p className="text-muted-foreground">{event.description}</p>
