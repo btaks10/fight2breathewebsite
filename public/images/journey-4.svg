@@ -1,0 +1,62 @@
+<svg width="600" height="750" viewBox="0 0 600 750" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="j4bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#faf5ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f3e8ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Bright, empowering background -->
+  <rect width="600" height="750" fill="url(#j4bg)"/>
+
+  <!-- Stage/platform -->
+  <ellipse cx="300" cy="550" rx="250" ry="60" fill="#7c3aed" opacity="0.2"/>
+
+  <!-- Caleigh figure - confident, speaking -->
+  <circle cx="300" cy="280" r="60" fill="#fcd5ce"/>
+
+  <!-- Hair -->
+  <ellipse cx="300" cy="250" rx="70" ry="60" fill="#5b4636"/>
+  <ellipse cx="250" cy="300" rx="30" ry="50" fill="#5b4636"/>
+  <ellipse cx="350" cy="300" rx="30" ry="50" fill="#5b4636"/>
+
+  <!-- Face features -->
+  <ellipse cx="280" cy="275" rx="8" ry="5" fill="#4a3728"/>
+  <ellipse cx="320" cy="275" rx="8" ry="5" fill="#4a3728"/>
+  <path d="M280 310 Q300 330 320 310" stroke="#9f6b53" stroke-width="3" fill="none"/>
+
+  <!-- Body - confident pose -->
+  <path d="M260 340 L240 500 L280 500 L290 380 L300 340 L310 380 L320 500 L360 500 L340 340 Z" fill="#7c3aed"/>
+
+  <!-- Arms raised/gesturing -->
+  <path d="M260 360 L180 300 L170 320" stroke="#fcd5ce" stroke-width="25" fill="none" stroke-linecap="round"/>
+  <path d="M340 360 L420 300 L430 320" stroke="#fcd5ce" stroke-width="25" fill="none" stroke-linecap="round"/>
+
+  <!-- Microphone -->
+  <rect x="430" y="290" width="15" height="40" fill="#1f2937" rx="5"/>
+  <ellipse cx="437" cy="285" rx="12" ry="15" fill="#374151"/>
+
+  <!-- Audience silhouettes -->
+  <circle cx="100" cy="650" r="25" fill="#d4d4d8"/>
+  <circle cx="180" cy="670" r="25" fill="#d4d4d8"/>
+  <circle cx="260" cy="660" r="25" fill="#d4d4d8"/>
+  <circle cx="340" cy="665" r="25" fill="#d4d4d8"/>
+  <circle cx="420" cy="655" r="25" fill="#d4d4d8"/>
+  <circle cx="500" cy="670" r="25" fill="#d4d4d8"/>
+
+  <!-- Speech/voice waves -->
+  <path d="M350 280 Q380 260 350 240" stroke="#f472b6" stroke-width="3" fill="none" opacity="0.6"/>
+  <path d="M360 290 Q400 260 360 230" stroke="#f472b6" stroke-width="3" fill="none" opacity="0.4"/>
+  <path d="M370 300 Q420 260 370 220" stroke="#f472b6" stroke-width="3" fill="none" opacity="0.2"/>
+
+  <!-- "Fight2Breathe" banner -->
+  <rect x="150" y="100" width="300" height="60" fill="#7c3aed" rx="10"/>
+  <text x="300" y="140" text-anchor="middle" font-family="sans-serif" font-size="24" fill="white" font-weight="bold">FIGHT2BREATHE</text>
+
+  <!-- Stars/impact symbols -->
+  <polygon points="80,200 85,215 100,215 88,225 93,240 80,230 67,240 72,225 60,215 75,215" fill="#fbbf24"/>
+  <polygon points="520,180 523,190 535,190 526,197 529,207 520,200 511,207 514,197 505,190 517,190" fill="#fbbf24"/>
+
+  <!-- "NOW" subtle -->
+  <text x="300" y="720" text-anchor="middle" font-family="serif" font-size="48" fill="#7c3aed" opacity="0.3">NOW</text>
+</svg>

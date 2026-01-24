@@ -1,0 +1,41 @@
+<svg width="600" height="750" viewBox="0 0 600 750" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="j1bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef3c7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fde68a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Warm, hopeful background -->
+  <rect width="600" height="750" fill="url(#j1bg)"/>
+
+  <!-- Sun -->
+  <circle cx="480" cy="100" r="60" fill="#fbbf24" opacity="0.8"/>
+  <circle cx="480" cy="100" r="80" fill="#fbbf24" opacity="0.3"/>
+
+  <!-- Hospital/crib suggestion -->
+  <rect x="150" y="350" width="300" height="200" rx="20" fill="white" stroke="#e5e7eb" stroke-width="3"/>
+  <rect x="150" y="350" width="300" height="40" fill="#f3e8ff"/>
+
+  <!-- Baby figure -->
+  <ellipse cx="300" cy="480" rx="50" ry="40" fill="#fcd5ce"/>
+  <circle cx="300" cy="430" r="35" fill="#fcd5ce"/>
+
+  <!-- Blanket -->
+  <path d="M220 460 Q300 520 380 460 L380 530 Q300 580 220 530 Z" fill="#f9a8d4" opacity="0.7"/>
+
+  <!-- Parent hands reaching -->
+  <ellipse cx="180" cy="420" rx="40" ry="25" fill="#fcd5ce" transform="rotate(-30 180 420)"/>
+  <ellipse cx="420" cy="420" rx="40" ry="25" fill="#fcd5ce" transform="rotate(30 420 420)"/>
+
+  <!-- Tiny heart -->
+  <path d="M300 400 L292 392 Q284 384 292 376 Q300 368 300 376 Q300 368 308 376 Q316 384 308 392 Z" fill="#f472b6"/>
+
+  <!-- "1990" subtle -->
+  <text x="300" y="680" text-anchor="middle" font-family="serif" font-size="48" fill="#92400e" opacity="0.3">1990</text>
+
+  <!-- Hope rays -->
+  <line x1="300" y1="200" x2="200" y2="100" stroke="#fbbf24" stroke-width="2" opacity="0.3"/>
+  <line x1="300" y1="200" x2="400" y2="80" stroke="#fbbf24" stroke-width="2" opacity="0.3"/>
+  <line x1="300" y1="200" x2="300" y2="50" stroke="#fbbf24" stroke-width="2" opacity="0.4"/>
+</svg>
