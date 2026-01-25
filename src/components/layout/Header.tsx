@@ -29,24 +29,17 @@ export function Header() {
   }, []);
 
   return (
-    <motion.header
+    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? 'bg-white/95 backdrop-blur-md shadow-sm'
-          : 'bg-transparent'
+          : 'bg-white/90 backdrop-blur-sm'
       }`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6 }}
     >
       <nav className="flex items-center justify-between p-6">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <span
-            className={`text-xl font-bold tracking-tight transition-colors ${
-              isScrolled ? 'text-gray-900' : 'text-white'
-            }`}
-          >
+          <span className="text-xl font-bold tracking-tight text-gray-900">
             Fight2Breathe
           </span>
         </Link>
@@ -60,11 +53,7 @@ export function Header() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`text-sm font-medium transition-colors ${
-                  isScrolled
-                    ? 'text-gray-600 hover:text-gray-900'
-                    : 'text-white/80 hover:text-white'
-                }`}
+                className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
               >
                 {link.label}
               </a>
@@ -72,11 +61,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors ${
-                  isScrolled
-                    ? 'text-gray-600 hover:text-gray-900'
-                    : 'text-white/80 hover:text-white'
-                }`}
+                className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
               >
                 {link.label}
               </Link>
@@ -86,9 +71,7 @@ export function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className={`md:hidden p-2 transition-colors ${
-            isScrolled ? 'text-gray-900' : 'text-white'
-          }`}
+          className="md:hidden p-2 text-gray-900"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -125,9 +108,7 @@ export function Header() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className={`md:hidden overflow-hidden ${
-              isScrolled ? 'bg-white' : 'bg-black/50 backdrop-blur-md'
-            }`}
+            className="md:hidden overflow-hidden bg-white"
           >
             <div className="py-4 px-6 flex flex-col gap-2">
               {navLinks.map((link) =>
@@ -137,11 +118,7 @@ export function Header() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`text-sm font-medium py-3 px-2 rounded-lg transition-colors ${
-                      isScrolled
-                        ? 'text-gray-600 hover:bg-gray-100'
-                        : 'text-white hover:bg-white/10'
-                    }`}
+                    className="text-sm font-medium py-3 px-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link.label}
@@ -150,11 +127,7 @@ export function Header() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`text-sm font-medium py-3 px-2 rounded-lg transition-colors ${
-                      isScrolled
-                        ? 'text-gray-600 hover:bg-gray-100'
-                        : 'text-white hover:bg-white/10'
-                    }`}
+                    className="text-sm font-medium py-3 px-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link.label}
@@ -165,6 +138,6 @@ export function Header() {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.header>
+    </header>
   );
 }
