@@ -108,10 +108,9 @@ export default function AboutPage() {
                   Patient. Builder. Advocate. Chronic Badass.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  I spent the first half of my life fighting to survive. Now
-                  I&apos;m building the things I wish existed when I was in the
-                  thick of it—resources, community, and a louder voice for
-                  patients in rooms where decisions get made.
+                  I spent the first half of my life fighting to survive. Now I
+                  build what I once needed most: resources, community, and a
+                  stronger patient voice where decisions are made.
                 </p>
               </div>
 
@@ -124,24 +123,37 @@ export default function AboutPage() {
                   company="Fight2Breathe"
                   role="Founder & Director"
                   roleColor="text-purple-500"
-                  summary="What started as a personal Instagram account became something bigger."
+                  summary="What began as a personal effort to survive grew into a community."
                 >
                   <p className="text-sm text-gray-600 leading-relaxed">
-                    Today, Fight2Breathe reaches over 100,000 people across platforms — patients, caregivers, and healthcare professionals looking for real information and real connection. I build resources, create content, and try to make the chronic illness experience a little less isolating.
+                    Today, Fight2Breathe reaches over 100,000 people across
+                    platforms, connecting patients, caregivers, and healthcare
+                    professionals who are looking for real information and real
+                    connection. I build resources and create content to make the
+                    chronic illness experience feel less isolating. My hope is
+                    to help people feel informed, supported, and empowered to
+                    make the decisions that are best for them.
                   </p>
                 </RoleCard>
 
-                {/* PRX (Patient Revolution) */}
+                {/* pRxEngage */}
                 <RoleCard
                   icon="🔬"
                   iconBg="bg-blue-100"
-                  company="PRX (Patient Revolution)"
-                  role="Consultant"
+                  company="pRxEngage"
+                  role="Community & Brand Strategy | Consultant"
                   roleColor="text-blue-500"
-                  summary="Aligning external presence with internal mission."
+                  summary="Helping their mission show up clearly for the people it's meant to serve."
                 >
                   <p className="text-sm text-gray-600 leading-relaxed">
-                    I worked with PRX to align their external presence with their internal mission. That meant auditing their marketing and social strategy, helping launch and manage an ambassador program, and creating educational content that actually sounds like people — not institutions. I write articles, blogs, and their newsletter to bring the mission closer to the people it serves.
+                    I lead efforts focused on how we engage with patient and
+                    community groups, helping design work rooted in empathy,
+                    clarity, and real-world understanding. I bring lived
+                    experience, strategic insight, and heart to my role at
+                    pRxEngage, shaped by my own life with rare disease and
+                    navigating complex care systems. My work centers on making
+                    clinical trial information more human, accessible, and
+                    grounded in the realities of people&apos;s lives.
                   </p>
                 </RoleCard>
 
@@ -155,7 +167,14 @@ export default function AboutPage() {
                   summary="Pharmaceutical companies, hospitals, and health startups hire me to share the patient perspective."
                 >
                   <p className="text-sm text-gray-600 leading-relaxed">
-                    What it&apos;s actually like to navigate the system, make treatment decisions, and live with the consequences. I bring the voice that&apos;s usually missing from the room — helping organizations understand what patients need, not just what they think patients need.
+                    My work includes advising on patient engagement and
+                    experience design, reviewing study materials and messaging,
+                    shaping education and content strategy, and supporting
+                    programs that impact how people navigate care and clinical
+                    research. I help teams understand what it actually feels
+                    like to live with a condition, make treatment decisions, and
+                    carry the long-term consequences—so decisions are informed
+                    by real patient experience, not assumptions.
                   </p>
                 </RoleCard>
 
@@ -169,8 +188,41 @@ export default function AboutPage() {
                   summary="A multi-day conference built by and for the CF community."
                 >
                   <p className="text-sm text-gray-600 leading-relaxed">
-                    BreatheCon is a multi-day conference built by and for the CF community. I co-led a team of 20 to bring together 500+ attendees, coordinating with the Cystic Fibrosis Foundation to make sure the event reflected what the community actually needed — not just what looked good on paper.
+                    BreatheCon is a multi-day conference built by and for the CF
+                    community. I co-led a team of 20 to bring together 500+
+                    attendees, coordinating with the Cystic Fibrosis Foundation
+                    to ensure the event reflected what the community truly
+                    needed.
                   </p>
+                </RoleCard>
+
+                {/* Podcast */}
+                <RoleCard
+                  icon="🎧"
+                  iconBg="bg-violet-100"
+                  company="Podcast"
+                  role="Host"
+                  roleColor="text-violet-500"
+                  summary="Hosting Our Fight to Breathe, a podcast centered on lived experience."
+                >
+                  <div className="space-y-3 text-sm text-gray-600 leading-relaxed">
+                    <p>
+                      I host Our Fight to Breathe, a podcast centered on lived
+                      experience and the realities of navigating chronic and
+                      rare disease. Through conversations with patients,
+                      caregivers, clinicians, advocates, and industry leaders, I
+                      amplify stories that are often overlooked but deeply
+                      needed.
+                    </p>
+                    <p>
+                      The podcast explores life with cystic fibrosis and
+                      transplant, patient advocacy, and healthcare
+                      decision-making, alongside what it means to live in a
+                      world you weren&apos;t meant to survive in. My goal is to
+                      offer clarity and connection through conversations that
+                      help people feel less alone and more informed.
+                    </p>
+                  </div>
                 </RoleCard>
 
                 {/* Speaking Engagements */}
@@ -180,60 +232,50 @@ export default function AboutPage() {
                   company="Speaking"
                   role="Conferences & Events"
                   roleColor="text-amber-500"
-                  summary="Sharing my story at hospitals, conferences, and foundations—not to inspire, but to translate what this life is actually like."
+                  summary="I speak at hospitals, conferences, and foundation events to translate lived experience into understanding."
                 >
-                  <div className="space-y-4">
-                    <div className="grid gap-4">
-                      <div className="flex items-start gap-4 p-4 bg-white rounded-xl">
-                        <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <span className="text-lg">🏥</span>
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-900">
-                            UCLA Health
-                          </h4>
-                          <p className="text-gray-500 text-sm">
-                            Patient Education Symposium
-                          </p>
-                          <p className="text-gray-400 text-xs mt-1">
-                            November 2018
-                          </p>
-                        </div>
-                      </div>
+                  <div className="space-y-3">
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      Organizations I&apos;ve spoken with:
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 bg-white rounded-full text-sm text-gray-700">
+                        Make a Wish Foundation
+                      </span>
+                      <span className="px-3 py-1 bg-white rounded-full text-sm text-gray-700">
+                        Global Genes
+                      </span>
+                      <span className="px-3 py-1 bg-white rounded-full text-sm text-gray-700">
+                        American Lung Association
+                      </span>
+                      <span className="px-3 py-1 bg-white rounded-full text-sm text-gray-700">
+                        CFRI
+                      </span>
+                    </div>
+                  </div>
+                </RoleCard>
 
-                      <div className="flex items-start gap-4 p-4 bg-white rounded-xl">
-                        <div className="w-10 h-10 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <span className="text-lg">🎗️</span>
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-900">
-                            Cystic Fibrosis Foundation
-                          </h4>
-                          <p className="text-gray-500 text-sm">
-                            Beach, Brews & BBQ Gala
-                          </p>
-                          <p className="text-gray-400 text-xs mt-1">
-                            October 2018, 2019
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start gap-4 p-4 bg-white rounded-xl">
-                        <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <span className="text-lg">🌐</span>
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-900">
-                            BreatheCon
-                          </h4>
-                          <p className="text-gray-500 text-sm">
-                            Virtual Conference Host
-                          </p>
-                          <p className="text-gray-400 text-xs mt-1">
-                            Committee Co-Chair
-                          </p>
-                        </div>
-                      </div>
+                {/* Awards */}
+                <RoleCard
+                  icon="🏆"
+                  iconBg="bg-yellow-100"
+                  company="Awards"
+                  role="Recognition"
+                  roleColor="text-yellow-600"
+                  summary="Recognized for contributions to the CF community."
+                >
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3 p-3 bg-white rounded-xl">
+                      <span className="text-xl">🌹</span>
+                      <p className="text-sm text-gray-700">
+                        Recipient of the <strong>2017 CFF Rose Award</strong>
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-3 p-3 bg-white rounded-xl">
+                      <span className="text-xl">⭐</span>
+                      <p className="text-sm text-gray-700">
+                        Recipient of the <strong>2024 CFF Impact Award</strong>
+                      </p>
                     </div>
                   </div>
                 </RoleCard>
