@@ -221,7 +221,7 @@ export default function HomePage() {
               <p className="text-gray-600 mb-6">
                 Every shirt is a conversation starter. And sometimes that conversation saves someone.
               </p>
-              <Button href="https://www.fight2breathe.org/collections/all" variant="dark" external>
+              <Button href="/shop" variant="dark">
                 Visit Shop
               </Button>
             </motion.div>

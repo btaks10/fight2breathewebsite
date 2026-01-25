@@ -46,7 +46,7 @@ export default async function PodcastPage() {
                   className="opacity-60 hover:opacity-100 transition-opacity"
                   title="Apple Podcasts"
                 >
-                  <Image src="/images/apple.jpeg" alt="Apple Podcasts" width={32} height={32} className="rounded" />
+                  <Image src="/images/apple.jpeg" alt="Apple Podcasts" width={32} height={32} className="rounded w-8 h-8 object-cover" />
                 </a>
                 <a
                   href="https://open.spotify.com/show/3gDKmuPjRsLctJEmoJKjgO"
@@ -55,7 +55,7 @@ export default async function PodcastPage() {
                   className="opacity-60 hover:opacity-100 transition-opacity"
                   title="Spotify"
                 >
-                  <Image src="/images/spotify.jpeg" alt="Spotify" width={32} height={32} className="rounded" />
+                  <Image src="/images/spotify.jpeg" alt="Spotify" width={32} height={32} className="rounded w-8 h-8 object-cover" />
                 </a>
                 <a
                   href="https://music.amazon.com/podcasts/b38d9c40-a0d5-4449-8bb1-7c9ab5809db4/our-fight-to-breathe---a-cystic-fibrosis-podcast"
@@ -64,7 +64,7 @@ export default async function PodcastPage() {
                   className="opacity-60 hover:opacity-100 transition-opacity"
                   title="Amazon Music"
                 >
-                  <Image src="/images/amazon.jpeg" alt="Amazon Music" width={32} height={32} className="rounded" />
+                  <Image src="/images/amazon.jpeg" alt="Amazon Music" width={32} height={32} className="rounded w-8 h-8 object-cover" />
                 </a>
                 <a
                   href="https://pca.st/YOUR_POCKETCASTS_ID"
@@ -73,7 +73,7 @@ export default async function PodcastPage() {
                   className="opacity-60 hover:opacity-100 transition-opacity"
                   title="Pocket Casts"
                 >
-                  <Image src="/images/pocketcast.jpeg" alt="Pocket Casts" width={32} height={32} className="rounded" />
+                  <Image src="/images/pocketcast.jpeg" alt="Pocket Casts" width={32} height={32} className="rounded w-8 h-8 object-cover" />
                 </a>
                 <a
                   href="https://podcastaddict.com/podcast/YOUR_PODCAST_ADDICT_ID"
@@ -82,7 +82,7 @@ export default async function PodcastPage() {
                   className="opacity-60 hover:opacity-100 transition-opacity"
                   title="Podcast Addict"
                 >
-                  <Image src="/images/podcastaddict.jpeg" alt="Podcast Addict" width={32} height={32} className="rounded" />
+                  <Image src="/images/podcastaddict.jpeg" alt="Podcast Addict" width={32} height={32} className="rounded w-8 h-8 object-cover" />
                 </a>
                 <a
                   href="https://www.deezer.com/show/YOUR_DEEZER_ID"
@@ -91,7 +91,7 @@ export default async function PodcastPage() {
                   className="opacity-60 hover:opacity-100 transition-opacity"
                   title="Deezer"
                 >
-                  <Image src="/images/deezer.jpeg" alt="Deezer" width={32} height={32} className="rounded" />
+                  <Image src="/images/deezer.jpeg" alt="Deezer" width={32} height={32} className="rounded w-8 h-8 object-cover" />
                 </a>
               </div>
             </div>

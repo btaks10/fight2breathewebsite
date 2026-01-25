@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
 
 export default function StoryPage() {
@@ -103,6 +104,16 @@ export default function StoryPage() {
               2013
             </span>
             <div className="h-px bg-gray-200 flex-1" />
+          </div>
+
+          <div className="mb-10">
+            <Image
+              src="/images/journey-2013.JPG"
+              alt="2013 - Fighting for survival"
+              width={800}
+              height={600}
+              className="rounded-xl w-full object-cover"
+            />
           </div>
 
           <div className="space-y-6 text-lg md:text-xl text-gray-600 leading-relaxed">
@@ -223,6 +234,16 @@ export default function StoryPage() {
               2017
             </span>
             <div className="h-px bg-gray-300 flex-1" />
+          </div>
+
+          <div className="mb-10 flex justify-center">
+            <Image
+              src="/images/journey-2017.jpg"
+              alt="2017 - Our wedding day"
+              width={600}
+              height={800}
+              className="rounded-xl object-cover rotate-[-90deg]"
+            />
           </div>
 
           <div className="space-y-6 text-lg md:text-xl text-gray-600 leading-relaxed">
