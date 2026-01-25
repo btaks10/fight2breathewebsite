@@ -10,57 +10,50 @@ const milestones = [
     year: '1990',
     title: 'The Beginning',
     description:
-      'Born with Cystic Fibrosis. Diagnosed at birth. The fight began on day one.',
-    image: '/images/journey-1.jpg',
-    bgClass: 'bg-white',
+      'Born with Cystic Fibrosis. Diagnosed at birth—which was rare back then. Most infants went undiagnosed and untreated. The median life expectancy that year was 18. When my parents found out that salty ocean air helped thin the mucus in my lungs, they moved us as close to the waves as possible.',
+    image: '/images/journey-1990.jpg',
   },
   {
     year: '2005',
     title: 'The Struggle',
     description:
-      'Hospital became a second home. Countless treatments, endless uncertainty. But giving up was never an option.',
-    image: '/images/journey-2.jpg',
-    bgClass: 'bg-white',
+      'CF is progressive. My childhood was healthy, but my adult years told a different story. Hospital became my first home, my apartment became my second. I went years cycling through—admitted for two or three weeks, out for one, then back in. The nurses and doctors became my family. Every day I thought about getting my independence back.',
+    image: '/images/journey-2005.jpg',
   },
   {
     year: '2013',
     title: 'The Wait',
     description:
-      'Listed for transplant. Every day became a prayer for a second chance at life.',
-    image: null,
-    bgClass: 'bg-purple-50',
+      'At 22, my lung function dropped to 16%. I lost almost 30 pounds. I was living on supplemental oxygen and a feeding tube. My doctors told me a double-lung transplant was my only option for survival. I was listed, and then I waited. Waiting is its own kind of fight.',
+    image: '/images/journey-2013.jpg',
   },
   {
     year: '2015',
     title: 'New Lungs',
     description:
-      "First double-lung transplant. A stranger's final gift became her second chance at life.",
-    image: '/images/journey-3.jpg',
-    bgClass: 'bg-white',
+      'October 20th. First double-lung transplant. I got some of my old routines back—walking to get coffee, going to farmers markets, caring for my dog. But transplant tested me too. An abscess in my left lung. Respiratory failure. A life flight. ECMO. A medically induced coma. I had to relearn how to hold my head up, swallow, walk, talk. Everything.',
+    image: '/images/journey-2015.jpg',
   },
   {
     year: '2017',
     title: 'Love',
     description:
-      "Married. Proof that life doesn't just continue after transplant—it flourishes.",
-    image: null,
-    bgClass: 'bg-rose-50',
+      "I went into organ rejection shortly after my one-year breathday. Within months I was back on oxygen, back on my feeding tube, unable to walk even a few feet. My lung function dropped to 14%. My center told me I wasn't a candidate for a redo. Their recommendation was palliative care. But in the middle of all that, I married my best friend, surrounded by 150 people who loved us.",
+    image: '/images/journey-2017.jpg',
   },
   {
     year: '2018',
     title: 'Again',
     description:
-      'Second transplant. Some battles you have to win twice. She did.',
-    image: '/images/journey-4.jpg',
-    bgClass: 'bg-white',
+      'My husband searched nationwide for any center that would take me. We packed everything and moved across California. UCLA gave me a chance when no one else would. After five and a half months living in the hospital, I received my second double-lung transplant on June 8th. When I woke up and took my first breath, I understood for the first time what breathing was actually supposed to feel like.',
+    image: '/images/journey-2018.jpg',
   },
   {
     year: 'Now',
     title: 'The Mission',
     description:
-      'Advocate. Podcaster. Voice for the voiceless. The fight continues—not just for herself, but for everyone.',
-    image: '/images/caleigh-portrait.jpg',
-    bgClass: 'bg-gradient-to-b from-gray-50 to-white',
+      "I breathe deep now. Effortlessly. But I'll never forget the moments I struggled for oxygen, or the people who showed up when it mattered. I started Fight2Breathe because this fight shouldn't be figured out alone. The information, the support, the community—it should already exist. So I'm building it.",
+    image: '/images/journey-now.jpg',
     showButton: true,
   },
 ];
@@ -79,7 +72,10 @@ export function JourneyTimeline() {
             setActiveIndex(index);
           }
         },
-        { threshold: 0.5 }
+        {
+          threshold: 0.5,
+          rootMargin: '-30% 0px -30% 0px',
+        }
       );
 
       observer.observe(ref);
@@ -91,21 +87,7 @@ export function JourneyTimeline() {
     };
   }, []);
 
-  // Get current image, fallback to last valid image if current milestone has none
-  const getCurrentImage = () => {
-    const current = milestones[activeIndex];
-    if (current?.image) return current.image;
-
-    // Look backwards for the most recent image
-    for (let i = activeIndex - 1; i >= 0; i--) {
-      if (milestones[i]?.image) return milestones[i].image;
-    }
-
-    // Fallback to first image
-    return milestones.find((m) => m.image)?.image || '/images/journey-1.jpg';
-  };
-
-  const currentImage = getCurrentImage();
+  const currentImage = milestones[activeIndex]?.image;
 
   return (
     <section className="relative bg-gray-50">
@@ -134,19 +116,16 @@ export function JourneyTimeline() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.4 }}
               className="relative h-full w-full"
             >
-              {currentImage ? (
-                <Image
-                  src={currentImage}
-                  alt="Caleigh's journey"
-                  fill
-                  className="object-cover"
-                />
-              ) : (
-                <div className="h-full w-full bg-gradient-to-br from-purple-600 to-purple-900" />
-              )}
+              <Image
+                src={currentImage}
+                alt={`${milestones[activeIndex]?.year} - ${milestones[activeIndex]?.title}`}
+                fill
+                className="object-cover"
+                priority
+              />
               <div className="absolute inset-0 bg-black/10" />
             </motion.div>
           </AnimatePresence>
@@ -160,7 +139,7 @@ export function JourneyTimeline() {
               ref={(el) => {
                 milestonesRef.current[index] = el;
               }}
-              className={`min-h-[70vh] flex items-center px-8 md:px-16 py-16 ${milestone.bgClass}`}
+              className="min-h-[70vh] flex items-center px-8 md:px-16 lg:px-20 py-16"
             >
               <motion.div
                 className="w-full"
@@ -170,39 +149,31 @@ export function JourneyTimeline() {
                 transition={{ duration: 0.6 }}
               >
                 {/* Mobile image */}
-                {milestone.image && (
-                  <div className="lg:hidden w-full mb-8">
-                    <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
-                      <Image
-                        src={milestone.image}
-                        alt={milestone.year}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
+                <div className="lg:hidden w-full mb-8">
+                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                    <Image
+                      src={milestone.image}
+                      alt={`${milestone.year} - ${milestone.title}`}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
-                )}
+                </div>
 
                 <div className="max-w-lg">
-                  <span
-                    className={`text-6xl md:text-8xl font-bold ${
-                      milestone.year === '2017'
-                        ? 'text-rose-200'
-                        : 'text-purple-200'
-                    }`}
-                  >
+                  <span className="text-7xl md:text-8xl lg:text-9xl font-bold text-purple-200/70">
                     {milestone.year}
                   </span>
-                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mt-2 mb-4">
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mt-4 mb-6">
                     {milestone.title}
                   </h3>
                   <p className="text-lg text-gray-600 leading-relaxed">
                     {milestone.description}
                   </p>
                   {milestone.showButton && (
-                    <div className="mt-8">
+                    <div className="mt-10">
                       <Button href="/about" variant="dark" size="lg">
-                        Read Her Full Story
+                        See What I&apos;m Building Now
                       </Button>
                     </div>
                   )}

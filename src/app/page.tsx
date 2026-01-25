@@ -33,7 +33,7 @@ export default function HomePage() {
             Fight2Breathe
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white max-w-3xl leading-tight">
-            Every breath is a battle I choose to fight.
+            Breathing is a full-time job. I&apos;ve been doing it for 34 years.
           </h1>
         </motion.div>
 
@@ -81,19 +81,24 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
-              Meet Caleigh
+              I&apos;m Caleigh
             </h2>
 
-            <div className="space-y-6 text-lg md:text-xl text-gray-700 leading-relaxed">
-              <p>Born with Cystic Fibrosis.</p>
-              <p>Three decades of hospitals, treatments, and uncertainty.</p>
-              <p>Two double-lung transplants.</p>
-              <p>One mission: to fight for everyone who knows what it means to struggle for air.</p>
+            <div className="space-y-6">
+              <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+                I was diagnosed with cystic fibrosis at birth. The year I was born, the median life expectancy was 18.
+              </p>
+              <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+                I&apos;ve spent more time in hospitals than I can count. I&apos;ve had two double-lung transplants. I&apos;ve been told I wouldn&apos;t survive—five times.
+              </p>
+              <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+                I&apos;m still here. And I started Fight2Breathe because no one should have to figure this out alone.
+              </p>
             </div>
 
             <div className="mt-10">
-              <Button href="/about" variant="dark" size="lg">
-                Read Her Full Story
+              <Button href="/story" variant="dark" size="lg">
+                Read My Full Story
               </Button>
             </div>
           </motion.div>
@@ -110,7 +115,7 @@ export default function HomePage() {
           transition={{ duration: 0.8 }}
         >
           <p className="text-2xl md:text-3xl lg:text-4xl font-medium text-white leading-relaxed">
-            &ldquo;CF doesn&apos;t define me—it fuels me. Every challenge I&apos;ve faced has become a stepping stone to help others walking this same path.&rdquo;
+            &ldquo;I have been fighting my whole life and I&apos;m not done yet.&rdquo;
           </p>
           <footer className="mt-8 text-purple-300 text-lg">— Caleigh</footer>
         </motion.blockquote>
@@ -148,8 +153,7 @@ export default function HomePage() {
               Our Fight to Breathe
             </h2>
             <p className="text-xl text-white/80 mb-8 leading-relaxed">
-              Real stories from the CF community. The struggles. The victories.
-              The moments that remind us why every breath matters.
+              I started this podcast because the conversations I needed didn&apos;t exist. What it&apos;s actually like to wait for lungs. How to talk to your family when you&apos;re scared. The stuff no one tells you.
             </p>
 
             {/* Latest episode teaser */}
@@ -213,9 +217,9 @@ export default function HomePage() {
               transition={{ duration: 0.5 }}
               whileHover={{ y: -5 }}
             >
-              <h3 className="text-2xl font-bold mb-4">Wear the Mission</h3>
+              <h3 className="text-2xl font-bold mb-4">Wear It</h3>
               <p className="text-gray-600 mb-6">
-                Every item supports the CF community.
+                Every shirt is a conversation starter. And sometimes that conversation saves someone.
               </p>
               <Button href="https://www.fight2breathe.org/collections/all" variant="dark" external>
                 Visit Shop
@@ -231,9 +235,9 @@ export default function HomePage() {
               transition={{ duration: 0.5, delay: 0.1 }}
               whileHover={{ y: -5 }}
             >
-              <h3 className="text-2xl font-bold text-white mb-4">Stay Connected</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Stay Close</h3>
               <p className="text-purple-200 mb-6">
-                Follow the journey on Instagram.
+                This is where I share the real stuff. The good days and the hard ones.
               </p>
               <Button href="https://www.instagram.com/fight2breathe" variant="primary" external>
                 @fight2breathe

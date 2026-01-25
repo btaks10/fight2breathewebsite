@@ -5,9 +5,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 
 const navLinks = [
-  { href: '/about', label: 'Her Story' },
+  { href: '/story', label: 'Story' },
+  { href: '/about', label: 'Work' },
   { href: '/podcast', label: 'Podcast' },
-  { href: 'https://www.fight2breathe.org/collections/all', label: 'Shop', external: true },
+  {
+    href: 'https://www.fight2breathe.org/collections/all',
+    label: 'Shop',
+    external: true,
+  },
 ];
 
 export function Header() {

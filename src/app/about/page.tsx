@@ -1,204 +1,393 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useState } from 'react';
 import Image from 'next/image';
-import { Container, SectionHeading, Button } from '@/components/ui';
-import { Timeline, TimelineEvent } from '@/components/timeline';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
+import { Button } from '@/components/ui/Button';
 
-const timelineEvents: TimelineEvent[] = [
-  {
-    id: '1',
-    year: '1998',
-    title: 'The Beginning',
-    description:
-      'Born with Cystic Fibrosis, Caleigh began her fight from day one. Her parents were told to prepare for a difficult journey, but they never gave up hope.',
-    image: '/images/timeline-1.svg',
-    quote: 'Every breath was a victory, even then.',
-  },
-  {
-    id: '2',
-    year: '2005',
-    title: 'Growing Up CF',
-    description:
-      'School, hospital stays, treatments, and still finding joy in life. Caleigh learned early that life with CF meant fighting harder than most, but also appreciating every moment more.',
-    image: '/images/timeline-2.svg',
-  },
-  {
-    id: '3',
-    year: '2012',
-    title: 'The First Major Surgery',
-    description:
-      'At 14, Caleigh faced her first major surgical intervention. It was a turning point that showed her the strength she never knew she had.',
-    image: '/images/timeline-3.svg',
-    quote: 'I learned that strength isnt about not being scared. Its about being terrified and still showing up.',
-  },
-  {
-    id: '4',
-    year: '2018',
-    title: 'The Call That Changed Everything',
-    description:
-      'After years on the transplant list, the call finally came. A generous donor gave Caleigh the gift of new lungs and a second chance at life.',
-    image: '/images/timeline-4.svg',
-    quote: 'Someone I never met saved my life. I carry their gift with me every single day.',
-  },
-  {
-    id: '5',
-    year: '2020',
-    title: 'Founding Fight2Breathe',
-    description:
-      'With her new lungs and renewed purpose, Caleigh founded Fight2Breathe to advocate for the CF community and raise awareness about organ donation.',
-    image: '/images/timeline-5.svg',
-  },
-  {
-    id: '6',
-    year: '2022',
-    title: 'Launching "Our Fight to Breathe" Podcast',
-    description:
-      'The podcast launched to share stories of hope, resilience, and community. Each episode connects CF warriors and their families, creating a support network that spans the globe.',
-    image: '/images/timeline-6.svg',
-    quote: 'Every story shared is a life touched. Thats why we do this.',
-  },
-  {
-    id: '7',
-    year: 'Today',
-    title: 'The Fight Continues',
-    description:
-      'Today, Caleigh continues to advocate, inspire, and fight for every breath. With your support, Fight2Breathe is making a difference in the lives of CF warriors everywhere.',
-    image: '/images/timeline-7.svg',
-  },
-];
+interface RoleCardProps {
+  icon: string;
+  iconBg: string;
+  company: string;
+  role: string;
+  roleColor: string;
+  summary: string;
+  children: React.ReactNode;
+  defaultOpen?: boolean;
+}
+
+function RoleCard({
+  icon,
+  iconBg,
+  company,
+  role,
+  roleColor,
+  summary,
+  children,
+  defaultOpen = false,
+}: RoleCardProps) {
+  const [isOpen, setIsOpen] = useState(defaultOpen);
+
+  return (
+    <div className="bg-gray-50 rounded-2xl overflow-hidden">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full p-6 flex items-start gap-4 text-left hover:bg-gray-100 transition-colors"
+      >
+        <div
+          className={`w-12 h-12 ${iconBg} rounded-xl flex items-center justify-center flex-shrink-0`}
+        >
+          <span className="text-xl">{icon}</span>
+        </div>
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-2 flex-wrap">
+            <h3 className="text-xl font-bold text-gray-900">{company}</h3>
+            <span className="text-gray-300">|</span>
+            <p className={`${roleColor} font-medium`}>{role}</p>
+          </div>
+          <p className="text-gray-600 text-sm mt-2 leading-relaxed">{summary}</p>
+        </div>
+        <motion.div
+          animate={{ rotate: isOpen ? 180 : 0 }}
+          transition={{ duration: 0.2 }}
+          className="flex-shrink-0 mt-1"
+        >
+          <ChevronDown className="w-5 h-5 text-gray-400" />
+        </motion.div>
+      </button>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="overflow-hidden"
+          >
+            <div className="px-6 pb-6 pt-2 border-t border-gray-200">
+              {children}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
 
 export default function AboutPage() {
   return (
-    <>
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-24 bg-gradient-to-br from-primary via-primary-light to-accent">
-        <Container>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              className="text-white"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold  mb-6">
-                Meet Caleigh
-              </h1>
-              <p className="text-xl text-white/90 mb-4">
-                CF Warrior. Transplant Recipient. Advocate.
-              </p>
-              <p className="text-white/80">
-                My journey with Cystic Fibrosis started at birth, but it doesnt
-                define me — it fuels me. Every challenge Ive faced has become a
-                stepping stone to help others who walk this same path.
-              </p>
-            </motion.div>
-
-            <motion.div
-              className="relative"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <div className="relative aspect-square max-w-md mx-auto rounded-2xl overflow-hidden shadow-2xl">
-                <Image
-                  src="/images/about-hero.svg"
-                  alt="Caleigh"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-            </motion.div>
-          </div>
-        </Container>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 bg-white">
-        <Container>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { number: '25+', label: 'Years Fighting CF' },
-              { number: '6', label: 'Years Post-Transplant' },
-              { number: '100+', label: 'Podcast Episodes' },
-              { number: '1000s', label: 'Lives Touched' },
-            ].map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <div className="text-4xl md:text-5xl font-bold text-primary ">
-                  {stat.number}
+    <main className="min-h-screen bg-white">
+      <section className="px-4 md:px-8 pt-32 pb-24">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
+            {/* Left: Tall Photo (sticky) */}
+            <div className="lg:col-span-2">
+              <div className="lg:sticky lg:top-32">
+                <div className="relative aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl">
+                  <Image
+                    src="/images/caleigh-portrait.jpg"
+                    alt="Caleigh Haber-Takayama"
+                    fill
+                    className="object-cover object-[center_25%]"
+                    priority
+                  />
                 </div>
-                <div className="text-muted-foreground mt-2">{stat.label}</div>
-              </motion.div>
-            ))}
+              </div>
+            </div>
+
+            {/* Right: CV Content */}
+            <div className="lg:col-span-3">
+              {/* Header */}
+              <div className="mb-12">
+                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                  Caleigh Haber-Takayama
+                </h1>
+                <p className="text-xl text-purple-600 font-medium mb-6">
+                  Patient. Builder. Advocate. Chronic Badass.
+                </p>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  I spent the first half of my life fighting to survive. Now
+                  I&apos;m building the things I wish existed when I was in the
+                  thick of it—resources, community, and a louder voice for
+                  patients in rooms where decisions get made.
+                </p>
+              </div>
+
+              {/* Role Cards */}
+              <div className="space-y-4">
+                {/* Fight2Breathe */}
+                <RoleCard
+                  icon="💜"
+                  iconBg="bg-purple-100"
+                  company="Fight2Breathe"
+                  role="Founder & CEO"
+                  roleColor="text-purple-500"
+                  summary="Fight2Breathe started as an Instagram account from my hospital bed. Now it's becoming the platform I needed when I was sick."
+                >
+                  <div className="space-y-4">
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Real information, real community, real support for chronic
+                      illness patients and the people who love them.
+                    </p>
+                    <div className="pt-2">
+                      <p className="text-xs text-gray-400 uppercase tracking-wider mb-3">
+                        Key Initiatives
+                      </p>
+                      <ul className="space-y-2 text-sm text-gray-600">
+                        <li className="flex items-start gap-2">
+                          <span className="text-purple-400 mt-1">•</span>
+                          <span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-purple-400 mt-1">•</span>
+                          <span>
+                            Sed do eiusmod tempor incididunt ut labore et dolore
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-purple-400 mt-1">•</span>
+                          <span>
+                            Ut enim ad minim veniam, quis nostrud exercitation
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </RoleCard>
+
+                {/* PRX Engage */}
+                <RoleCard
+                  icon="🔬"
+                  iconBg="bg-blue-100"
+                  company="PRX Engage"
+                  role="Brand & Content Strategy Lead"
+                  roleColor="text-blue-500"
+                  summary="PRX Engage matches patients with clinical trials. I lead brand and content strategy."
+                >
+                  <div className="space-y-4">
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Making sure the way we talk to patients actually sounds
+                      like we understand what they&apos;re going through.
+                      Because I do.
+                    </p>
+                    <div className="pt-2">
+                      <p className="text-xs text-gray-400 uppercase tracking-wider mb-3">
+                        Core Deliverables
+                      </p>
+                      <ul className="space-y-2 text-sm text-gray-600">
+                        <li className="flex items-start gap-2">
+                          <span className="text-blue-400 mt-1">•</span>
+                          <span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-blue-400 mt-1">•</span>
+                          <span>
+                            Sed do eiusmod tempor incididunt ut labore et dolore
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-blue-400 mt-1">•</span>
+                          <span>
+                            Ut enim ad minim veniam, quis nostrud exercitation
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </RoleCard>
+
+                {/* Patient Consulting */}
+                <RoleCard
+                  icon="🎯"
+                  iconBg="bg-rose-100"
+                  company="Patient Consulting"
+                  role="Patient Consultant"
+                  roleColor="text-rose-500"
+                  summary="Pharmaceutical companies, hospitals, and health startups hire me to share the patient perspective."
+                >
+                  <div className="space-y-4">
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      What it&apos;s actually like to navigate the system, make
+                      treatment decisions, and live with the consequences. I
+                      bring the voice that&apos;s usually missing from the room.
+                    </p>
+                    <div className="pt-2">
+                      <p className="text-xs text-gray-400 uppercase tracking-wider mb-3">
+                        Core Deliverables
+                      </p>
+                      <ul className="space-y-2 text-sm text-gray-600">
+                        <li className="flex items-start gap-2">
+                          <span className="text-rose-400 mt-1">•</span>
+                          <span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-rose-400 mt-1">•</span>
+                          <span>
+                            Sed do eiusmod tempor incididunt ut labore et dolore
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-rose-400 mt-1">•</span>
+                          <span>
+                            Ut enim ad minim veniam, quis nostrud exercitation
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </RoleCard>
+
+                {/* CFF BreatheCon */}
+                <RoleCard
+                  icon="🌐"
+                  iconBg="bg-green-100"
+                  company="CFF BreatheCon"
+                  role="Committee Co-Chair"
+                  roleColor="text-green-500"
+                  summary="Co-chaired the committee for CFF's annual virtual event, streaming to 500+ CF patients worldwide."
+                >
+                  <div className="space-y-4">
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Helping shape what the community needs to hear—and how
+                      they hear it.
+                    </p>
+                    <div className="pt-2">
+                      <p className="text-xs text-gray-400 uppercase tracking-wider mb-3">
+                        Core Deliverables
+                      </p>
+                      <ul className="space-y-2 text-sm text-gray-600">
+                        <li className="flex items-start gap-2">
+                          <span className="text-green-400 mt-1">•</span>
+                          <span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-green-400 mt-1">•</span>
+                          <span>
+                            Sed do eiusmod tempor incididunt ut labore et dolore
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-green-400 mt-1">•</span>
+                          <span>
+                            Ut enim ad minim veniam, quis nostrud exercitation
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </RoleCard>
+
+                {/* Speaking Engagements */}
+                <RoleCard
+                  icon="🎤"
+                  iconBg="bg-amber-100"
+                  company="Speaking"
+                  role="Conferences & Events"
+                  roleColor="text-amber-500"
+                  summary="Sharing my story at hospitals, conferences, and foundations—not to inspire, but to translate what this life is actually like."
+                >
+                  <div className="space-y-4">
+                    <div className="grid gap-4">
+                      <div className="flex items-start gap-4 p-4 bg-white rounded-xl">
+                        <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <span className="text-lg">🏥</span>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900">
+                            UCLA Health
+                          </h4>
+                          <p className="text-gray-500 text-sm">
+                            Patient Education Symposium
+                          </p>
+                          <p className="text-gray-400 text-xs mt-1">
+                            November 2018
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-4 p-4 bg-white rounded-xl">
+                        <div className="w-10 h-10 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <span className="text-lg">🎗️</span>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900">
+                            Cystic Fibrosis Foundation
+                          </h4>
+                          <p className="text-gray-500 text-sm">
+                            Beach, Brews & BBQ Gala
+                          </p>
+                          <p className="text-gray-400 text-xs mt-1">
+                            October 2018, 2019
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-4 p-4 bg-white rounded-xl">
+                        <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <span className="text-lg">🌐</span>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900">
+                            BreatheCon
+                          </h4>
+                          <p className="text-gray-500 text-sm">
+                            Virtual Conference Host
+                          </p>
+                          <p className="text-gray-400 text-xs mt-1">
+                            Committee Co-Chair
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </RoleCard>
+              </div>
+
+              {/* Work With Me CTA */}
+              <div className="mt-16 p-8 bg-purple-900 rounded-3xl text-white">
+                <h2 className="text-2xl font-bold mb-4">Work With Me</h2>
+                <p className="text-purple-200 mb-6">
+                  I consult with healthcare companies, speak at events, and
+                  advise on patient-centered content and strategy. If
+                  you&apos;re building something for patients, I can help you
+                  get it right.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button
+                    href="mailto:caleigh@fight2breathe.org"
+                    variant="primary"
+                    size="lg"
+                  >
+                    Get in Touch
+                  </Button>
+                  <Button
+                    href="https://www.instagram.com/fight2breathe"
+                    variant="secondary"
+                    size="lg"
+                    external
+                  >
+                    Follow Along
+                  </Button>
+                </div>
+              </div>
+            </div>
           </div>
-        </Container>
+        </div>
       </section>
-
-      {/* Timeline Section */}
-      <section className="py-24 bg-warm-white">
-        <Container>
-          <SectionHeading
-            title="My Journey"
-            subtitle="A timeline of milestones, challenges, and victories in the fight for every breath"
-          />
-
-          <Timeline events={timelineEvents} />
-        </Container>
-      </section>
-
-      {/* Mission Section */}
-      <section className="py-24 bg-white">
-        <Container size="md">
-          <motion.div
-            className="text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <SectionHeading
-              title="The Mission"
-              subtitle="Why I fight, and why your support matters"
-            />
-
-            <div className="prose prose-lg max-w-none text-muted-foreground">
-              <p>
-                Cystic Fibrosis affects over 30,000 people in the United States
-                alone, and many more worldwide. Its a relentless disease that
-                impacts every aspect of daily life. But within this community,
-                Ive found incredible strength, resilience, and hope.
-              </p>
-              <p>
-                Fight2Breathe exists to amplify these stories, to advocate for
-                better treatments and research funding, and to support CF warriors
-                and their families through every step of their journey.
-              </p>
-              <p>
-                Through our podcast, merchandise, and community initiatives, were
-                building a movement. A movement that says every breath matters,
-                every voice counts, and together, we can make a difference.
-              </p>
-            </div>
-
-            <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/podcast" variant="primary">
-                Listen to the Podcast
-              </Button>
-              <Button href="/connect" variant="secondary">
-                Join the Community
-              </Button>
-            </div>
-          </motion.div>
-        </Container>
-      </section>
-    </>
+    </main>
   );
 }
