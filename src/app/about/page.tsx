@@ -30,10 +30,10 @@ function RoleCard({
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
   return (
-    <div className="bg-gray-50 rounded-2xl overflow-hidden">
+    <div className="ombre-section rounded-2xl overflow-hidden">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full p-6 flex items-start gap-4 text-left hover:bg-gray-100 transition-colors"
+        className="w-full p-6 flex items-start gap-4 text-left hover:bg-white/50 transition-colors"
       >
         <div
           className={`w-12 h-12 ${iconBg} rounded-xl flex items-center justify-center flex-shrink-0`}
@@ -101,10 +101,10 @@ export default function AboutPage() {
             <div className="lg:col-span-3">
               {/* Header */}
               <div className="mb-12">
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                <h1 className="text-4xl md:text-5xl font-bold ombre-text mb-4">
                   Caleigh Haber-Takayama
                 </h1>
-                <p className="text-xl text-purple-600 font-medium mb-6">
+                <p className="text-xl ombre-text-horizontal font-medium mb-6">
                   Patient. Builder. Advocate. Chronic Badass.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed">
@@ -118,11 +118,11 @@ export default function AboutPage() {
               <div className="space-y-4">
                 {/* Fight2Breathe */}
                 <RoleCard
-                  icon="💜"
-                  iconBg="bg-purple-100"
+                  icon="💗"
+                  iconBg="ombre-bg"
                   company="Fight2Breathe"
                   role="Founder & Director"
-                  roleColor="text-purple-500"
+                  roleColor="ombre-text-horizontal"
                   summary="What began as a personal effort to survive grew into a community."
                 >
                   <p className="text-sm text-gray-600 leading-relaxed">
@@ -282,9 +282,9 @@ export default function AboutPage() {
               </div>
 
               {/* Work With Me CTA */}
-              <div className="mt-16 p-8 bg-purple-900 rounded-3xl text-white">
+              <div className="mt-16 p-8 ombre-bg rounded-3xl text-white">
                 <h2 className="text-2xl font-bold mb-4">Work With Me</h2>
-                <p className="text-purple-200 mb-6">
+                <p className="text-white/80 mb-6">
                   I consult with healthcare companies, speak at events, and
                   advise on patient-centered content and strategy. If
                   you&apos;re building something for patients, I can help you

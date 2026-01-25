@@ -4,14 +4,14 @@ export default function StoryPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Header */}
-      <header className="bg-purple-900 pt-32 pb-20 md:pt-40 md:pb-28 px-6">
+      <header className="ombre-bg pt-32 pb-20 md:pt-40 md:pb-28 px-6">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6">
             I&apos;ve been fighting
             <br />
             my whole life.
           </h1>
-          <p className="text-2xl text-purple-200 font-light">
+          <p className="text-2xl text-white/80 font-light">
             And I&apos;m not done yet.
           </p>
         </div>
@@ -36,7 +36,7 @@ export default function StoryPage() {
             </p>
 
             <div>
-              <h3 className="text-xl md:text-2xl font-semibold text-purple-900 mb-4">
+              <h3 className="text-xl md:text-2xl font-semibold ombre-text-horizontal mb-4">
                 Beyond the Diagnosis
               </h3>
               <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
@@ -58,13 +58,13 @@ export default function StoryPage() {
       </section>
 
       {/* Chapter 1 */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="py-20 md:py-28 px-6 ombre-section">
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center gap-4 mb-8">
-            <span className="text-5xl md:text-6xl font-bold text-purple-200">
+            <span className="text-5xl md:text-6xl font-bold ombre-text">
               1990
             </span>
-            <div className="h-px bg-gray-200 flex-1" />
+            <div className="h-px bg-gradient-to-r from-[#BBAAEE] to-[#F575D5] flex-1" />
           </div>
 
           <div className="space-y-6 text-lg md:text-xl text-gray-600 leading-relaxed">
@@ -90,13 +90,13 @@ export default function StoryPage() {
       </section>
 
       {/* Chapter 2 */}
-      <section className="py-20 md:py-28 px-6 bg-gray-50">
+      <section className="py-20 md:py-28 px-6 ombre-section-medium">
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center gap-4 mb-8">
-            <span className="text-5xl md:text-6xl font-bold text-purple-200">
+            <span className="text-5xl md:text-6xl font-bold ombre-text">
               2008
             </span>
-            <div className="h-px bg-gray-300 flex-1" />
+            <div className="h-px bg-gradient-to-r from-[#BBAAEE] to-[#F575D5] flex-1" />
           </div>
 
           <div className="space-y-6 text-lg md:text-xl text-gray-600 leading-relaxed">
@@ -123,7 +123,7 @@ export default function StoryPage() {
       </section>
 
       {/* Pull Quote */}
-      <section className="py-16 md:py-24 px-6 bg-purple-900">
+      <section className="py-16 md:py-24 px-6 ombre-bg">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-2xl md:text-4xl text-white font-light leading-relaxed">
             &ldquo;To people living with CF, breathing is a full-time job.
@@ -136,13 +136,13 @@ export default function StoryPage() {
       </section>
 
       {/* Chapter 3 */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="py-20 md:py-28 px-6 ombre-section">
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center gap-4 mb-8">
-            <span className="text-5xl md:text-6xl font-bold text-purple-200">
+            <span className="text-5xl md:text-6xl font-bold ombre-text">
               2013
             </span>
-            <div className="h-px bg-gray-200 flex-1" />
+            <div className="h-px bg-gradient-to-r from-[#BBAAEE] to-[#F575D5] flex-1" />
           </div>
 
           <div className="space-y-6 text-lg md:text-xl text-gray-600 leading-relaxed">
@@ -176,13 +176,13 @@ export default function StoryPage() {
       </section>
 
       {/* Chapter 4 */}
-      <section className="py-20 md:py-28 px-6 bg-gray-50">
+      <section className="py-20 md:py-28 px-6 ombre-section-medium">
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center gap-4 mb-8">
-            <span className="text-5xl md:text-6xl font-bold text-purple-200">
+            <span className="text-5xl md:text-6xl font-bold ombre-text">
               2015
             </span>
-            <div className="h-px bg-gray-300 flex-1" />
+            <div className="h-px bg-gradient-to-r from-[#BBAAEE] to-[#F575D5] flex-1" />
           </div>
 
           <div className="space-y-6 text-lg md:text-xl text-gray-600 leading-relaxed">
@@ -210,7 +210,7 @@ export default function StoryPage() {
               up. How to swallow. How to walk, talk, and piece my memory back
               together.
             </p>
-            <p className="text-xl md:text-2xl text-purple-600 font-medium">
+            <p className="text-xl md:text-2xl font-medium ombre-text-horizontal">
               I didn&apos;t just survive. I had to rebuild myself from the
               ground up.
             </p>
@@ -219,13 +219,13 @@ export default function StoryPage() {
       </section>
 
       {/* Chapter 5 */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="py-20 md:py-28 px-6 ombre-section">
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center gap-4 mb-8">
-            <span className="text-5xl md:text-6xl font-bold text-purple-200">
+            <span className="text-5xl md:text-6xl font-bold ombre-text">
               2017
             </span>
-            <div className="h-px bg-gray-200 flex-1" />
+            <div className="h-px bg-gradient-to-r from-[#BBAAEE] to-[#F575D5] flex-1" />
           </div>
 
           <div className="space-y-6 text-lg md:text-xl text-gray-600 leading-relaxed">
@@ -263,28 +263,28 @@ export default function StoryPage() {
       </section>
 
       {/* Dark Quote */}
-      <section className="py-16 md:py-24 px-6 bg-gray-900">
+      <section className="py-16 md:py-24 px-6 dark-purple-gradient">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-xl md:text-2xl text-gray-400 leading-relaxed mb-4">
+          <p className="text-xl md:text-2xl text-[#E8B8CE] leading-relaxed mb-4">
             My hospital told me I needed a second transplant.
           </p>
           <p className="text-2xl md:text-4xl text-white font-medium leading-relaxed">
             Then they told me they weren&apos;t willing to give it to me.
           </p>
-          <p className="text-xl md:text-2xl text-gray-400 leading-relaxed mt-4">
+          <p className="text-xl md:text-2xl text-[#E8B8CE] leading-relaxed mt-4">
             I was placed on hospice and discharged from care.
           </p>
         </div>
       </section>
 
       {/* Chapter 6 */}
-      <section className="py-20 md:py-28 px-6 bg-gray-50">
+      <section className="py-20 md:py-28 px-6 ombre-section-medium">
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center gap-4 mb-8">
-            <span className="text-5xl md:text-6xl font-bold text-rose-200">
+            <span className="text-5xl md:text-6xl font-bold ombre-text">
               2017
             </span>
-            <div className="h-px bg-gray-300 flex-1" />
+            <div className="h-px bg-gradient-to-r from-[#BBAAEE] to-[#F575D5] flex-1" />
           </div>
 
           <div className="space-y-6 text-lg md:text-xl text-gray-600 leading-relaxed">
@@ -306,7 +306,7 @@ export default function StoryPage() {
       </section>
 
       {/* The Quote */}
-      <section className="py-24 md:py-32 px-6 bg-purple-900">
+      <section className="py-24 md:py-32 px-6 ombre-bg">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-3xl md:text-5xl lg:text-6xl text-white font-bold leading-tight">
             &ldquo;I have been fighting my whole life, and I&apos;m not done
@@ -316,15 +316,15 @@ export default function StoryPage() {
       </section>
 
       {/* Chapter 7 */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="py-20 md:py-28 px-6 ombre-section">
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center gap-4 mb-4">
-            <span className="text-5xl md:text-6xl font-bold text-purple-200">
+            <span className="text-5xl md:text-6xl font-bold ombre-text">
               2018
             </span>
-            <div className="h-px bg-gray-200 flex-1" />
+            <div className="h-px bg-gradient-to-r from-[#BBAAEE] to-[#F575D5] flex-1" />
           </div>
-          <p className="text-xl md:text-2xl text-purple-600 font-medium mb-8">
+          <p className="text-xl md:text-2xl font-medium ombre-text-horizontal mb-8">
             A Second Chance
           </p>
 
@@ -342,7 +342,7 @@ export default function StoryPage() {
               When I woke up on June 8th, I took the first full breath I&apos;d
               taken in over a decade.
             </p>
-            <p className="text-xl md:text-2xl text-purple-600 font-medium">
+            <p className="text-xl md:text-2xl font-medium ombre-text-horizontal">
               For the first time, I could truly breathe.
             </p>
           </div>
@@ -350,13 +350,13 @@ export default function StoryPage() {
       </section>
 
       {/* Chapter 8: Now */}
-      <section className="py-20 md:py-28 px-6 bg-gray-50">
+      <section className="py-20 md:py-28 px-6 ombre-section-medium">
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center gap-4 mb-8">
-            <span className="text-5xl md:text-6xl font-bold text-purple-200">
+            <span className="text-5xl md:text-6xl font-bold ombre-text">
               Now
             </span>
-            <div className="h-px bg-gray-300 flex-1" />
+            <div className="h-px bg-gradient-to-r from-[#BBAAEE] to-[#F575D5] flex-1" />
           </div>
 
           <div className="space-y-6 text-lg md:text-xl text-gray-600 leading-relaxed">
@@ -372,7 +372,7 @@ export default function StoryPage() {
               experience illness—not in isolation, but in community. With access
               to information, support, and lived expertise from day one.
             </p>
-            <p className="text-xl md:text-2xl text-purple-600 font-medium pt-4">
+            <p className="text-xl md:text-2xl font-medium ombre-text-horizontal pt-4">
               I&apos;m building the future I once needed.
             </p>
           </div>

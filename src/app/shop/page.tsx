@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ShopifyProduct, FEATURED_HANDLES } from '@/lib/shopify';
 import { ProductModal } from '@/components/ProductModal';
+import { getProductDescription } from '@/lib/productDescriptions';
 
 export default function ShopPage() {
   const [products, setProducts] = useState<ShopifyProduct[]>([]);
@@ -51,9 +52,9 @@ export default function ShopPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-24 px-6 bg-gray-50">
+      <section className="pt-32 pb-16 md:pt-40 md:pb-24 px-6 ombre-section-medium">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-4">
+          <h1 className="text-5xl md:text-7xl font-bold ombre-text mb-4">
             Wear the Fight
           </h1>
           <p className="text-xl md:text-2xl text-gray-500 max-w-xl">
@@ -88,8 +89,17 @@ export default function ShopPage() {
                   product.priceRange.minVariantPrice.amount
                 );
 
+                const productDescription = getProductDescription(product.handle || product.title);
+
                 return (
-                  <article key={product.id} className="group relative">
+                  <article
+                    key={product.id}
+                    className="group relative"
+                    role="article"
+                    aria-label={`Product: ${product.title}. ${productDescription}`}
+                    data-product-title={product.title}
+                    data-product-description={productDescription}
+                  >
                     <button
                       onClick={() => openModal(product)}
                       className="block w-full text-left"
@@ -98,7 +108,7 @@ export default function ShopPage() {
                         {image && (
                           <Image
                             src={image.url}
-                            alt={image.altText || product.title}
+                            alt={productDescription}
                             fill
                             className="object-cover group-hover:scale-105 transition-transform duration-500"
                           />
@@ -107,14 +117,14 @@ export default function ShopPage() {
                       </div>
                       <div className="flex justify-between items-start">
                         <div>
-                          <h3 className="text-lg font-semibold text-gray-900 group-hover:text-purple-600 transition-colors">
+                          <h3 className="text-lg font-semibold text-gray-900 group-hover:text-[#E060C0] transition-colors">
                             {product.title}
                           </h3>
-                          <p className="text-gray-500 mt-1">
+                          <p className="text-gray-500 mt-1" data-product-price>
                             ${price.toFixed(0)}
                           </p>
                         </div>
-                        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-900 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#2A1A2E] text-white opacity-0 group-hover:opacity-100 transition-opacity">
                           <svg
                             className="w-4 h-4"
                             fill="none"
@@ -141,7 +151,7 @@ export default function ShopPage() {
 
       {/* Divider */}
       <div className="max-w-7xl mx-auto px-6">
-        <hr className="border-gray-200" />
+        <div className="h-px bg-gradient-to-r from-[#BBAAEE] via-[#D48AE0] to-[#F575D5]" />
       </div>
 
       {/* All Products */}
@@ -168,9 +178,17 @@ export default function ShopPage() {
                 const price = parseFloat(
                   product.priceRange.minVariantPrice.amount
                 );
+                const productDescription = getProductDescription(product.handle || product.title);
 
                 return (
-                  <article key={product.id} className="group">
+                  <article
+                    key={product.id}
+                    className="group"
+                    role="article"
+                    aria-label={`Product: ${product.title}. ${productDescription}`}
+                    data-product-title={product.title}
+                    data-product-description={productDescription}
+                  >
                     <button
                       onClick={() => openModal(product)}
                       className="block w-full text-left"
@@ -179,16 +197,16 @@ export default function ShopPage() {
                         {image && (
                           <Image
                             src={image.url}
-                            alt={image.altText || product.title}
+                            alt={productDescription}
                             fill
                             className="object-cover group-hover:scale-105 transition-transform duration-500"
                           />
                         )}
                       </div>
-                      <h3 className="text-sm font-medium text-gray-900 group-hover:text-purple-600 transition-colors">
+                      <h3 className="text-sm font-medium text-gray-900 group-hover:text-[#E060C0] transition-colors">
                         {product.title}
                       </h3>
-                      <p className="text-sm text-gray-500 mt-1">
+                      <p className="text-sm text-gray-500 mt-1" data-product-price>
                         ${price.toFixed(0)}
                       </p>
                     </button>
@@ -201,19 +219,19 @@ export default function ShopPage() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="py-20 px-6 bg-gray-900">
+      <section className="py-20 px-6 dark-purple-gradient">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             More than merch.
           </h2>
-          <p className="text-xl text-gray-400 mb-8">
+          <p className="text-xl text-[#E8B8CE] mb-8">
             Every purchase supports Fight2Breathe—building resources, community,
             and support for chronic illness patients and their families.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/story"
-              className="inline-flex items-center justify-center px-8 py-3 bg-white text-gray-900 font-medium rounded-full hover:bg-gray-100 transition-colors"
+              className="inline-flex items-center justify-center px-8 py-3 bg-white text-[#2A1A2E] font-medium rounded-full hover:bg-gray-100 transition-colors"
             >
               Read the Story
             </Link>
@@ -221,7 +239,7 @@ export default function ShopPage() {
               href="https://www.instagram.com/fight2breathe"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-3 border border-gray-700 text-white font-medium rounded-full hover:border-gray-500 transition-colors"
+              className="inline-flex items-center justify-center px-8 py-3 border border-[#6B2D5C] text-white font-medium rounded-full hover:border-[#B8709C] transition-colors"
             >
               Follow @fight2breathe
             </a>

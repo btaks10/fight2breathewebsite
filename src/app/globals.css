@@ -1,10 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  /* Primary - CF Awareness Purple */
-  --color-primary: #65428a;
-  --color-primary-light: #7d5aa3;
-  --color-primary-dark: #4d3268;
+  /* Primary - Vibrant Fuchsia */
+  --color-primary: #F575D5;
+  --color-primary-light: #F9A0E5;
+  --color-primary-dark: #E060C0;
+  --color-primary-darker: #D050B0;
+
+  /* Ombre Gradient Colors (Lavender to Pink) */
+  --color-ombre-start: #BBAAEE;
+  --color-ombre-mid: #D48AE0;
+  --color-ombre-end: #F575D5;
+
+  /* Dark Purple (for dark sections) */
+  --color-dark-purple: #2A1A2E;
+  --color-dark-purple-deep: #1E1525;
 
   /* Accent - Rose/Coral */
   --color-accent: #e8a0a0;
@@ -77,8 +87,8 @@ p {
 
 /* Selection color matching brand */
 ::selection {
-  background: #c4b5fd;
-  color: #4d3268;
+  background: #F575D5;
+  color: #4a3040;
 }
 
 /* Custom scrollbar */
@@ -193,4 +203,251 @@ p {
 /* Max width for prose/paragraphs */
 .max-w-prose {
   max-width: 65ch;
+}
+
+/* ================================
+   ACCESSIBILITY STYLES
+   ================================ */
+
+/* High Contrast Mode */
+.high-contrast {
+  --color-background: #ffffff;
+  --color-foreground: #000000;
+}
+
+.high-contrast * {
+  border-color: #000000 !important;
+}
+
+.high-contrast p,
+.high-contrast span,
+.high-contrast h1,
+.high-contrast h2,
+.high-contrast h3,
+.high-contrast h4,
+.high-contrast h5,
+.high-contrast h6,
+.high-contrast li,
+.high-contrast a {
+  color: #000000 !important;
+}
+
+.high-contrast .bg-gray-50,
+.high-contrast .bg-gray-100,
+.high-contrast .bg-white {
+  background-color: #ffffff !important;
+}
+
+.high-contrast .bg-\[\#D050B0\],
+.high-contrast .bg-gray-900,
+.high-contrast .bg-\[\#2A1A2E\],
+.high-contrast .bg-\[\#1E1525\] {
+  background-color: #000000 !important;
+}
+
+.high-contrast .bg-\[\#D050B0\] *,
+.high-contrast .bg-gray-900 *,
+.high-contrast .bg-\[\#2A1A2E\] *,
+.high-contrast .bg-\[\#1E1525\] * {
+  color: #ffffff !important;
+}
+
+/* Reduced Motion */
+.reduce-motion *,
+.reduce-motion *::before,
+.reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Dyslexia-Friendly Font */
+.dyslexia-font {
+  font-family: 'OpenDyslexic', 'Comic Sans MS', 'Arial', sans-serif !important;
+  letter-spacing: 0.05em !important;
+  word-spacing: 0.15em !important;
+  line-height: 1.8 !important;
+}
+
+.dyslexia-font * {
+  font-family: inherit !important;
+  letter-spacing: inherit !important;
+  word-spacing: inherit !important;
+}
+
+/* Color Blind Filters */
+[data-colorblind="deuteranopia"] {
+  filter: url('#deuteranopia-filter');
+}
+
+[data-colorblind="protanopia"] {
+  filter: url('#protanopia-filter');
+}
+
+[data-colorblind="tritanopia"] {
+  filter: url('#tritanopia-filter');
+}
+
+/* Ensure filters don't affect fixed elements poorly */
+[data-colorblind="deuteranopia"] .fixed,
+[data-colorblind="protanopia"] .fixed,
+[data-colorblind="tritanopia"] .fixed {
+  filter: none;
+}
+
+/* ================================
+   OMBRE GRADIENT UTILITIES
+   ================================ */
+
+/* Subtle section background - for light backgrounds */
+.ombre-section {
+  background: linear-gradient(
+    180deg,
+    rgba(187, 170, 238, 0.12) 0%,
+    rgba(212, 138, 224, 0.12) 50%,
+    rgba(245, 117, 213, 0.12) 100%
+  );
+}
+
+/* Medium intensity section background */
+.ombre-section-medium {
+  background: linear-gradient(
+    180deg,
+    rgba(187, 170, 238, 0.2) 0%,
+    rgba(212, 138, 224, 0.2) 50%,
+    rgba(245, 117, 213, 0.2) 100%
+  );
+}
+
+/* Strong section background - for featured areas */
+.ombre-section-strong {
+  background: linear-gradient(
+    180deg,
+    rgba(187, 170, 238, 0.35) 0%,
+    rgba(212, 138, 224, 0.35) 50%,
+    rgba(245, 117, 213, 0.35) 100%
+  );
+}
+
+/* Full opacity gradient background */
+.ombre-bg {
+  background: linear-gradient(
+    180deg,
+    #BBAAEE 0%,
+    #C7A0E8 15%,
+    #D090E2 30%,
+    #DA85DD 45%,
+    #E47CD9 60%,
+    #EE76D7 80%,
+    #F575D5 100%
+  );
+}
+
+/* Gradient text effect */
+.ombre-text {
+  background: linear-gradient(180deg, #BBAAEE 0%, #D48AE0 50%, #F575D5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Horizontal gradient text */
+.ombre-text-horizontal {
+  background: linear-gradient(90deg, #BBAAEE 0%, #D48AE0 50%, #F575D5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gradient left border */
+.ombre-border-left {
+  position: relative;
+}
+
+.ombre-border-left::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #BBAAEE 0%, #D48AE0 50%, #F575D5 100%);
+  border-radius: 2px;
+}
+
+/* Gradient bottom border */
+.ombre-border-bottom {
+  position: relative;
+}
+
+.ombre-border-bottom::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #BBAAEE 0%, #D48AE0 50%, #F575D5 100%);
+}
+
+/* Card with gradient border */
+.ombre-card-border {
+  position: relative;
+  background: white;
+}
+
+.ombre-card-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  background: linear-gradient(180deg, #BBAAEE 0%, #D48AE0 50%, #F575D5 100%);
+  border-radius: inherit;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Button with ombre gradient */
+.ombre-button {
+  background: linear-gradient(180deg, #BBAAEE 0%, #D48AE0 50%, #F575D5 100%);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.ombre-button:hover {
+  background: linear-gradient(180deg, #A899DD 0%, #C47AD0 50%, #E565C5 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(245, 117, 213, 0.3);
+}
+
+/* Horizontal button gradient */
+.ombre-button-horizontal {
+  background: linear-gradient(90deg, #BBAAEE 0%, #D48AE0 50%, #F575D5 100%);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.ombre-button-horizontal:hover {
+  background: linear-gradient(90deg, #A899DD 0%, #C47AD0 50%, #E565C5 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(245, 117, 213, 0.3);
+}
+
+/* ================================
+   DARK PURPLE BACKGROUNDS
+   ================================ */
+
+/* Dark wine purple solid background */
+.dark-purple-bg {
+  background-color: #2A1A2E;
+}
+
+/* Dark purple with subtle gradient for depth */
+.dark-purple-gradient {
+  background: linear-gradient(180deg, #2A1A2E 0%, #1E1525 100%);
 }

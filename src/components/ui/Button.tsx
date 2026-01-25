@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils';
 
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'ghost' | 'dark';
+  variant?: 'primary' | 'secondary' | 'ghost' | 'dark' | 'ombre';
   size?: 'sm' | 'default' | 'lg';
   href?: string;
   onClick?: () => void;
@@ -28,10 +28,11 @@ export function Button({
   const baseStyles = 'inline-flex items-center justify-center font-semibold transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none cursor-pointer';
 
   const variants = {
-    primary: 'bg-rose-400 text-white hover:bg-rose-500 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 active:shadow-md shadow-md focus:ring-rose-400',
+    primary: 'bg-[#6B2D5C] text-white hover:bg-[#5D2751] hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 active:shadow-md shadow-md focus:ring-[#6B2D5C]',
     secondary: 'bg-transparent text-white border-2 border-white/40 hover:border-white hover:bg-white/10 focus:ring-white',
     ghost: 'bg-white/10 text-white hover:bg-white/20 focus:ring-white',
-    dark: 'bg-purple-900 text-white hover:bg-purple-800 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 shadow-md focus:ring-purple-900',
+    dark: 'bg-[#D050B0] text-white hover:bg-[#E060C0] hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 shadow-md focus:ring-[#D050B0]',
+    ombre: 'ombre-button hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 shadow-md focus:ring-[#D48AE0]',
   };
 
   const sizes = {

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ShopifyProduct, getCheckoutUrl } from '@/lib/shopify';
+import { getProductDescription } from '@/lib/productDescriptions';
 
 interface ProductModalProps {
   product: ShopifyProduct | null;
@@ -25,6 +26,7 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
   const image = product.images.edges[0]?.node;
   const hasMultipleVariants = variants.length > 1;
   const defaultVariant = variants[0];
+  const productDescription = getProductDescription(product.handle || product.title);
 
   const currentVariant = selectedVariant
     ? variants.find((v) => v.id === selectedVariant)
@@ -58,6 +60,9 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             className="fixed inset-4 md:inset-auto md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:max-w-2xl md:w-full bg-white rounded-2xl shadow-2xl z-50 overflow-hidden"
+            role="dialog"
+            aria-modal="true"
+            aria-label={`Product details: ${product.title}. ${productDescription}`}
           >
             <div className="flex flex-col md:flex-row max-h-[90vh] md:max-h-[80vh]">
               {/* Image */}
@@ -65,7 +70,7 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
                 {image && (
                   <Image
                     src={image.url}
-                    alt={image.altText || product.title}
+                    alt={productDescription}
                     fill
                     className="object-cover"
                   />
@@ -122,7 +127,7 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
                           disabled={!variant.availableForSale}
                           className={`px-4 py-2 text-sm font-medium rounded-lg border transition-all ${
                             selectedVariant === variant.id
-                              ? 'border-purple-600 bg-purple-600 text-white'
+                              ? 'border-[#F575D5] bg-[#F575D5] text-gray-900'
                               : variant.availableForSale
                                 ? 'border-gray-300 text-gray-900 hover:border-gray-400'
                                 : 'border-gray-200 text-gray-300 cursor-not-allowed line-through'
@@ -142,7 +147,7 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
                     disabled={!canBuy}
                     className={`w-full py-3 px-6 rounded-full font-medium transition-colors ${
                       canBuy
-                        ? 'bg-gray-900 text-white hover:bg-gray-800'
+                        ? 'bg-[#2A1A2E] text-white hover:bg-[#3D2240]'
                         : 'bg-gray-200 text-gray-400 cursor-not-allowed'
                     }`}
                   >

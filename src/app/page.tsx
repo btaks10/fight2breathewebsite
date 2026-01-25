@@ -32,9 +32,12 @@ export default function HomePage() {
           <p className="text-white/80 text-sm md:text-base font-medium tracking-widest uppercase mb-4">
             Fight2Breathe
           </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white max-w-3xl leading-tight">
-            Breathing is a full-time job. It turned survival into purpose.
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white whitespace-nowrap">
+            Breathing is a full-time job.
           </h1>
+          <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white whitespace-nowrap mt-1 md:mt-2">
+            It turned survival into purpose.
+          </p>
         </motion.div>
 
         {/* Scroll indicator */}
@@ -80,7 +83,7 @@ export default function HomePage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold ombre-text mb-8">
               I&apos;m Caleigh
             </h2>
 
@@ -91,8 +94,14 @@ export default function HomePage() {
               <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
                 I&apos;ve spent more years inside hospitals, than home. I&apos;ve undergone two double-lung transplants. I&apos;ve been told more than once that I wouldn&apos;t survive.
               </p>
+              <p className="text-2xl md:text-3xl font-bold text-gray-900">
+                I did.
+              </p>
               <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-                I did. I&apos;m still here because I learned early how to fight for my life, my care, and my voice. Fight2Breathe began as survival. It became purpose. And today, it exists so no one navigating illness has to do it alone.
+                I&apos;m still here because I learned early how to fight for my
+                life, my care, and my voice. Fight2Breathe began as survival. It
+                became purpose. And today, it exists so no one navigating
+                illness has to do it alone.
               </p>
             </div>
 
@@ -106,7 +115,7 @@ export default function HomePage() {
       </section>
 
       {/* Pull Quote */}
-      <section className="py-24 md:py-32 lg:py-40 px-8 bg-purple-900">
+      <section className="py-24 md:py-32 lg:py-40 px-8 ombre-bg">
         <motion.blockquote
           className="max-w-4xl mx-auto text-center"
           initial={{ opacity: 0, y: 30 }}
@@ -133,7 +142,7 @@ export default function HomePage() {
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-purple-900/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#BBAAEE]/85 via-[#D48AE0]/85 to-[#F575D5]/85" />
         </div>
 
         {/* Content */}
@@ -145,7 +154,7 @@ export default function HomePage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-purple-300 text-sm font-medium tracking-widest uppercase mb-4">
+            <p className="text-[#F9A0E5] text-sm font-medium tracking-widest uppercase mb-4">
               The Podcast
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -214,7 +223,7 @@ export default function HomePage() {
       </section>
 
       {/* CHAPTER 5: Join the Fight */}
-      <section className="py-24 md:py-32 bg-white">
+      <section className="py-24 md:py-32 ombre-section">
         <div className="container mx-auto px-8">
           <motion.div
             className="text-center mb-16"
@@ -223,7 +232,7 @@ export default function HomePage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Join the Fight</h2>
+            <h2 className="text-3xl md:text-4xl font-bold ombre-text mb-4">Join the Fight</h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Awareness. Research. Community. Every action matters.
             </p>
@@ -233,7 +242,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Shop */}
             <motion.div
-              className="bg-gray-50 rounded-3xl p-8 text-center"
+              className="ombre-section-medium rounded-3xl p-8 text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -251,7 +260,7 @@ export default function HomePage() {
 
             {/* Connect */}
             <motion.div
-              className="bg-purple-900 rounded-3xl p-8 text-center"
+              className="ombre-bg rounded-3xl p-8 text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -259,7 +268,7 @@ export default function HomePage() {
               whileHover={{ y: -5 }}
             >
               <h3 className="text-2xl font-bold text-white mb-4">Stay Connected</h3>
-              <p className="text-purple-200 mb-6">
+              <p className="text-white/80 mb-6">
                 This is where I share the real stuff. The good days and the hard ones.
               </p>
               <Button href="https://www.instagram.com/fight2breathe" variant="primary" external>

@@ -29,7 +29,7 @@ export default async function PodcastPage() {
 
             {/* Info */}
             <div className="text-center md:text-left">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              <h1 className="text-4xl md:text-5xl font-bold ombre-text mb-4">
                 Our Fight to Breathe
               </h1>
               <p className="text-xl text-gray-600 mb-6 max-w-lg">
@@ -100,7 +100,7 @@ export default async function PodcastPage() {
       </section>
 
       {/* Episodes */}
-      <section className="py-10 md:py-16 px-6 bg-gray-50">
+      <section className="py-10 md:py-16 px-6 ombre-section">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-sm font-medium text-gray-400 uppercase tracking-wider mb-12">
             Latest Episodes
@@ -131,7 +131,7 @@ export default async function PodcastPage() {
 
                   {/* Episode Info */}
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-lg font-semibold text-gray-900 group-hover:text-purple-600 transition-colors line-clamp-1">
+                    <h3 className="text-lg font-semibold text-gray-900 group-hover:text-[#E060C0] transition-colors line-clamp-1">
                       {episode.title}
                     </h3>
                     <p className="text-gray-500 text-sm mt-1 line-clamp-2">
@@ -146,7 +146,7 @@ export default async function PodcastPage() {
 
                   {/* Listen Button */}
                   <div className="flex-shrink-0 self-center">
-                    <span className="inline-flex items-center gap-2 px-4 py-2 bg-purple-600 text-white text-sm font-medium rounded-full group-hover:bg-purple-700 transition-colors">
+                    <span className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#BBAAEE] to-[#F575D5] text-white text-sm font-medium rounded-full group-hover:from-[#A899DD] group-hover:to-[#E060C0] transition-all">
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M8 5v14l11-7z" />
                       </svg>
@@ -165,7 +165,7 @@ export default async function PodcastPage() {
                 href="https://feeds.transistor.fm/our-fight-to-breathe-a-cystic-fibrosis-podcast"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-purple-600 font-medium hover:text-purple-700"
+                className="text-[#E060C0] font-medium hover:text-[#D050B0]"
               >
                 View episodes on Transistor
               </a>
@@ -179,7 +179,7 @@ export default async function PodcastPage() {
                 href="https://feeds.transistor.fm/our-fight-to-breathe-a-cystic-fibrosis-podcast"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-purple-600 font-medium hover:text-purple-700"
+                className="inline-flex items-center gap-2 text-[#E060C0] font-medium hover:text-[#D050B0]"
               >
                 View all episodes
                 <svg

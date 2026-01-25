@@ -121,7 +121,7 @@ export function Header() {
                       key={link.href}
                       href={link.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="block text-3xl font-semibold text-gray-900 hover:text-purple-600 transition-colors"
+                      className="block text-3xl font-semibold text-gray-900 hover:text-[#E060C0] transition-colors"
                     >
                       {link.label}
                     </Link>

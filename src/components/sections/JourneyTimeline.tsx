@@ -90,7 +90,7 @@ export function JourneyTimeline() {
   const currentImage = milestones[activeIndex]?.image;
 
   return (
-    <section className="relative bg-gray-50">
+    <section className="relative ombre-section">
       {/* Section Header */}
       <div className="py-24 text-center px-8">
         <motion.div
@@ -99,7 +99,7 @@ export function JourneyTimeline() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">The Journey</h2>
+          <h2 className="text-4xl md:text-5xl font-bold ombre-text mb-4">The Journey</h2>
           <p className="text-gray-600 text-xl max-w-xl mx-auto">
             A life measured not in years, but in fights won.
           </p>
@@ -161,7 +161,7 @@ export function JourneyTimeline() {
                 </div>
 
                 <div className="max-w-lg">
-                  <span className="text-7xl md:text-8xl lg:text-9xl font-bold text-purple-200/70">
+                  <span className="text-7xl md:text-8xl lg:text-9xl font-bold ombre-text opacity-70">
                     {milestone.year}
                   </span>
                   <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mt-4 mb-6">
@@ -172,7 +172,7 @@ export function JourneyTimeline() {
                   </p>
                   {milestone.showButton && (
                     <div className="mt-10">
-                      <Button href="/about" variant="dark" size="lg">
+                      <Button href="/about" variant="ombre" size="lg">
                         See What I&apos;m Building Now
                       </Button>
                     </div>
