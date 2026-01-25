@@ -126,7 +126,7 @@ export default function AboutPage() {
                   roleColor="text-purple-500"
                   summary="What started as a personal Instagram account became something bigger."
                 >
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-sm text-gray-600 leading-relaxed">
                     Today, Fight2Breathe reaches over 100,000 people across platforms — patients, caregivers, and healthcare professionals looking for real information and real connection. I build resources, create content, and try to make the chronic illness experience a little less isolating.
                   </p>
                 </RoleCard>
@@ -140,7 +140,7 @@ export default function AboutPage() {
                   roleColor="text-blue-500"
                   summary="Aligning external presence with internal mission."
                 >
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-sm text-gray-600 leading-relaxed">
                     I worked with PRX to align their external presence with their internal mission. That meant auditing their marketing and social strategy, helping launch and manage an ambassador program, and creating educational content that actually sounds like people — not institutions. I write articles, blogs, and their newsletter to bring the mission closer to the people it serves.
                   </p>
                 </RoleCard>
@@ -154,7 +154,7 @@ export default function AboutPage() {
                   roleColor="text-rose-500"
                   summary="Pharmaceutical companies, hospitals, and health startups hire me to share the patient perspective."
                 >
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-sm text-gray-600 leading-relaxed">
                     What it&apos;s actually like to navigate the system, make treatment decisions, and live with the consequences. I bring the voice that&apos;s usually missing from the room — helping organizations understand what patients need, not just what they think patients need.
                   </p>
                 </RoleCard>
@@ -168,7 +168,7 @@ export default function AboutPage() {
                   roleColor="text-green-500"
                   summary="A multi-day conference built by and for the CF community."
                 >
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-sm text-gray-600 leading-relaxed">
                     BreatheCon is a multi-day conference built by and for the CF community. I co-led a team of 20 to bring together 500+ attendees, coordinating with the Cystic Fibrosis Foundation to make sure the event reflected what the community actually needed — not just what looked good on paper.
                   </p>
                 </RoleCard>
