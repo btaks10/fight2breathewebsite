@@ -67,7 +67,7 @@ export default async function PodcastPage() {
                   <Image src="/images/amazon.jpeg" alt="Amazon Music" width={32} height={32} className="rounded w-8 h-8 object-cover" />
                 </a>
                 <a
-                  href="https://pca.st/YOUR_POCKETCASTS_ID"
+                  href="https://pca.st/itunes/1820255519"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="opacity-60 hover:opacity-100 transition-opacity"
@@ -76,7 +76,7 @@ export default async function PodcastPage() {
                   <Image src="/images/pocketcast.jpeg" alt="Pocket Casts" width={32} height={32} className="rounded w-8 h-8 object-cover" />
                 </a>
                 <a
-                  href="https://podcastaddict.com/podcast/YOUR_PODCAST_ADDICT_ID"
+                  href="https://podcastaddict.com/podcast/our-fight-to-breathe-a-cystic-fibrosis-podcast/5211464"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="opacity-60 hover:opacity-100 transition-opacity"
@@ -85,7 +85,7 @@ export default async function PodcastPage() {
                   <Image src="/images/podcastaddict.jpeg" alt="Podcast Addict" width={32} height={32} className="rounded w-8 h-8 object-cover" />
                 </a>
                 <a
-                  href="https://www.deezer.com/show/YOUR_DEEZER_ID"
+                  href="https://www.deezer.com/show/1001960731"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="opacity-60 hover:opacity-100 transition-opacity"
