@@ -242,7 +242,7 @@ export default function StoryPage() {
               alt="2017 - Our wedding day"
               width={600}
               height={800}
-              className="rounded-xl object-cover rotate-[-90deg]"
+              className="rounded-xl object-cover"
             />
           </div>
 
