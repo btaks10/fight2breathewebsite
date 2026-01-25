@@ -11,7 +11,13 @@ export function Footer() {
             <h3 className="text-2xl font-bold mb-2">Fight2Breathe</h3>
             <p className="text-gray-400">Every breath is worth fighting for.</p>
           </div>
-          <div className="flex gap-6">
+          <div className="flex gap-6 flex-wrap">
+            <a
+              href="mailto:caleigh@fight2breathe.org"
+              className="text-gray-400 hover:text-white transition-colors"
+            >
+              Email
+            </a>
             <a
               href="https://www.instagram.com/fight2breathe"
               target="_blank"

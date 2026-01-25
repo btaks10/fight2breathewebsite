@@ -84,7 +84,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
             {/* Left: Tall Photo (sticky) */}
             <div className="lg:col-span-2">
-              <div className="lg:sticky lg:top-32">
+              <div className="lg:sticky lg:top-32 mt-8 md:mt-12">
                 <div className="relative aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl">
                   <Image
                     src="/images/caleigh-portrait.jpg"
