@@ -2,6 +2,10 @@ import { getProducts } from '@/lib/shopify';
 import { NextResponse } from 'next/server';
 
 export async function GET() {
+  console.log('API route called');
+  console.log('SHOPIFY_DOMAIN:', process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN);
+  console.log('TOKEN exists:', !!process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN);
+
   try {
     // Check if environment variables exist
     if (!process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN || !process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN) {
@@ -10,9 +14,10 @@ export async function GET() {
     }
 
     const products = await getProducts();
+    console.log('Products fetched:', products.length);
     return NextResponse.json(products || []);
   } catch (error) {
     console.error('Error fetching products:', error);
-    return NextResponse.json([], { status: 200 }); // Return empty array instead of 500
+    return NextResponse.json([], { status: 200 });
   }
 }
