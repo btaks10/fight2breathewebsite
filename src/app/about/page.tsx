@@ -122,86 +122,27 @@ export default function AboutPage() {
                   icon="💜"
                   iconBg="bg-purple-100"
                   company="Fight2Breathe"
-                  role="Founder & CEO"
+                  role="Founder & Director"
                   roleColor="text-purple-500"
-                  summary="Fight2Breathe started as an Instagram account from my hospital bed. Now it's becoming the platform I needed when I was sick."
+                  summary="What started as a personal Instagram account became something bigger."
                 >
-                  <div className="space-y-4">
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      Real information, real community, real support for chronic
-                      illness patients and the people who love them.
-                    </p>
-                    <div className="pt-2">
-                      <p className="text-xs text-gray-400 uppercase tracking-wider mb-3">
-                        Key Initiatives
-                      </p>
-                      <ul className="space-y-2 text-sm text-gray-600">
-                        <li className="flex items-start gap-2">
-                          <span className="text-purple-400 mt-1">•</span>
-                          <span>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-purple-400 mt-1">•</span>
-                          <span>
-                            Sed do eiusmod tempor incididunt ut labore et dolore
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-purple-400 mt-1">•</span>
-                          <span>
-                            Ut enim ad minim veniam, quis nostrud exercitation
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+                  <p className="text-gray-600 leading-relaxed">
+                    Today, Fight2Breathe reaches over 100,000 people across platforms — patients, caregivers, and healthcare professionals looking for real information and real connection. I build resources, create content, and try to make the chronic illness experience a little less isolating.
+                  </p>
                 </RoleCard>
 
-                {/* PRX Engage */}
+                {/* PRX (Patient Revolution) */}
                 <RoleCard
                   icon="🔬"
                   iconBg="bg-blue-100"
-                  company="PRX Engage"
-                  role="Brand & Content Strategy Lead"
+                  company="PRX (Patient Revolution)"
+                  role="Consultant"
                   roleColor="text-blue-500"
-                  summary="PRX Engage matches patients with clinical trials. I lead brand and content strategy."
+                  summary="Aligning external presence with internal mission."
                 >
-                  <div className="space-y-4">
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      Making sure the way we talk to patients actually sounds
-                      like we understand what they&apos;re going through.
-                      Because I do.
-                    </p>
-                    <div className="pt-2">
-                      <p className="text-xs text-gray-400 uppercase tracking-wider mb-3">
-                        Core Deliverables
-                      </p>
-                      <ul className="space-y-2 text-sm text-gray-600">
-                        <li className="flex items-start gap-2">
-                          <span className="text-blue-400 mt-1">•</span>
-                          <span>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-blue-400 mt-1">•</span>
-                          <span>
-                            Sed do eiusmod tempor incididunt ut labore et dolore
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-blue-400 mt-1">•</span>
-                          <span>
-                            Ut enim ad minim veniam, quis nostrud exercitation
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+                  <p className="text-gray-600 leading-relaxed">
+                    I worked with PRX to align their external presence with their internal mission. That meant auditing their marketing and social strategy, helping launch and manage an ambassador program, and creating educational content that actually sounds like people — not institutions. I write articles, blogs, and their newsletter to bring the mission closer to the people it serves.
+                  </p>
                 </RoleCard>
 
                 {/* Patient Consulting */}
@@ -213,82 +154,23 @@ export default function AboutPage() {
                   roleColor="text-rose-500"
                   summary="Pharmaceutical companies, hospitals, and health startups hire me to share the patient perspective."
                 >
-                  <div className="space-y-4">
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      What it&apos;s actually like to navigate the system, make
-                      treatment decisions, and live with the consequences. I
-                      bring the voice that&apos;s usually missing from the room.
-                    </p>
-                    <div className="pt-2">
-                      <p className="text-xs text-gray-400 uppercase tracking-wider mb-3">
-                        Core Deliverables
-                      </p>
-                      <ul className="space-y-2 text-sm text-gray-600">
-                        <li className="flex items-start gap-2">
-                          <span className="text-rose-400 mt-1">•</span>
-                          <span>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-rose-400 mt-1">•</span>
-                          <span>
-                            Sed do eiusmod tempor incididunt ut labore et dolore
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-rose-400 mt-1">•</span>
-                          <span>
-                            Ut enim ad minim veniam, quis nostrud exercitation
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+                  <p className="text-gray-600 leading-relaxed">
+                    What it&apos;s actually like to navigate the system, make treatment decisions, and live with the consequences. I bring the voice that&apos;s usually missing from the room — helping organizations understand what patients need, not just what they think patients need.
+                  </p>
                 </RoleCard>
 
-                {/* CFF BreatheCon */}
+                {/* BreatheCon */}
                 <RoleCard
                   icon="🌐"
                   iconBg="bg-green-100"
-                  company="CFF BreatheCon"
-                  role="Committee Co-Chair"
+                  company="BreatheCon"
+                  role="Co-Organizer"
                   roleColor="text-green-500"
-                  summary="Co-chaired the committee for CFF's annual virtual event, streaming to 500+ CF patients worldwide."
+                  summary="A multi-day conference built by and for the CF community."
                 >
-                  <div className="space-y-4">
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      Helping shape what the community needs to hear—and how
-                      they hear it.
-                    </p>
-                    <div className="pt-2">
-                      <p className="text-xs text-gray-400 uppercase tracking-wider mb-3">
-                        Core Deliverables
-                      </p>
-                      <ul className="space-y-2 text-sm text-gray-600">
-                        <li className="flex items-start gap-2">
-                          <span className="text-green-400 mt-1">•</span>
-                          <span>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-green-400 mt-1">•</span>
-                          <span>
-                            Sed do eiusmod tempor incididunt ut labore et dolore
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-green-400 mt-1">•</span>
-                          <span>
-                            Ut enim ad minim veniam, quis nostrud exercitation
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+                  <p className="text-gray-600 leading-relaxed">
+                    BreatheCon is a multi-day conference built by and for the CF community. I co-led a team of 20 to bring together 500+ attendees, coordinating with the Cystic Fibrosis Foundation to make sure the event reflected what the community actually needed — not just what looked good on paper.
+                  </p>
                 </RoleCard>
 
                 {/* Speaking Engagements */}

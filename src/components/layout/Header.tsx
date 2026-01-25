@@ -113,7 +113,10 @@ export function Header() {
               {/* Navigation links - centered and large */}
               <nav className="flex-1 flex flex-col justify-center">
                 <div className="space-y-6">
-                  {navLinks.map((link) => (
+                  {[
+                    { href: '/', label: 'Home' },
+                    ...navLinks,
+                  ].map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
