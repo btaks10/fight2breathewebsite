@@ -21,11 +21,11 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/images/f2b-logo.jpeg"
+            src="/images/f2b-logo.svg"
             alt="Fight2Breathe"
             width={150}
             height={40}
-            className="h-8 md:h-10 w-auto object-contain mix-blend-multiply"
+            className="h-8 md:h-10 w-auto"
           />
         </Link>
 
