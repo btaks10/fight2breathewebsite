@@ -217,7 +217,7 @@ export default function ShopPage() {
               Read the Story
             </Link>
             <a
-              href="https://instagram.com/fight2breathe"
+              href="https://www.instagram.com/fight2breathe"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-3 border border-gray-700 text-white font-medium rounded-full hover:border-gray-500 transition-colors"

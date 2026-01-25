@@ -5,12 +5,12 @@ import Image from 'next/image';
 import { Button } from '../ui';
 
 const instagramPosts = [
-  { id: 1, image: '/images/instagram-1.svg', href: 'https://instagram.com/fight2breathe' },
-  { id: 2, image: '/images/instagram-2.svg', href: 'https://instagram.com/fight2breathe' },
-  { id: 3, image: '/images/instagram-3.svg', href: 'https://instagram.com/fight2breathe' },
-  { id: 4, image: '/images/instagram-4.svg', href: 'https://instagram.com/fight2breathe' },
-  { id: 5, image: '/images/instagram-5.svg', href: 'https://instagram.com/fight2breathe' },
-  { id: 6, image: '/images/instagram-6.svg', href: 'https://instagram.com/fight2breathe' },
+  { id: 1, image: '/images/instagram-1.svg', href: 'https://www.instagram.com/fight2breathe' },
+  { id: 2, image: '/images/instagram-2.svg', href: 'https://www.instagram.com/fight2breathe' },
+  { id: 3, image: '/images/instagram-3.svg', href: 'https://www.instagram.com/fight2breathe' },
+  { id: 4, image: '/images/instagram-4.svg', href: 'https://www.instagram.com/fight2breathe' },
+  { id: 5, image: '/images/instagram-5.svg', href: 'https://www.instagram.com/fight2breathe' },
+  { id: 6, image: '/images/instagram-6.svg', href: 'https://www.instagram.com/fight2breathe' },
 ];
 
 export function InstagramSection() {
@@ -69,7 +69,7 @@ export function InstagramSection() {
           transition={{ delay: 0.3 }}
         >
           <Button
-            href="https://instagram.com/fight2breathe"
+            href="https://www.instagram.com/fight2breathe"
             external
             variant="dark"
             className="inline-flex items-center gap-2"

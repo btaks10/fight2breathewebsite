@@ -28,6 +28,14 @@ export function Footer() {
             >
               TikTok
             </a>
+            <a
+              href="https://www.linkedin.com/in/caleighhabert/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white transition-colors"
+            >
+              LinkedIn
+            </a>
             <Link
               href="/podcast"
               className="text-gray-400 hover:text-white transition-colors"
