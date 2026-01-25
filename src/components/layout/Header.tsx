@@ -74,27 +74,79 @@ export function Header() {
         </button>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden overflow-hidden bg-white"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-50 md:hidden"
           >
-            <div className="py-4 px-6 flex flex-col gap-2">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm font-medium py-3 px-2 rounded-lg text-gray-900 hover:bg-gray-100 transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.label}
+            {/* Background */}
+            <div className="absolute inset-0 bg-white" />
+
+            {/* Menu content */}
+            <div className="relative h-full flex flex-col px-6 py-8">
+              {/* Header with logo and close button */}
+              <div className="flex items-center justify-between mb-12">
+                <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Image
+                    src="/images/f2b-logo.svg"
+                    alt="Fight2Breathe"
+                    width={150}
+                    height={45}
+                    className="h-10 w-auto"
+                  />
                 </Link>
-              ))}
+                <button
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+                >
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Navigation links - centered and large */}
+              <nav className="flex-1 flex flex-col justify-center">
+                <div className="space-y-6">
+                  {navLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="block text-3xl font-semibold text-gray-900 hover:text-purple-600 transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </nav>
+
+              {/* Footer with social links */}
+              <div className="pt-8 border-t border-gray-200">
+                <div className="flex items-center gap-6">
+                  <a
+                    href="https://www.instagram.com/fight2breathe"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-500 hover:text-gray-900 transition-colors"
+                  >
+                    Instagram
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/caleighhabert/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-500 hover:text-gray-900 transition-colors"
+                  >
+                    LinkedIn
+                  </a>
+                </div>
+              </div>
             </div>
           </motion.div>
         )}
