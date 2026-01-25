@@ -8,11 +8,7 @@ const navLinks = [
   { href: '/story', label: 'Story' },
   { href: '/about', label: 'Work' },
   { href: '/podcast', label: 'Podcast' },
-  {
-    href: 'https://www.fight2breathe.org/collections/all',
-    label: 'Shop',
-    external: true,
-  },
+  { href: '/shop', label: 'Shop' },
 ];
 
 export function Header() {
@@ -46,27 +42,15 @@ export function Header() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) =>
-            link.external ? (
-              <a
-                key={link.href}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
-              >
-                {link.label}
-              </a>
-            ) : (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
-              >
-                {link.label}
-              </Link>
-            )
-          )}
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
         </div>
 
         {/* Mobile Menu Button */}
@@ -111,29 +95,16 @@ export function Header() {
             className="md:hidden overflow-hidden bg-white"
           >
             <div className="py-4 px-6 flex flex-col gap-2">
-              {navLinks.map((link) =>
-                link.external ? (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm font-medium py-3 px-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {link.label}
-                  </a>
-                ) : (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="text-sm font-medium py-3 px-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
-                )
-              )}
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm font-medium py-3 px-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
           </motion.div>
         )}
