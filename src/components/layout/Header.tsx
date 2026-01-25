@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const navLinks = [
   { href: '/story', label: 'Story' },
@@ -19,9 +20,13 @@ export function Header() {
       <nav className="flex items-center justify-between p-6">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <span className="text-xl font-bold tracking-tight text-gray-900">
-            Fight2Breathe
-          </span>
+          <Image
+            src="/images/f2b-logo.jpeg"
+            alt="Fight2Breathe"
+            width={150}
+            height={40}
+            className="h-8 md:h-10 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop Navigation */}
