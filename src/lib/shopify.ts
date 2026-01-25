@@ -118,20 +118,30 @@ const productsQuery = `
 `;
 
 export async function getProducts(): Promise<ShopifyProduct[]> {
-  const data = await shopifyFetch<{
-    products: { edges: Array<{ node: ShopifyProduct }> };
-  }>({
-    query: productsQuery,
-  });
+  try {
+    const data = await shopifyFetch<{
+      products: { edges: Array<{ node: ShopifyProduct }> };
+    }>({
+      query: productsQuery,
+    });
 
-  // Filter out gift cards
-  return data.products.edges
-    .map((edge) => edge.node)
-    .filter(
-      (product) =>
-        !product.title.toLowerCase().includes('gift') &&
-        !product.productType?.toLowerCase().includes('gift')
-    );
+    if (!data?.products?.edges) {
+      console.error('No products data returned');
+      return [];
+    }
+
+    // Filter out gift cards
+    return data.products.edges
+      .map((edge) => edge.node)
+      .filter(
+        (product) =>
+          !product.title.toLowerCase().includes('gift') &&
+          !product.productType?.toLowerCase().includes('gift')
+      );
+  } catch (error) {
+    console.error('Shopify fetch error:', error);
+    return [];
+  }
 }
 
 export function getCheckoutUrl(variantId: string, quantity: number = 1): string {
