@@ -1,260 +1,239 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { getProducts, getCheckoutUrl, type ShopifyProduct } from '@/lib/shopify';
-import { Button } from '@/components/ui/Button';
-
-function ProductCard({ product, index }: { product: ShopifyProduct; index: number }) {
-  const image = product.images.edges[0]?.node;
-  const price = parseFloat(product.priceRange.minVariantPrice.amount);
-  const variantId = product.variants.edges[0]?.node.id;
-
-  return (
-    <motion.div
-      className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-50px' }}
-      transition={{ duration: 0.5, delay: index * 0.05 }}
-    >
-      {/* Product Image */}
-      <div className="relative aspect-square bg-gray-100 overflow-hidden">
-        {image ? (
-          <Image
-            src={image.url}
-            alt={image.altText || product.title}
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
-          />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center text-gray-400">
-            No image
-          </div>
-        )}
-      </div>
-
-      {/* Product Info */}
-      <div className="p-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
-          {product.title}
-        </h3>
-        <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-          {product.description}
-        </p>
-        <div className="flex items-center justify-between">
-          <span className="text-xl font-bold text-purple-600">
-            ${price.toFixed(2)}
-          </span>
-          {variantId && (
-            <a
-              href={getCheckoutUrl(variantId)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 bg-purple-600 text-white text-sm font-medium rounded-lg hover:bg-purple-700 transition-colors"
-            >
-              Buy Now
-            </a>
-          )}
-        </div>
-      </div>
-    </motion.div>
-  );
-}
-
-function ProductSkeleton() {
-  return (
-    <div className="bg-white rounded-2xl overflow-hidden shadow-sm animate-pulse">
-      <div className="aspect-square bg-gray-200" />
-      <div className="p-6 space-y-4">
-        <div className="h-5 bg-gray-200 rounded w-3/4" />
-        <div className="h-4 bg-gray-200 rounded w-full" />
-        <div className="h-4 bg-gray-200 rounded w-1/2" />
-        <div className="flex items-center justify-between">
-          <div className="h-6 bg-gray-200 rounded w-16" />
-          <div className="h-10 bg-gray-200 rounded w-20" />
-        </div>
-      </div>
-    </div>
-  );
-}
+import Link from 'next/link';
+import { ShopifyProduct, FEATURED_HANDLES } from '@/lib/shopify';
+import { ProductModal } from '@/components/ProductModal';
 
 export default function ShopPage() {
   const [products, setProducts] = useState<ShopifyProduct[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [selectedProduct, setSelectedProduct] = useState<ShopifyProduct | null>(
+    null
+  );
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const data = await getProducts(20);
+        const res = await fetch('/api/products');
+        const data = await res.json();
         setProducts(data);
-      } catch (err) {
-        console.error('Failed to fetch products:', err);
-        setError('Unable to load products. Please try again later.');
+      } catch (error) {
+        console.error('Failed to fetch products:', error);
       } finally {
         setLoading(false);
       }
     }
-
     fetchProducts();
   }, []);
 
-  return (
-    <main className="min-h-screen bg-gray-50">
-      {/* Hero Header */}
-      <header className="bg-purple-900 pt-32 pb-16 md:pt-40 md:pb-20 px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-              Shop Fight2Breathe
-            </h1>
-            <p className="text-xl text-purple-200 max-w-2xl mx-auto">
-              Every purchase supports CF research and helps spread awareness.
-              Wear your fight.
-            </p>
-          </motion.div>
-        </div>
-      </header>
+  // Separate featured from rest, preserving FEATURED_HANDLES order
+  const featuredProducts = FEATURED_HANDLES.map((handle) =>
+    products.find((p) => p.handle === handle)
+  ).filter(Boolean) as ShopifyProduct[];
+  const otherProducts = products.filter(
+    (p) => !FEATURED_HANDLES.includes(p.handle)
+  );
 
-      {/* Impact Banner */}
-      <section className="py-6 bg-purple-100">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 text-center md:text-left">
-            <div className="flex items-center gap-3">
-              <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-              </svg>
-              <span className="font-medium text-gray-900">100% of profits support CF community</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
-              </svg>
-              <span className="font-medium text-gray-900">Free shipping on orders $50+</span>
-            </div>
-          </div>
+  const openModal = (product: ShopifyProduct) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedProduct(null);
+  };
+
+  return (
+    <main className="min-h-screen bg-white">
+      {/* Hero */}
+      <section className="pt-32 pb-16 md:pt-40 md:pb-24 px-6 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-4">
+            Wear the Fight
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-500 max-w-xl">
+            Every piece starts a conversation. Every purchase supports the
+            mission.
+          </p>
         </div>
       </section>
 
-      {/* Products Grid */}
+      {/* Featured Products */}
       <section className="py-16 md:py-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          {error ? (
-            <div className="text-center py-16">
-              <p className="text-gray-600 mb-6">{error}</p>
-              <Button
-                href="https://www.fight2breathe.org/collections/all"
-                variant="dark"
-                external
-              >
-                Visit External Shop
-              </Button>
-            </div>
-          ) : loading ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {[...Array(8)].map((_, i) => (
-                <ProductSkeleton key={i} />
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-sm font-medium text-gray-400 uppercase tracking-wider mb-12">
+            Featured
+          </h2>
+
+          {loading ? (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+              {[1, 2, 3].map((i) => (
+                <div key={i} className="animate-pulse">
+                  <div className="aspect-[3/4] bg-gray-200 rounded-2xl mb-6" />
+                  <div className="h-5 bg-gray-200 rounded w-3/4 mb-2" />
+                  <div className="h-4 bg-gray-200 rounded w-1/4" />
+                </div>
               ))}
-            </div>
-          ) : products.length === 0 ? (
-            <div className="text-center py-16">
-              <p className="text-gray-600 mb-6">No products available right now.</p>
-              <Button
-                href="https://www.fight2breathe.org/collections/all"
-                variant="dark"
-                external
-              >
-                Visit External Shop
-              </Button>
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {products.map((product, index) => (
-                <ProductCard key={product.id} product={product} index={index} />
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+              {featuredProducts.map((product) => {
+                const image = product.images.edges[0]?.node;
+                const price = parseFloat(
+                  product.priceRange.minVariantPrice.amount
+                );
+
+                return (
+                  <article key={product.id} className="group relative">
+                    <button
+                      onClick={() => openModal(product)}
+                      className="block w-full text-left"
+                    >
+                      <div className="aspect-[3/4] relative bg-gray-100 rounded-2xl overflow-hidden mb-6">
+                        {image && (
+                          <Image
+                            src={image.url}
+                            alt={image.altText || product.title}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                        )}
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+                      </div>
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <h3 className="text-lg font-semibold text-gray-900 group-hover:text-purple-600 transition-colors">
+                            {product.title}
+                          </h3>
+                          <p className="text-gray-500 mt-1">
+                            ${price.toFixed(0)}
+                          </p>
+                        </div>
+                        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-900 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                          <svg
+                            className="w-4 h-4"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            />
+                          </svg>
+                        </span>
+                      </div>
+                    </button>
+                  </article>
+                );
+              })}
             </div>
           )}
         </div>
       </section>
 
-      {/* Why Shop Section */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Your Purchase Matters
-            </h2>
-            <p className="text-gray-600 text-lg">
-              More than merchandise — it&apos;s a movement
-            </p>
-          </div>
+      {/* Divider */}
+      <div className="max-w-7xl mx-auto px-6">
+        <hr className="border-gray-200" />
+      </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: '💜',
-                title: 'Funds Research',
-                description: 'A portion of every sale goes directly to CF research organizations working on breakthrough treatments.',
-              },
-              {
-                icon: '👥',
-                title: 'Supports Families',
-                description: 'We provide resources, support groups, and assistance to CF families navigating this journey.',
-              },
-              {
-                icon: '📢',
-                title: 'Spreads Awareness',
-                description: 'Every item you wear starts conversations about CF and organ donation, spreading vital awareness.',
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={item.title}
-                className="text-center p-8 bg-gray-50 rounded-2xl"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <div className="text-4xl mb-4">{item.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600">{item.description}</p>
-              </motion.div>
-            ))}
-          </div>
+      {/* All Products */}
+      <section className="py-16 md:py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-sm font-medium text-gray-400 uppercase tracking-wider mb-12">
+            All Products
+          </h2>
+
+          {loading ? (
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+              {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+                <div key={i} className="animate-pulse">
+                  <div className="aspect-square bg-gray-200 rounded-xl mb-4" />
+                  <div className="h-4 bg-gray-200 rounded w-3/4 mb-2" />
+                  <div className="h-3 bg-gray-200 rounded w-1/4" />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+              {otherProducts.map((product) => {
+                const image = product.images.edges[0]?.node;
+                const price = parseFloat(
+                  product.priceRange.minVariantPrice.amount
+                );
+
+                return (
+                  <article key={product.id} className="group">
+                    <button
+                      onClick={() => openModal(product)}
+                      className="block w-full text-left"
+                    >
+                      <div className="aspect-square relative bg-gray-100 rounded-xl overflow-hidden mb-4">
+                        {image && (
+                          <Image
+                            src={image.url}
+                            alt={image.altText || product.title}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                        )}
+                      </div>
+                      <h3 className="text-sm font-medium text-gray-900 group-hover:text-purple-600 transition-colors">
+                        {product.title}
+                      </h3>
+                      <p className="text-sm text-gray-500 mt-1">
+                        ${price.toFixed(0)}
+                      </p>
+                    </button>
+                  </article>
+                );
+              })}
+            </div>
+          )}
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 px-6 bg-gray-50">
+      {/* Bottom CTA */}
+      <section className="py-20 px-6 bg-gray-900">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            Want to Support in Other Ways?
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            More than merch.
           </h2>
-          <p className="text-gray-600 mb-8">
-            Follow along on Instagram for the real stories, or reach out to collaborate.
+          <p className="text-xl text-gray-400 mb-8">
+            Every purchase supports Fight2Breathe—building resources, community,
+            and support for chronic illness patients and their families.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              href="https://www.instagram.com/fight2breathe"
-              variant="primary"
-              external
+            <Link
+              href="/story"
+              className="inline-flex items-center justify-center px-8 py-3 bg-white text-gray-900 font-medium rounded-full hover:bg-gray-100 transition-colors"
+            >
+              Read the Story
+            </Link>
+            <a
+              href="https://instagram.com/fight2breathe"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-3 border border-gray-700 text-white font-medium rounded-full hover:border-gray-500 transition-colors"
             >
               Follow @fight2breathe
-            </Button>
-            <Button href="/about" variant="dark">
-              Work With Me
-            </Button>
+            </a>
           </div>
         </div>
       </section>
+
+      {/* Product Modal */}
+      <ProductModal
+        product={selectedProduct}
+        isOpen={isModalOpen}
+        onClose={closeModal}
+      />
     </main>
   );
 }
