@@ -169,60 +169,54 @@ export default function HomePage() {
             </div>
 
             {/* Platform Icons */}
-            <div className="flex items-center gap-3 flex-wrap">
+            <div className="flex items-center gap-4 flex-wrap">
               <a
                 href="https://podcasts.apple.com/podcast/our-fight-to-breathe-a-cystic-fibrosis-podcast/id1820255519"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="opacity-70 hover:opacity-100 transition-opacity"
                 title="Apple Podcasts"
               >
-                <Image src="/images/apple.jpeg" alt="Apple Podcasts" width={32} height={32} className="rounded w-8 h-8 object-cover" />
+                <Image src="/images/apple.jpeg" alt="Apple Podcasts" width={32} height={32} className="rounded-full w-8 h-8 object-cover grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all" />
               </a>
               <a
                 href="https://open.spotify.com/show/3gDKmuPjRsLctJEmoJKjgO"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="opacity-70 hover:opacity-100 transition-opacity"
                 title="Spotify"
               >
-                <Image src="/images/spotify.jpeg" alt="Spotify" width={32} height={32} className="rounded w-8 h-8 object-cover" />
+                <Image src="/images/spotify.jpeg" alt="Spotify" width={32} height={32} className="rounded-full w-8 h-8 object-cover grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all" />
               </a>
               <a
                 href="https://music.amazon.com/podcasts/b38d9c40-a0d5-4449-8bb1-7c9ab5809db4/our-fight-to-breathe---a-cystic-fibrosis-podcast"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="opacity-70 hover:opacity-100 transition-opacity"
                 title="Amazon Music"
               >
-                <Image src="/images/amazon.jpeg" alt="Amazon Music" width={32} height={32} className="rounded w-8 h-8 object-cover" />
+                <Image src="/images/amazon.jpeg" alt="Amazon Music" width={32} height={32} className="rounded-full w-8 h-8 object-cover grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all" />
               </a>
               <a
                 href="https://pca.st/itunes/1820255519"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="opacity-70 hover:opacity-100 transition-opacity"
                 title="Pocket Casts"
               >
-                <Image src="/images/pocketcast.jpeg" alt="Pocket Casts" width={32} height={32} className="rounded w-8 h-8 object-cover" />
+                <Image src="/images/pocketcast.jpeg" alt="Pocket Casts" width={32} height={32} className="rounded-full w-8 h-8 object-cover grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all" />
               </a>
               <a
                 href="https://podcastaddict.com/podcast/our-fight-to-breathe-a-cystic-fibrosis-podcast/5211464"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="opacity-70 hover:opacity-100 transition-opacity"
                 title="Podcast Addict"
               >
-                <Image src="/images/podcastaddict.jpeg" alt="Podcast Addict" width={32} height={32} className="rounded w-8 h-8 object-cover" />
+                <Image src="/images/podcastaddict.jpeg" alt="Podcast Addict" width={32} height={32} className="rounded-full w-8 h-8 object-cover grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all" />
               </a>
               <a
                 href="https://www.deezer.com/show/1001960731"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="opacity-70 hover:opacity-100 transition-opacity"
                 title="Deezer"
               >
-                <Image src="/images/deezer.jpeg" alt="Deezer" width={32} height={32} className="rounded w-8 h-8 object-cover" />
+                <Image src="/images/deezer.jpeg" alt="Deezer" width={32} height={32} className="rounded-full w-8 h-8 object-cover grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all" />
               </a>
             </div>
           </motion.div>
