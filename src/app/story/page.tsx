@@ -108,7 +108,7 @@ export default function StoryPage() {
 
           <div className="mb-10">
             <Image
-              src="/images/journey-2013.JPG"
+              src="/images/journey-2013.jpg"
               alt="2013 - Fighting for survival"
               width={800}
               height={600}
