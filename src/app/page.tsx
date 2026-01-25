@@ -33,7 +33,7 @@ export default function HomePage() {
             Fight2Breathe
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white max-w-3xl leading-tight">
-            Breathing is a full-time job. I&apos;ve been doing it for 34 years.
+            Breathing is a full-time job. It turned survival into purpose.
           </h1>
         </motion.div>
 
@@ -86,13 +86,13 @@ export default function HomePage() {
 
             <div className="space-y-6">
               <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-                I was diagnosed with cystic fibrosis at birth. The year I was born, the median life expectancy was 18.
+                I was born with cystic fibrosis, at a time when the life expectancy was 18.
               </p>
               <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-                I&apos;ve spent more time in hospitals than I can count. I&apos;ve had two double-lung transplants. I&apos;ve been told I wouldn&apos;t survive—five times.
+                I&apos;ve spent more years inside hospitals, than home. I&apos;ve undergone two double-lung transplants. I&apos;ve been told more than once that I wouldn&apos;t survive.
               </p>
               <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-                I&apos;m still here. And I started Fight2Breathe because no one should have to figure this out alone.
+                I did. I&apos;m still here because I learned early how to fight for my life, my care, and my voice. Fight2Breathe began as survival. It became purpose. And today, it exists so no one navigating illness has to do it alone.
               </p>
             </div>
 
@@ -117,7 +117,6 @@ export default function HomePage() {
           <p className="text-2xl md:text-3xl lg:text-4xl font-medium text-white leading-relaxed">
             &ldquo;I have been fighting my whole life and I&apos;m not done yet.&rdquo;
           </p>
-          <footer className="mt-8 text-purple-300 text-lg">— Caleigh</footer>
         </motion.blockquote>
       </section>
 
@@ -152,21 +151,12 @@ export default function HomePage() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our Fight to Breathe
             </h2>
-            <p className="text-xl text-white/80 mb-8 leading-relaxed">
-              I started this podcast because the conversations I needed didn&apos;t exist. What it&apos;s actually like to wait for lungs. How to talk to your family when you&apos;re scared. The stuff no one tells you.
+            <p className="text-xl text-white/80 mb-4 leading-relaxed">
+              This podcast exists because the conversations I needed didn&apos;t exist. What it&apos;s really like to wait for lungs. How to talk to your family when you&apos;re scared. The things no one prepares you for and no one says out loud.
             </p>
-
-            {/* Latest episode teaser */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8">
-              <p className="text-purple-300 text-sm mb-2">Latest Episode</p>
-              <h3 className="text-xl font-semibold text-white mb-2">
-                The Gift of Life: Stories from Transplant Recipients
-              </h3>
-              <p className="text-white/70">
-                Fellow transplant recipients share their journeys, their
-                gratitude, and how they honor their donors every day.
-              </p>
-            </div>
+            <p className="text-xl text-white/80 mb-8 leading-relaxed">
+              Each episode brings together people living with CF, their families, caregivers, and care teams for honest conversations about life with chronic disease.
+            </p>
 
             {/* Platform Icons */}
             <div className="flex items-center gap-4 flex-wrap">
@@ -235,8 +225,7 @@ export default function HomePage() {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Join the Fight</h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Every purchase supports CF research. Every follow spreads awareness.
-              Every action matters.
+              Awareness. Research. Community. Every action matters.
             </p>
           </motion.div>
 
@@ -253,7 +242,7 @@ export default function HomePage() {
             >
               <h3 className="text-2xl font-bold mb-4">Wear It</h3>
               <p className="text-gray-600 mb-6">
-                Every shirt is a conversation starter. And sometimes that conversation saves someone.
+                Every purchase starts a conversation. Sometimes, that conversation saves a life.
               </p>
               <Button href="/shop" variant="dark">
                 Visit Shop
@@ -269,7 +258,7 @@ export default function HomePage() {
               transition={{ duration: 0.5, delay: 0.1 }}
               whileHover={{ y: -5 }}
             >
-              <h3 className="text-2xl font-bold text-white mb-4">Stay Close</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Stay Connected</h3>
               <p className="text-purple-200 mb-6">
                 This is where I share the real stuff. The good days and the hard ones.
               </p>

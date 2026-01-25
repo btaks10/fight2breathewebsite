@@ -30,21 +30,16 @@ export default function StoryPage() {
 
           <div className="space-y-6 text-lg md:text-xl text-gray-600 leading-relaxed">
             <p>
-              I was diagnosed with cystic fibrosis at birth. That was rare in
-              1990—most infants went undiagnosed and didn&apos;t receive the
-              right treatment.
+              I was born with cystic fibrosis and diagnosed at birth, which was
+              rare at the time. Many infants went undiagnosed and untreated.
             </p>
             <p className="text-2xl md:text-3xl text-gray-900 font-medium py-4">
-              The median life expectancy that year was 18 years old.
+              The median life expectancy that year was 18.
             </p>
             <p>
-              My parents had no idea what cystic fibrosis was. But when they
-              found out that salty ocean air helped thin the thick, sticky mucus
-              in my lungs, they moved us as close to the waves as possible.
-            </p>
-            <p>
-              I lived a happy and healthy childhood along the coast, enjoying
-              the salty air every moment I could.
+              When my parents learned that salty ocean air helped my lungs, they
+              did what they could to keep me breathing and moved us closer to
+              the sea.
             </p>
           </div>
         </div>
@@ -55,29 +50,24 @@ export default function StoryPage() {
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center gap-4 mb-8">
             <span className="text-5xl md:text-6xl font-bold text-purple-200">
-              2005
+              2008
             </span>
             <div className="h-px bg-gray-300 flex-1" />
           </div>
 
           <div className="space-y-6 text-lg md:text-xl text-gray-600 leading-relaxed">
             <p>
-              CF is progressive. My childhood was healthy, but my adult years
-              told a different story.
+              Cystic fibrosis is progressive. My childhood was relatively
+              healthy, but my adult years told a different story.
             </p>
             <p>
-              As my disease progressed, the hospital became my first home and my
-              apartment became my second. The nurses and doctors became my
-              family and closest confidants.
+              The hospital became my first home, my apartment the second. I
+              spent years cycling through admissions. Two or three weeks in, one
+              week out, then back again.
             </p>
             <p>
-              I went years cycling through—admitted for two or three weeks, out
-              for one, then back in. Every day thinking and wishing for my
-              independence back.
-            </p>
-            <p>
-              What CF was doing to my body didn&apos;t only affect me. Like a
-              ripple, it disrupted the lives of everyone in my family.
+              The nurses and doctors became family. Every day was spent thinking
+              about getting my independence back.
             </p>
           </div>
         </div>
@@ -118,20 +108,14 @@ export default function StoryPage() {
 
           <div className="space-y-6 text-lg md:text-xl text-gray-600 leading-relaxed">
             <p>
-              At 22 years old, my lung function dropped to 16%. I lost almost 30
-              pounds. I was living on supplemental oxygen and a feeding tube.
+              At 22, my lung function dropped to 16%. I lost nearly 30 pounds. I
+              relied on supplemental oxygen and a feeding tube.
             </p>
             <p>
-              I laid in the hospital and was told that a double lung transplant
-              was my only option for survival.
-            </p>
-            <p>
-              My family&apos;s life was committed to working diligently on my
-              health. After a year and a half of hard work, I was listed for my
-              life-saving transplant.
+              A double-lung transplant became my only option for survival.
             </p>
             <p className="text-2xl md:text-3xl text-gray-900 font-medium py-4">
-              Then I waited. Waiting is its own kind of fight.
+              I was listed, and then I waited. Waiting is its own kind of fight.
             </p>
           </div>
         </div>
@@ -149,23 +133,21 @@ export default function StoryPage() {
 
           <div className="space-y-6 text-lg md:text-xl text-gray-600 leading-relaxed">
             <p className="text-2xl md:text-3xl text-gray-900 font-medium">
-              On October 20th, I received my gift of life.
+              On October 20, I received my first double-lung transplant.
             </p>
             <p>
-              I regained many of my old routines—walking to get my morning
-              coffee, attending farmers markets, helping care for my dog. I
-              became more social again.
-            </p>
-            <p>But transplant tested me in ways I never expected.</p>
-            <p>
-              An abscess the size of an orange in my left lung. The team
-              questioned removing it entirely, just three months after my
-              transplant. Then respiratory failure. A life flight. ECMO life
-              support. A medically induced coma.
+              After nearly two years of waiting, I got some of my old routines
+              back. Walking to get coffee. Going to farmers markets. Caring for
+              my dog.
             </p>
             <p>
-              I had to relearn everything. How to hold my own head up. How to
-              swallow. How to walk, talk, and reform my memory.
+              Post-transplant life tested me too. An abscess in my left lung.
+              Respiratory failure. A life flight. ECMO. A medically induced
+              coma. Multiple strokes.
+            </p>
+            <p>
+              Relearning how to hold my head up, swallow, walk, and talk. I had
+              to start from zero.
             </p>
           </div>
         </div>
@@ -183,29 +165,18 @@ export default function StoryPage() {
 
           <div className="space-y-6 text-lg md:text-xl text-gray-600 leading-relaxed">
             <p>
-              Shortly after my one-year breathday, I went into organ rejection.
+              I went into organ rejection shortly after my one-year breathday.
             </p>
             <p>
-              My care team, my supporters, and I worked endlessly to fight our
-              way out of it. Weeks in the hospital. Working out with a trainer.
-              Managing my CF-related diabetes. Trying to gain weight. Attempting
-              to control every factor we knew could be playing a part.
+              Within months, I was back on oxygen, using my feeding tube
+              continuously, and unable to walk more than a few feet.
             </p>
             <p className="text-2xl md:text-3xl text-gray-900 font-medium py-4">
-              It wasn&apos;t enough.
+              My lung function dropped to 9%.
             </p>
             <p>
-              Within months, I was back on supplemental oxygen 24/7. Back on my
-              feeding tube. I couldn&apos;t care for myself at all. I
-              couldn&apos;t even walk around our 650-square-foot San Francisco
-              apartment.
-            </p>
-            <p>My lung function dropped to 14%.</p>
-            <p>
-              Going through rejection was more emotionally and physically taxing
-              than my first battle with end-stage lung disease. I felt
-              responsible for my body failing to accept my lungs. Ashamed for
-              letting my donor family down.
+              My center told me I wasn&apos;t a candidate for a redo. Their
+              recommendation was palliative care.
             </p>
           </div>
         </div>
@@ -248,18 +219,9 @@ export default function StoryPage() {
 
           <div className="space-y-6 text-lg md:text-xl text-gray-600 leading-relaxed">
             <p className="text-2xl md:text-3xl text-gray-900 font-medium">
-              My fight was not over. And neither was my family&apos;s.
+              In the middle of all that, I married my best friend, surrounded by
+              150 people who loved us.
             </p>
-            <p>
-              While I suffered from a rapid decline, my husband worked
-              endlessly to find a center that would take a chance on me.
-            </p>
-            <p>
-              In the middle of all this, we got married—150 family members and
-              friends. Then a honeymoon to my favorite place in the world,
-              Hawaii.
-            </p>
-            <p>My words to my husband were simple:</p>
           </div>
         </div>
       </section>
@@ -277,33 +239,35 @@ export default function StoryPage() {
       {/* Chapter 7 */}
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-3xl mx-auto">
-          <div className="flex items-center gap-4 mb-8">
+          <div className="flex items-center gap-4 mb-4">
             <span className="text-5xl md:text-6xl font-bold text-purple-200">
               2018
             </span>
             <div className="h-px bg-gray-200 flex-1" />
           </div>
+          <p className="text-xl md:text-2xl text-purple-600 font-medium mb-8">
+            A Second Chance
+          </p>
 
           <div className="space-y-6 text-lg md:text-xl text-gray-600 leading-relaxed">
             <p>
-              We packed all of our belongings and moved across California. UCLA
-              gave me a chance when no one else would.
-            </p>
-            <p>
-              After five and a half months living in the hospital, I received
-              not only new lungs—but a new life.
+              My husband searched nationwide for any center willing to take me.
+              We packed everything and moved across California.
             </p>
             <p className="text-2xl md:text-3xl text-gray-900 font-medium py-4">
-              When I woke up on June 8th, I felt my lungs breathe for the first
-              time. I mean really breathe.
+              UCLA gave me a chance when no one else would.
             </p>
             <p>
-              Living with end-stage cystic fibrosis, my breathing had always
-              been so shallow, so strenuous, that I didn&apos;t fully understand
-              what it was like to take a deep breath.
+              After five and a half months living in the hospital, I received my
+              second double-lung transplant on June 8th.
+            </p>
+            <p>
+              When I woke up and took my first breath, I understood for the
+              first time what breathing was meant to feel like.
             </p>
             <p className="text-2xl md:text-3xl text-gray-900 font-medium">
-              Now I do.
+              All night, I kept repeating, &ldquo;I&apos;m so happy. I can
+              breathe.&rdquo;
             </p>
           </div>
         </div>
@@ -320,18 +284,27 @@ export default function StoryPage() {
           </div>
 
           <div className="space-y-6 text-lg md:text-xl text-gray-600 leading-relaxed">
-            <p>Today I breathe deep and effortlessly.</p>
             <p>
-              But I will never forget the moments I struggled for oxygen. Or the
-              people who showed up when it mattered.
+              Today, I breathe deeply and effortlessly. But I&apos;ll never
+              forget the moments I struggled for oxygen, or the people who
+              showed up when it mattered.
             </p>
             <p>
-              I started Fight2Breathe because this fight shouldn&apos;t be
-              figured out alone. The information, the support, the
-              community—it should already exist.
+              I started Fight2Breathe as a way to survive. Now, Fight2Breathe is
+              bigger than my story.
             </p>
-            <p className="text-2xl md:text-3xl text-gray-900 font-medium pt-4">
-              So I&apos;m building it.
+            <p className="text-2xl md:text-3xl text-gray-900 font-medium py-4">
+              It&apos;s a community.
+            </p>
+            <p>
+              A space where no one is expected to figure it out alone. Where
+              support exists across diagnoses, roles, and stages of the journey.
+              Where lived experience is centered, respected, and woven into
+              every conversation.
+            </p>
+            <p className="text-xl md:text-2xl text-purple-600 font-medium pt-4">
+              If you&apos;ve ever felt like you had to navigate illness, care,
+              or advocacy on your own, this space is for you.
             </p>
           </div>
         </div>
