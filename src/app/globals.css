@@ -350,6 +350,8 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  padding-bottom: 0.15em;
+  line-height: 1.15;
 }
 
 /* Horizontal gradient text */
@@ -449,5 +451,5 @@ p {
 
 /* Dark purple with subtle gradient for depth */
 .dark-purple-gradient {
-  background: linear-gradient(180deg, #2A1A2E 0%, #1E1525 100%);
+  background: linear-gradient(180deg, #6B2D5C 0%, #8B4A7C 100%);
 }

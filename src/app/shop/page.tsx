@@ -239,7 +239,7 @@ export default function ShopPage() {
               href="https://www.instagram.com/fight2breathe"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-3 border border-[#6B2D5C] text-white font-medium rounded-full hover:border-[#B8709C] transition-colors"
+              className="inline-flex items-center justify-center px-8 py-3 border border-white/40 text-white font-medium rounded-full hover:border-white/60 transition-colors"
             >
               Follow @fight2breathe
             </a>
