@@ -21,7 +21,7 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/images/F2B-logo-black.jpeg"
+            src="/images/F2B-logo-black.png"
             alt="Fight2Breathe"
             width={180}
             height={180}
@@ -93,7 +93,7 @@ export function Header() {
               <div className="flex items-center justify-between mb-12">
                 <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
                   <Image
-                    src="/images/F2B-logo-black.jpeg"
+                    src="/images/F2B-logo-black.png"
                     alt="Fight2Breathe"
                     width={150}
                     height={150}
