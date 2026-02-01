@@ -21,11 +21,11 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/images/f2b-logo.svg"
+            src="/images/F2B-logo-black.jpeg"
             alt="Fight2Breathe"
-            width={200}
-            height={60}
-            className="h-10 md:h-12 w-auto"
+            width={180}
+            height={180}
+            className="h-12 md:h-16 w-auto"
             priority
           />
         </Link>
@@ -93,11 +93,11 @@ export function Header() {
               <div className="flex items-center justify-between mb-12">
                 <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
                   <Image
-                    src="/images/f2b-logo.svg"
+                    src="/images/F2B-logo-black.jpeg"
                     alt="Fight2Breathe"
                     width={150}
-                    height={45}
-                    className="h-10 w-auto"
+                    height={150}
+                    className="h-14 w-auto"
                   />
                 </Link>
                 <button
