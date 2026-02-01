@@ -38,6 +38,9 @@ export const metadata: Metadata = {
     description:
       'Join Caleigh on her mission to advocate for those living with Cystic Fibrosis and organ transplants.',
   },
+  icons: {
+    icon: '/images/favicon.jpg',
+  },
 };
 
 export default function RootLayout({
