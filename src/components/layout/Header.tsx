@@ -23,9 +23,9 @@ export function Header() {
           <Image
             src="/images/F2B-logo-black.png"
             alt="Fight2Breathe"
-            width={180}
-            height={180}
-            className="h-12 md:h-16 w-auto"
+            width={120}
+            height={120}
+            className="h-8 md:h-10 w-auto"
             priority
           />
         </Link>
