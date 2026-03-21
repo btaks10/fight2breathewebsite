@@ -73,7 +73,7 @@ export default function WorkWithCaleigh() {
             translating lived experience with chronic illness into community,
             content, and systems-level impact. Founder of Fight2Breathe, a
             global platform reaching 71,900+ followers across 30+ countries.
-            Currently lead Community and Brand Strategy at pRxEngage, helping
+            Currently lead Community and Brand Strategy at pRxTrialPort, helping
             bridge the gap between clinical trials and the rare disease
             communities they aim to serve.
           </p>
@@ -111,7 +111,7 @@ export default function WorkWithCaleigh() {
                   </li>
                   <li>
                     Produced and hosted <em>Our Fight to Breathe</em> podcast:
-                    13 episodes, 1,000+ subscribers; weekly conversations
+                    13 episodes, 1,000+ subscribers; conversations
                     averaging 45–60 min covering chronic illness, transplant
                     life, and patient advocacy
                   </li>

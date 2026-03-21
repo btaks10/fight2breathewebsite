@@ -136,11 +136,11 @@ export default function AboutPage() {
                   </p>
                 </RoleCard>
 
-                {/* pRxEngage */}
+                {/* pRxTrialPort */}
                 <RoleCard
                   icon="🔬"
                   iconBg="bg-blue-100"
-                  company="pRxEngage"
+                  company="pRxTrialPort"
                   role="Community & Brand Strategy | Consultant"
                   roleColor="text-blue-500"
                   summary="Helping their mission show up clearly for the people it's meant to serve."
@@ -150,7 +150,7 @@ export default function AboutPage() {
                     community groups, helping design work rooted in empathy,
                     clarity, and real-world understanding. I bring lived
                     experience, strategic insight, and heart to my role at
-                    pRxEngage, shaped by my own life with rare disease and
+                    pRxTrialPort, shaped by my own life with rare disease and
                     navigating complex care systems. My work centers on making
                     clinical trial information more human, accessible, and
                     grounded in the realities of people&apos;s lives.
