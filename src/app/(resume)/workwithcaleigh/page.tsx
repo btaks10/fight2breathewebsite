@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { MailtoTag } from './MailtoTag';
 import './resume.css';
 
 export default function WorkWithCaleigh() {
@@ -78,9 +79,61 @@ export default function WorkWithCaleigh() {
             communities they aim to serve.
           </p>
           <div className="r-tags">
-            <a href="mailto:caleigh@fight2breathe.org?subject=Brand%20Partnership%20Inquiry%20%E2%80%93%20Fight2Breathe&body=Hi%20Caleigh%2C%0D%0A%0D%0AI%E2%80%99m%20reaching%20out%20regarding%20a%20potential%20brand%20partnership%20with%20Fight2Breathe.%0D%0A%0D%0AOrganization%2FBrand%3A%20%0D%0APartnership%20Type%20(sponsored%20content%2C%20ambassador%2C%20campaign%2C%20etc.)%3A%20%0D%0ATimeline%3A%20%0D%0ABudget%20Range%3A%20%0D%0A%0D%0ABrief%20Description%3A%0D%0A%0D%0A%0D%0AThank%20you%2C%0D%0A" className="r-tag">Brand Partnerships</a>
-            <a href="mailto:caleigh@fight2breathe.org?subject=Speaking%20Engagement%20Inquiry%20%E2%80%93%20Fight2Breathe&body=Hi%20Caleigh%2C%0D%0A%0D%0AI%E2%80%99m%20reaching%20out%20regarding%20a%20potential%20speaking%20engagement.%0D%0A%0D%0AOrganization%2FEvent%3A%20%0D%0AEvent%20Date%3A%20%0D%0AFormat%20(keynote%2C%20panel%2C%20fireside%20chat%2C%20virtual%2C%20etc.)%3A%20%0D%0AAudience%3A%20%0D%0ATopic%2FTheme%3A%20%0D%0A%0D%0AAdditional%20Details%3A%0D%0A%0D%0A%0D%0AThank%20you%2C%0D%0A" className="r-tag">Speaking Engagement</a>
-            <a href="mailto:caleigh@fight2breathe.org?subject=Patient%20Consulting%20Inquiry%20%E2%80%93%20Fight2Breathe&body=Hi%20Caleigh%2C%0D%0A%0D%0AI%E2%80%99m%20reaching%20out%20regarding%20a%20patient%20consulting%20opportunity.%0D%0A%0D%0AOrganization%3A%20%0D%0AProject%2FScope%3A%20%0D%0ATimeline%3A%20%0D%0AArea%20of%20Focus%20(clinical%20trials%2C%20patient%20engagement%2C%20rare%20disease%20strategy%2C%20etc.)%3A%20%0D%0A%0D%0AAdditional%20Details%3A%0D%0A%0D%0A%0D%0AThank%20you%2C%0D%0A" className="r-tag">Patient Consulting</a>
+            <MailtoTag
+              label="Brand Partnerships"
+              subject="Brand Partnership Inquiry – Fight2Breathe"
+              body={`Hi Caleigh,
+
+I'm reaching out regarding a potential brand partnership with Fight2Breathe.
+
+Organization/Brand:
+Partnership Type:
+Timeline:
+Budget Range:
+
+Brief Description:
+
+
+Thank you,
+`}
+            />
+            <MailtoTag
+              label="Speaking Engagement"
+              subject="Speaking Engagement Inquiry – Fight2Breathe"
+              body={`Hi Caleigh,
+
+I'm reaching out regarding a potential speaking engagement.
+
+Organization/Event:
+Event Date:
+Format (keynote, panel, fireside chat, virtual, etc.):
+Audience:
+Topic/Theme:
+
+Additional Details:
+
+
+Thank you,
+`}
+            />
+            <MailtoTag
+              label="Patient Consulting"
+              subject="Patient Consulting Inquiry – Fight2Breathe"
+              body={`Hi Caleigh,
+
+I'm reaching out regarding a patient consulting opportunity.
+
+Organization:
+Project/Scope:
+Timeline:
+Area of Focus (clinical trials, patient engagement, rare disease strategy, etc.):
+
+Additional Details:
+
+
+Thank you,
+`}
+            />
           </div>
         </div>
 
@@ -131,8 +184,7 @@ export default function WorkWithCaleigh() {
                   <li>
                     Served as Co-Chair of BreatheCon 2025; active contributor to
                     CFF Peer Connect, Global Genes Rare Leader Program,
-                    Make-A-Wish Foundation (Wish Granter, 2019–2020), Lyfebulb
-                    Ambassador, Global Genes Ambassador, Global Genes Social
+                    Make-A-Wish Foundation (Wish Granter, 2019–2020), Global Genes Social
                     Media event content creator
                   </li>
                   <li>
