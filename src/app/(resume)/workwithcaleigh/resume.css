@@ -706,14 +706,7 @@ details.r-entry summary::-webkit-details-marker {
     top: 10px;
   }
   .r-media-table {
-    display: block;
-    overflow-x: auto;
-  }
-  .r-media-table thead,
-  .r-media-table tbody {
-    display: table;
     width: 100%;
-    min-width: 480px;
   }
 }
 
@@ -773,10 +766,6 @@ details.r-entry summary::-webkit-details-marker {
   .r-sec-lbl {
     font-size: 8px;
     letter-spacing: 3px;
-  }
-  .r-media-table thead,
-  .r-media-table tbody {
-    min-width: 420px;
   }
   .r-media-table td {
     font-size: 11px;
