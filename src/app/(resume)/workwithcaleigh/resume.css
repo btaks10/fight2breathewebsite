@@ -616,8 +616,18 @@
    RESPONSIVE
    ============================================ */
 @media (max-width: 700px) {
+  .r-header {
+    height: auto;
+  }
   .r-header-inner {
     padding: 32px 24px 28px;
+  }
+  .r-name {
+    font-size: 36px;
+  }
+  .r-title-line {
+    font-size: 9px;
+    letter-spacing: 2.5px;
   }
   .r-body {
     padding: 0 24px 44px;
@@ -631,11 +641,113 @@
     padding-left: 0;
     padding-top: 28px;
   }
+  .r-eh {
+    flex-wrap: wrap;
+  }
+  .r-ed {
+    white-space: normal;
+  }
+  .r-summary p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .r-eb li {
+    padding-left: 12px;
+  }
+  .r-eb-nested {
+    padding-left: 0;
+  }
   .r-hstats {
     flex-wrap: wrap;
   }
   .r-hstat {
     flex: 1 1 auto;
     min-width: 70px;
+  }
+  .r-media-table {
+    display: block;
+    overflow-x: auto;
+  }
+  .r-media-table thead,
+  .r-media-table tbody {
+    display: table;
+    width: 100%;
+    min-width: 480px;
+  }
+}
+
+/* ============================================
+   SMALL PHONES
+   ============================================ */
+@media (max-width: 480px) {
+  .resume-page {
+    font-size: 12.5px;
+  }
+  .r-header-inner {
+    padding: 28px 16px 24px;
+  }
+  .r-body {
+    padding: 0 16px 32px;
+  }
+  .r-name {
+    font-size: 28px;
+  }
+  .r-eh {
+    flex-direction: column;
+    gap: 2px;
+  }
+  .r-ed {
+    font-size: 10.5px;
+    align-self: flex-start;
+  }
+  .r-contact-row {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .r-cdot {
+    display: none;
+  }
+  .r-hstats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .r-health-tag {
+    font-size: 9px;
+    padding: 2px 8px;
+  }
+  .r-er {
+    font-size: 13px;
+  }
+  .r-eo {
+    font-size: 11px;
+  }
+  .r-eb li {
+    font-size: 12px;
+    padding-left: 11px;
+  }
+  .r-summary p {
+    font-size: 13px;
+  }
+  .r-sec-lbl {
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+  .r-media-table thead,
+  .r-media-table tbody {
+    min-width: 420px;
+  }
+  .r-media-table td {
+    font-size: 11px;
+  }
+  .r-pcard {
+    padding: 12px;
+  }
+  .r-callout {
+    padding: 9px 11px;
+  }
+  .r-t {
+    font-size: 10px;
+    padding: 2px 7px;
   }
 }

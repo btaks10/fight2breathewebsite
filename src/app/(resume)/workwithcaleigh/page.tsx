@@ -193,8 +193,7 @@ Thank you,
                   </li>
                   <li>
                     Recognized with the CFF Impact Grant (2024);{' '}
-                    <a href="/images/BreatheCon_Flowers_Poster_V2.pdf" target="_blank" rel="noopener noreferrer">winner of
-                    BreatheCon Artist Contest</a> (2024); recipient of the CFF
+                    winner of <a href="/images/BreatheCon_Flowers_Poster_V2.pdf" target="_blank" rel="noopener noreferrer">BreatheCon Artist Contest</a> (2024); recipient of the CFF
                     Rose Award for Advocacy (2017)
                   </li>
                 </ul>
@@ -399,6 +398,11 @@ Thank you,
                     <td><a href="https://open.spotify.com/show/3gDKmuPjRsLctJEmoJKjgO?si=07aef93f86eb495b" target="_blank" rel="noopener noreferrer">Our Fight to Breathe</a></td>
                     <td><span className="r-media-pill r-mp-pod">Podcast</span></td>
                     <td>Jun 25, 2025</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://podcasts.apple.com/us/podcast/our-fight-to-breathe-a-cystic-fibrosis-podcast/id1820255519" target="_blank" rel="noopener noreferrer">Our Fight to Breathe Podcast</a></td>
+                    <td><span className="r-media-pill r-mp-pod">Podcast</span></td>
+                    <td>2025</td>
                   </tr>
                   <tr>
                     <td><a href="https://podcasts.musixmatch.com/podcast/diabetech-diabetes-tech-news-and-management-01hg131n9rq0err2dwes3chmv4/episode/thriving-with-cystic-fibrosis-related-diabetes-caleighs-01hhycr6g04febgch86b0v3bd2" target="_blank" rel="noopener noreferrer">Diabetech Podcast</a></td>
