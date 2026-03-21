@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { MailtoTag } from './MailtoTag';
+import { DesktopDetailsOpen } from './DesktopDetailsOpen';
 import './resume.css';
 
 export default function WorkWithCaleigh() {
@@ -145,7 +146,7 @@ Thank you,
             <div className="r-sec">
               <div className="r-sec-lbl">Experience</div>
 
-              <details className="r-entry" open>
+              <details className="r-entry">
                 <summary>
                   <div className="r-eh">
                     <span className="r-er">
@@ -201,7 +202,7 @@ Thank you,
                 </ul>
               </details>
 
-              <details className="r-entry" open>
+              <details className="r-entry">
                 <summary>
                   <div className="r-eh">
                     <span className="r-er">
@@ -257,7 +258,7 @@ Thank you,
                 </ul>
               </details>
 
-              <details className="r-entry" open>
+              <details className="r-entry">
                 <summary>
                   <div className="r-eh">
                     <span className="r-er">
@@ -325,7 +326,7 @@ Thank you,
                 </ul>
               </details>
 
-              <details className="r-entry" open>
+              <details className="r-entry">
                 <summary>
                   <div className="r-eh">
                     <span className="r-er">Pastry Cook</span>
@@ -592,6 +593,7 @@ Thank you,
           </aside>
         </div>
       </div>
+      <DesktopDetailsOpen />
     </div>
   );
 }
