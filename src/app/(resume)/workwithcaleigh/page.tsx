@@ -343,100 +343,114 @@ Thank you,
                   <tr>
                     <th>Outlet / Show</th>
                     <th>Type</th>
-                    <th>Topic / Title</th>
-                    <th>Year</th>
+                    <th>Date</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>MedTalks with Katrin</td>
-                    <td>
-                      <span className="r-media-pill r-mp-pod">Podcast</span>
-                    </td>
-                    <td>CF &amp; Patient Leadership</td>
-                    <td>2026</td>
+                    <td><a href="https://open.spotify.com/episode/3gCEGndaBXHNAg2ewlTRpA?si=qUbB0C6sQwaN0H1JEljzLQ" target="_blank" rel="noopener noreferrer">MedTalks with Katrin</a></td>
+                    <td><span className="r-media-pill r-mp-pod">Podcast</span></td>
+                    <td>Mar 13, 2026</td>
                   </tr>
                   <tr>
-                    <td>CF Roundtable</td>
-                    <td>
-                      <span className="r-media-pill r-mp-pub">Publication</span>
-                    </td>
-                    <td>Clinical trials article</td>
-                    <td>2025</td>
+                    <td><a href="https://www.instagram.com/reel/DVOiU91Ch3M/" target="_blank" rel="noopener noreferrer">CF News Today</a></td>
+                    <td><span className="r-media-pill r-mp-content">Content</span></td>
+                    <td>Feb 26, 2026</td>
                   </tr>
                   <tr>
-                    <td>American Lung Assoc.</td>
-                    <td>
-                      <span className="r-media-pill r-mp-pub">Feature</span>
-                    </td>
-                    <td>Patient feature</td>
-                    <td>2025</td>
+                    <td><a href="https://www.instagram.com/reel/DUEUmDqj4eT/" target="_blank" rel="noopener noreferrer">CF News Today</a></td>
+                    <td><span className="r-media-pill r-mp-content">Content</span></td>
+                    <td>Jan 28, 2026</td>
                   </tr>
                   <tr>
-                    <td>Packing Up &amp; Peacing Out</td>
-                    <td>
-                      <span className="r-media-pill r-mp-pod">Podcast</span>
-                    </td>
-                    <td>Chronic illness abroad</td>
-                    <td>2025</td>
+                    <td><a href="https://www.instagram.com/p/DSTT7m5Dzhg/" target="_blank" rel="noopener noreferrer">American Hospitals Assoc.</a></td>
+                    <td><span className="r-media-pill r-mp-content">Content</span></td>
+                    <td>Dec 31, 2025</td>
                   </tr>
                   <tr>
-                    <td>It&apos;s a Lung Story</td>
-                    <td>
-                      <span className="r-media-pill r-mp-pod">Podcast</span>
-                    </td>
-                    <td>CF transplant stories</td>
-                    <td>2025</td>
+                    <td><a href="https://www.instagram.com/reel/DSk7tejD2zC/" target="_blank" rel="noopener noreferrer">CF News Today</a></td>
+                    <td><span className="r-media-pill r-mp-content">Content</span></td>
+                    <td>Dec 4, 2025</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://online.flipbuilder.com/jxtof/fipe/" target="_blank" rel="noopener noreferrer">CF Roundtable</a></td>
+                    <td><span className="r-media-pill r-mp-pub">Publication</span></td>
+                    <td>Nov 26, 2025</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://www.lung.org/blog/cystic-fibrosis-living-fully" target="_blank" rel="noopener noreferrer">American Lung Assoc.</a></td>
+                    <td><span className="r-media-pill r-mp-pub">Feature</span></td>
+                    <td>Nov 19, 2025</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://open.spotify.com/episode/6krttjCOQrN2K53lJyUuJV?si=mhuIR3DpQh2Q85fgmEVNlA" target="_blank" rel="noopener noreferrer">Packing Up &amp; Peacing Out</a></td>
+                    <td><span className="r-media-pill r-mp-pod">Podcast</span></td>
+                    <td>Oct 27, 2025</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://open.spotify.com/episode/35cFbIgv3dq4Po8uCXqKgb?si=oCp3LBsPQP-AGKLoOvDXVg" target="_blank" rel="noopener noreferrer">It&apos;s a Lung Story</a></td>
+                    <td><span className="r-media-pill r-mp-pod">Podcast</span></td>
+                    <td>Jul 14, 2025</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://open.spotify.com/show/3gDKmuPjRsLctJEmoJKjgO?si=07aef93f86eb495b" target="_blank" rel="noopener noreferrer">Our Fight to Breathe</a></td>
+                    <td><span className="r-media-pill r-mp-pod">Podcast</span></td>
+                    <td>Jun 25, 2025</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://podcasts.musixmatch.com/podcast/diabetech-diabetes-tech-news-and-management-01hg131n9rq0err2dwes3chmv4/episode/thriving-with-cystic-fibrosis-related-diabetes-caleighs-01hhycr6g04febgch86b0v3bd2" target="_blank" rel="noopener noreferrer">Diabetech Podcast</a></td>
+                    <td><span className="r-media-pill r-mp-pod">Podcast</span></td>
+                    <td>Jul 31, 2023</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://globalgenes.org/raredaily/rare-leader-caleigh-haber-takayama-ceo-fight2breathe/" target="_blank" rel="noopener noreferrer">Global Genes Rare Leader</a></td>
+                    <td><span className="r-media-pill r-mp-adv">Advocacy</span></td>
+                    <td>May 14, 2020</td>
                   </tr>
                   <tr>
                     <td>USA Today</td>
-                    <td>
-                      <span className="r-media-pill r-mp-pub">Campaign</span>
-                    </td>
-                    <td>Lung Health Campaign</td>
-                    <td>2020</td>
+                    <td><span className="r-media-pill r-mp-pub">Publication</span></td>
+                    <td>Mar 14, 2020</td>
                   </tr>
                   <tr>
-                    <td>Jairek Robbins</td>
-                    <td>
-                      <span className="r-media-pill r-mp-pod">Podcast</span>
-                    </td>
-                    <td>What the world needs</td>
-                    <td>2018</td>
+                    <td>Phillips Respironics</td>
+                    <td><span className="r-media-pill r-mp-content">Content</span></td>
+                    <td>Dec 10, 2019</td>
                   </tr>
                   <tr>
-                    <td>Donate Life California</td>
-                    <td>
-                      <span className="r-media-pill r-mp-pub">Feature</span>
-                    </td>
-                    <td>Stories of Hope</td>
-                    <td>2018</td>
+                    <td><a href="https://open.spotify.com/show/1hdVuf0sIIl8H50Z6FMBUm?si=c7308f697fae4e11" target="_blank" rel="noopener noreferrer">Jairek Robbins</a></td>
+                    <td><span className="r-media-pill r-mp-pod">Podcast</span></td>
+                    <td>Oct 15, 2018</td>
                   </tr>
                   <tr>
-                    <td>CF News Today</td>
-                    <td>
-                      <span className="r-media-pill r-mp-pub">Feature</span>
-                    </td>
-                    <td>Not Your Average Rose</td>
-                    <td>2017</td>
+                    <td><a href="https://donatelifecalifornia.org/stories-of-hope/caleigh-haber/" target="_blank" rel="noopener noreferrer">Donate Life California</a></td>
+                    <td><span className="r-media-pill r-mp-adv">Advocacy</span></td>
+                    <td>Mar 20, 2018</td>
                   </tr>
                   <tr>
-                    <td>CFF Blog</td>
-                    <td>
-                      <span className="r-media-pill r-mp-content">
-                        Contributor
-                      </span>
-                    </td>
-                    <td>Multiple posts</td>
-                    <td>2016</td>
+                    <td><a href="https://cysticfibrosisnewstoday.com/columns/welcome-not-your-average-rose-column-cystic-fibrosis/" target="_blank" rel="noopener noreferrer">CF News Today</a></td>
+                    <td><span className="r-media-pill r-mp-pub">Publication</span></td>
+                    <td>Apr 20, 2017</td>
                   </tr>
                   <tr>
-                    <td>CF News Today</td>
-                    <td>
-                      <span className="r-media-pill r-mp-pub">Feature</span>
-                    </td>
-                    <td>Artist With CF Fights to Breathe</td>
-                    <td>2015</td>
+                    <td><a href="https://www.cff.org/community-posts/2016-10/unexpect-expected-what-i-learned-after-my-lung-transplant" target="_blank" rel="noopener noreferrer">CFF Blog</a></td>
+                    <td><span className="r-media-pill r-mp-pub">Publication</span></td>
+                    <td>Oct 6, 2016</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://www.cff.org/community-posts/2016-10/my-experience-waiting-and-getting-transplant-call" target="_blank" rel="noopener noreferrer">CFF Blog</a></td>
+                    <td><span className="r-media-pill r-mp-pub">Publication</span></td>
+                    <td>Oct 5, 2016</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://www.cff.org/community-posts/2016-10/my-experience-waiting-and-getting-transplant-call" target="_blank" rel="noopener noreferrer">CFF Blog</a></td>
+                    <td><span className="r-media-pill r-mp-pub">Publication</span></td>
+                    <td>Apr 11, 2016</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://cysticfibrosisnewstoday.com/news/artist-cf-caleigh-haber-fights-breathe-advocates-lung-donor-awareness/" target="_blank" rel="noopener noreferrer">CF News Today</a></td>
+                    <td><span className="r-media-pill r-mp-adv">Advocacy</span></td>
+                    <td>May 20, 2015</td>
                   </tr>
                 </tbody>
               </table>

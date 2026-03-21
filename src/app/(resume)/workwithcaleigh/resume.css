@@ -488,7 +488,6 @@
   border-bottom: 1px solid var(--r-border);
   vertical-align: middle;
   line-height: 1.45;
-  white-space: nowrap;
 }
 
 .r-media-table tr:last-child td {
@@ -499,12 +498,21 @@
   font-weight: 500;
   color: var(--r-text);
   padding-right: 12px;
-  width: 42%;
+  width: 50%;
+}
+
+.r-media-table td:first-child a {
+  color: var(--wine);
+  text-decoration: none;
+}
+
+.r-media-table td:first-child a:hover {
+  text-decoration: underline;
 }
 
 .r-media-table td:nth-child(2) {
   padding-right: 10px;
-  width: 22%;
+  width: 25%;
 }
 
 .r-media-pill {
@@ -528,6 +536,11 @@
 .r-mp-content {
   background: #e8f5ee;
   color: #2A6B4A;
+}
+
+.r-mp-adv {
+  background: #fce8f0;
+  color: var(--wine);
 }
 
 /* ============================================
