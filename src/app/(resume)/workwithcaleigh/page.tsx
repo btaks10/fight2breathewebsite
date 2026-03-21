@@ -153,7 +153,7 @@ Thank you,
                   <span className="r-ed">2014 – Present</span>
                 </div>
                 <div className="r-eo">
-                  Fight2Breathe &middot; Advocacy Platform &amp; Community
+                  <em>Advocacy Platform &amp; Community</em> | 2014 – Present
                 </div>
                 <ul className="r-eb">
                   <li>
@@ -178,8 +178,7 @@ Thank you,
                     organizations including CF News Today, American Lung
                     Association, American Hospitals Association, Philips
                     Respironics, Astrazeneca, Cystic Fibrosis Foundation, Cystic
-                    Fibrosis Research Inc., Pfizer,{' '}
-                    <a href="https://turnto.ai">Turnto.ai</a>, and others
+                    Fibrosis Research Inc., Pfizer, Turnto.ai, and others
                   </li>
                   <li>
                     Served as Co-Chair of BreatheCon 2025; active contributor to
@@ -190,12 +189,13 @@ Thank you,
                   <li>
                     DonateLife Ambassador, American Lung Association Ambassador,
                     Cystic Fibrosis Ambassador, Make A Wish Ambassador, Global
-                    Genes Ambassador
+                    Genes Ambassador, Lyfebulb Ambassador
                   </li>
                   <li>
-                    Recognized with the CFF Impact Grant (2024); winner of
-                    BreatheCon Artist Contest (2024); recipient of the CFF Rose
-                    Award for Advocacy (2017)
+                    Recognized with the CFF Impact Grant (2024);{' '}
+                    <a href="/images/BreatheCon_Flowers_Poster_V2.pdf" target="_blank" rel="noopener noreferrer">winner of
+                    BreatheCon Artist Contest</a> (2024); recipient of the CFF
+                    Rose Award for Advocacy (2017)
                   </li>
                 </ul>
               </div>
@@ -269,20 +269,20 @@ Thank you,
                   <li>
                     Panelist, Patient Centricity &amp; Collaboration World
                     Congress (Feb 2026) — contributed to discussions on patient
-                    engagement, trust, and patient-centered research
+                    engagement, trust, and patient-centered clinical research
                   </li>
                   <li>
-                    Speaker, Worldwide Clinical Trials Global Event (London, Feb
-                    2026) — delivered patient perspective on cystic fibrosis,
-                    rare disease, and inclusive clinical trial design
+                    Speaker Panelist, Worldwide Clinical Trials Global Event
+                    (London, Feb 2026) — delivered patient perspective on cystic
+                    fibrosis, rare disease, and inclusive clinical trial design
+                  </li>
+                  <li>
+                    Panelist (Sept 2019) – speaking on the chronic illness
+                    experience in women
                   </li>
                   <li>
                     Speaker, Global Genes (Sept 2018) — presented on love,
                     relationships, and living with chronic illness
-                  </li>
-                  <li>
-                    Panelist &amp; Speaker, UCLA Health Lung Transplant Patient
-                    Education Symposium (Nov 2018)
                   </li>
                   <li>
                     Speaker, American Lung Association Awareness &amp;
@@ -312,7 +312,10 @@ Thank you,
                     </ul>
                   </li>
                   <li>
-                    Upcoming: TransPerfect Life Sciences (May 2026)
+                    Upcoming:
+                    <ul className="r-eb r-eb-nested">
+                      <li>TransPerfect Life Sciences (May 2026)</li>
+                    </ul>
                   </li>
                 </ul>
               </div>
@@ -492,15 +495,15 @@ Thank you,
               <div className="r-tg">
                 <div className="r-tgl">Advocacy</div>
                 <div className="r-tgs">
-                  <span className="r-t r-ta">Patient advocacy</span>
-                  <span className="r-t r-ta">Rare disease</span>
-                  <span className="r-t r-ta">CF &amp; transplant</span>
-                  <span className="r-t r-ta">Clinical trials</span>
-                  <span className="r-t">Genetic disorders</span>
+                  <span className="r-t r-ta">Genetic disorders</span>
+                  <span className="r-t r-ta">Rare diseases</span>
+                  <span className="r-t r-ta">Organ transplantation</span>
+                  <span className="r-t r-ta">Cystic fibrosis</span>
                   <span className="r-t">Chronic illness</span>
-                  <span className="r-t">Cystic fibrosis</span>
                   <span className="r-t">Diabetes</span>
-                  <span className="r-t">Organ transplantation</span>
+                  <span className="r-t">Clinical trials</span>
+                  <span className="r-t">Women&apos;s health</span>
+                  <span className="r-t">Health equity</span>
                   <span className="r-t">AI health technologies</span>
                 </div>
               </div>
@@ -562,21 +565,6 @@ Thank you,
               </div>
             </div>
 
-            {/* Affiliations */}
-            <div className="r-sec">
-              <div className="r-sec-lbl">Affiliations</div>
-              <div className="r-affiliations">
-                <span>Cystic Fibrosis Foundation</span>
-                <span>Make-A-Wish Foundation</span>
-                <span>Global Genes</span>
-                <span>American Lung Association</span>
-                <span>American Hospitals Association</span>
-                <span>Donate Life America</span>
-                <span>Rare Patient Voice</span>
-                <span>Cystic Fibrosis Research Inc.</span>
-                <span>pRxTrialPort</span>
-              </div>
-            </div>
 
             {/* Education */}
             <div className="r-sec">
