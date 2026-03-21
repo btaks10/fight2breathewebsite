@@ -351,6 +351,10 @@ details.r-entry > .r-eb {
   display: block;
 }
 
+details.r-entry::details-content {
+  display: block;
+}
+
 details.r-entry summary {
   list-style: none;
   pointer-events: none;
@@ -681,6 +685,9 @@ details.r-entry summary::-webkit-details-marker {
   }
   /* Collapsible experience entries on mobile */
   details.r-entry > .r-eb {
+    display: revert;
+  }
+  details.r-entry::details-content {
     display: revert;
   }
   details.r-entry summary {
