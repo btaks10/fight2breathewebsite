@@ -324,12 +324,11 @@
 
 .r-eb li a {
   color: var(--wine);
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  text-decoration: none;
 }
 
 .r-eb li a:hover {
-  color: var(--wine-light);
+  text-decoration: underline;
 }
 
 .r-eb li::before {
@@ -345,6 +344,22 @@
 .r-eb-nested {
   margin-top: 4px;
   padding-left: 0;
+}
+
+/* Desktop: details always open, no toggle UI */
+details.r-entry > .r-eb {
+  display: block;
+}
+
+details.r-entry summary {
+  list-style: none;
+  pointer-events: none;
+  cursor: default;
+}
+
+details.r-entry summary::marker,
+details.r-entry summary::-webkit-details-marker {
+  display: none;
 }
 
 /* ============================================
@@ -663,6 +678,32 @@
   .r-hstat {
     flex: 1 1 auto;
     min-width: 70px;
+  }
+  /* Collapsible experience entries on mobile */
+  details.r-entry > .r-eb {
+    display: revert;
+  }
+  details.r-entry summary {
+    pointer-events: auto;
+    cursor: pointer;
+    position: relative;
+    padding-right: 24px;
+  }
+  details.r-entry summary::after {
+    content: '';
+    position: absolute;
+    right: 4px;
+    top: 6px;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--wine-light);
+    border-bottom: 2px solid var(--wine-light);
+    transform: rotate(45deg);
+    transition: transform 0.2s ease;
+  }
+  details[open].r-entry summary::after {
+    transform: rotate(-135deg);
+    top: 10px;
   }
   .r-media-table {
     display: block;

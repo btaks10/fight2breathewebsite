@@ -145,16 +145,18 @@ Thank you,
             <div className="r-sec">
               <div className="r-sec-lbl">Experience</div>
 
-              <div className="r-entry">
-                <div className="r-eh">
-                  <span className="r-er">
-                    Founder &amp; CEO — Fight2Breathe
-                  </span>
-                  <span className="r-ed">2014 – Present</span>
-                </div>
-                <div className="r-eo">
-                  <em>Advocacy Platform &amp; Community</em> | 2014 – Present
-                </div>
+              <details className="r-entry">
+                <summary>
+                  <div className="r-eh">
+                    <span className="r-er">
+                      Founder &amp; CEO — Fight2Breathe
+                    </span>
+                    <span className="r-ed">2014 – Present</span>
+                  </div>
+                  <div className="r-eo">
+                    <em>Advocacy Platform &amp; Community</em> | 2014 – Present
+                  </div>
+                </summary>
                 <ul className="r-eb">
                   <li>
                     Built and scaled a multi-platform global community to
@@ -197,19 +199,21 @@ Thank you,
                     Rose Award for Advocacy (2017)
                   </li>
                 </ul>
-              </div>
+              </details>
 
-              <div className="r-entry">
-                <div className="r-eh">
-                  <span className="r-er">
-                    Community &amp; Brand Strategy
-                  </span>
-                  <span className="r-ed">Aug 2025 – Present</span>
-                </div>
-                <div className="r-eo">
-                  pRxTrialPort &middot; Patient Engagement &amp; Clinical Trials
-                  Platform
-                </div>
+              <details className="r-entry">
+                <summary>
+                  <div className="r-eh">
+                    <span className="r-er">
+                      Community &amp; Brand Strategy
+                    </span>
+                    <span className="r-ed">Aug 2025 – Present</span>
+                  </div>
+                  <div className="r-eo">
+                    pRxTrialPort &middot; Patient Engagement &amp; Clinical Trials
+                    Platform
+                  </div>
+                </summary>
                 <ul className="r-eb">
                   <li>
                     Lead community and brand strategy for an AI-powered clinical
@@ -251,19 +255,21 @@ Thank you,
                     and community audiences
                   </li>
                 </ul>
-              </div>
+              </details>
 
-              <div className="r-entry">
-                <div className="r-eh">
-                  <span className="r-er">
-                    Public Speaker &amp; Patient Advocate
-                  </span>
-                  <span className="r-ed">2015 – Present</span>
-                </div>
-                <div className="r-eo">
-                  Cystic Fibrosis Foundation &middot; UCLA Health &middot;
-                  Global Genes &middot; LifeSciences &middot; Various
-                </div>
+              <details className="r-entry">
+                <summary>
+                  <div className="r-eh">
+                    <span className="r-er">
+                      Public Speaker &amp; Patient Advocate
+                    </span>
+                    <span className="r-ed">2015 – Present</span>
+                  </div>
+                  <div className="r-eo">
+                    Cystic Fibrosis Foundation &middot; UCLA Health &middot;
+                    Global Genes &middot; LifeSciences &middot; Various
+                  </div>
+                </summary>
                 <ul className="r-eb">
                   <li>
                     Panelist, Patient Centricity &amp; Collaboration World
@@ -317,16 +323,18 @@ Thank you,
                     </ul>
                   </li>
                 </ul>
-              </div>
+              </details>
 
-              <div className="r-entry">
-                <div className="r-eh">
-                  <span className="r-er">Pastry Cook</span>
-                  <span className="r-ed">2012 – 2014</span>
-                </div>
-                <div className="r-eo">
-                  Three-Star Michelin Restaurant &middot; San Francisco, CA
-                </div>
+              <details className="r-entry">
+                <summary>
+                  <div className="r-eh">
+                    <span className="r-er">Pastry Cook</span>
+                    <span className="r-ed">2012 – 2014</span>
+                  </div>
+                  <div className="r-eo">
+                    Three-Star Michelin Restaurant &middot; San Francisco, CA
+                  </div>
+                </summary>
                 <ul className="r-eb">
                   <li>
                     Completed culinary degree and joined a Michelin-starred
@@ -334,7 +342,7 @@ Thank you,
                     performance competencies
                   </li>
                 </ul>
-              </div>
+              </details>
             </div>
 
             {/* MEDIA & PRESS */}
