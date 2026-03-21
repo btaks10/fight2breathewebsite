@@ -322,6 +322,16 @@
   position: relative;
 }
 
+.r-eb li a {
+  color: var(--wine);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.r-eb li a:hover {
+  color: var(--wine-light);
+}
+
 .r-eb li::before {
   content: '';
   position: absolute;
