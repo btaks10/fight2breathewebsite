@@ -156,6 +156,25 @@
   margin-top: 3px;
 }
 
+.r-health-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.r-health-tag {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--pink-mid);
+  background: rgba(255, 255, 255, 0.06);
+}
+
 /* ============================================
    BODY
    ============================================ */
@@ -197,6 +216,14 @@
   border: 1px solid var(--wine);
   color: var(--wine);
   background: var(--pink-soft);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.r-tag:hover {
+  background: var(--wine);
+  color: #fff;
 }
 
 /* ============================================
@@ -303,6 +330,11 @@
   width: 6px;
   height: 1px;
   background: var(--pink-accent);
+}
+
+.r-eb-nested {
+  margin-top: 4px;
+  padding-left: 0;
 }
 
 /* ============================================
@@ -454,8 +486,9 @@
   color: var(--r-muted);
   padding: 9px 0;
   border-bottom: 1px solid var(--r-border);
-  vertical-align: top;
+  vertical-align: middle;
   line-height: 1.45;
+  white-space: nowrap;
 }
 
 .r-media-table tr:last-child td {

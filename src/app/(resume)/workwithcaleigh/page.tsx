@@ -21,8 +21,9 @@ export default function WorkWithCaleigh() {
             Haber-Takayama
           </h1>
           <p className="r-title-line">
-            Patient Advocate &nbsp;&middot;&nbsp; Founder &nbsp;&middot;&nbsp;
-            Community &amp; Brand Strategist &nbsp;&middot;&nbsp; Public Speaker
+            Patient Advocate &nbsp;&middot;&nbsp; Founder
+            &nbsp;&middot;&nbsp; Consultant &nbsp;&middot;&nbsp; Public Speaker
+            &nbsp;&middot;&nbsp; Community &amp; Brand Strategist
           </p>
           <div className="r-contact-row">
             <span className="r-ci">
@@ -53,10 +54,12 @@ export default function WorkWithCaleigh() {
               <div className="r-hstat-n">10+</div>
               <div className="r-hstat-l">Years advocating</div>
             </div>
-            <div className="r-hstat">
-              <div className="r-hstat-n">2&times;</div>
-              <div className="r-hstat-l">Lung transplant</div>
-            </div>
+          </div>
+          <div className="r-health-tags">
+            <span className="r-health-tag">Cystic Fibrosis</span>
+            <span className="r-health-tag">Rare Disease</span>
+            <span className="r-health-tag">Diabetes</span>
+            <span className="r-health-tag">2&times; Lung Transplant</span>
           </div>
         </div>
       </header>
@@ -66,19 +69,18 @@ export default function WorkWithCaleigh() {
         {/* SUMMARY */}
         <div className="r-summary">
           <p>
-            Patient advocate, founder, and community strategist with over a
-            decade of work at the intersection of chronic illness, storytelling,
-            and systems change. Founder of Fight2Breathe — a platform built from
-            lived experience with cystic fibrosis and two double lung
-            transplants — reaching 71,900+ followers across 30+ countries.
-            Currently leading community and brand strategy at pRxEngage, shaping
-            how a clinical trials platform engages with rare disease communities
-            worldwide.
+            Patient advocate and founder with 10+ years of experience
+            translating lived experience with chronic illness into community,
+            content, and systems-level impact. Founder of Fight2Breathe, a
+            global platform reaching 71,900+ followers across 30+ countries.
+            Currently lead Community and Brand Strategy at pRxEngage, helping
+            bridge the gap between clinical trials and the rare disease
+            communities they aim to serve.
           </p>
           <div className="r-tags">
-            <span className="r-tag">Brand Partnerships</span>
-            <span className="r-tag">Speaking Engagements</span>
-            <span className="r-tag">Employment</span>
+            <a href="mailto:caleigh@fight2breathe.org?subject=Brand%20Partnership%20Inquiry%20%E2%80%93%20Fight2Breathe&body=Hi%20Caleigh%2C%0A%0AI%E2%80%99m%20reaching%20out%20regarding%20a%20potential%20brand%20partnership%20with%20Fight2Breathe.%0A%0AOrganization%2FBrand%3A%20%0APartnership%20Type%20(sponsored%20content%2C%20ambassador%2C%20campaign%2C%20etc.)%3A%20%0ATimeline%3A%20%0ABudget%20Range%3A%20%0A%0ABrief%20Description%3A%0A%0A%0AThank%20you%2C%0A" className="r-tag">Brand Partnerships</a>
+            <a href="mailto:caleigh@fight2breathe.org?subject=Speaking%20Engagement%20Inquiry%20%E2%80%93%20Fight2Breathe&body=Hi%20Caleigh%2C%0A%0AI%E2%80%99m%20reaching%20out%20regarding%20a%20potential%20speaking%20engagement.%0A%0AOrganization%2FEvent%3A%20%0AEvent%20Date%3A%20%0AFormat%20(keynote%2C%20panel%2C%20fireside%20chat%2C%20virtual%2C%20etc.)%3A%20%0AAudience%3A%20%0ATopic%2FTheme%3A%20%0A%0AAdditional%20Details%3A%0A%0A%0AThank%20you%2C%0A" className="r-tag">Speaking Engagement</a>
+            <a href="mailto:caleigh@fight2breathe.org?subject=Patient%20Consulting%20Inquiry%20%E2%80%93%20Fight2Breathe&body=Hi%20Caleigh%2C%0A%0AI%E2%80%99m%20reaching%20out%20regarding%20a%20patient%20consulting%20opportunity.%0A%0AOrganization%3A%20%0AProject%2FScope%3A%20%0ATimeline%3A%20%0AArea%20of%20Focus%20(clinical%20trials%2C%20patient%20engagement%2C%20rare%20disease%20strategy%2C%20etc.)%3A%20%0A%0AAdditional%20Details%3A%0A%0A%0AThank%20you%2C%0A" className="r-tag">Patient Consulting</a>
           </div>
         </div>
 
@@ -102,9 +104,9 @@ export default function WorkWithCaleigh() {
                 </div>
                 <ul className="r-eb">
                   <li>
-                    Built a multi-platform community of 71,900+ Instagram
-                    followers with podcast listeners in 30+ countries —
-                    organically, from personal lived experience with CF and
+                    Built and scaled a multi-platform global community to
+                    71,900+ followers across 30+ countries, driven organically
+                    through lived experience with cystic fibrosis and lung
                     transplantation
                   </li>
                   <li>
@@ -114,25 +116,34 @@ export default function WorkWithCaleigh() {
                     life, and patient advocacy
                   </li>
                   <li>
-                    Launched Fight2Breathe.org (Next.js) with full accessibility
-                    features, community resources, blog, and merchandise
-                    storefront
+                    Launched Fight2Breathe.org (Next.js), integrating
+                    accessibility-first design, educational resources, blog
+                    content, and a merchandise storefront
                   </li>
                   <li>
-                    Secured and manages active brand partnerships with CF News
-                    Today, American Lung Association, American Hospitals
-                    Association, Philips Respironics, Turnto.ai, and others
+                    Established and manage strategic partnerships with
+                    organizations including CF News Today, American Lung
+                    Association, American Hospitals Association, Philips
+                    Respironics, Astrazeneca, Cystic Fibrosis Foundation, Cystic
+                    Fibrosis Research Inc., Pfizer,{' '}
+                    <a href="https://turnto.ai">Turnto.ai</a>, and others
                   </li>
                   <li>
-                    Received CFF Impact Grant (2024) in recognition of
-                    platform&apos;s role in the CF community; won CFF BreatheCon
-                    Artist Contest (2024); received CFF Rose Award for Advocacy
-                    (2017)
+                    Served as Co-Chair of BreatheCon 2025; active contributor to
+                    CFF Peer Connect, Global Genes Rare Leader Program,
+                    Make-A-Wish Foundation (Wish Granter, 2019–2020), Lyfebulb
+                    Ambassador, Global Genes Ambassador, Global Genes Social
+                    Media event content creator
                   </li>
                   <li>
-                    Serves as Co-Chair for BreatheCon 2025; affiliated with CFF
-                    Peer Connect, Global Genes Rare Leader program, Make-A-Wish
-                    Foundation (Wish Granter, 2019–present), and Donate Life
+                    DonateLife Ambassador, American Lung Association Ambassador,
+                    Cystic Fibrosis Ambassador, Make A Wish Ambassador, Global
+                    Genes Ambassador
+                  </li>
+                  <li>
+                    Recognized with the CFF Impact Grant (2024); winner of
+                    BreatheCon Artist Contest (2024); recipient of the CFF Rose
+                    Award for Advocacy (2017)
                   </li>
                 </ul>
               </div>
@@ -145,51 +156,48 @@ export default function WorkWithCaleigh() {
                   <span className="r-ed">Aug 2025 – Present</span>
                 </div>
                 <div className="r-eo">
-                  pRxEngage &middot; Patient Engagement &amp; Clinical Trials
+                  pRxTrialPort &middot; Patient Engagement &amp; Clinical Trials
                   Platform
                 </div>
                 <ul className="r-eb">
                   <li>
-                    Leads community and brand strategy at an AI-powered clinical
+                    Lead community and brand strategy for an AI-powered clinical
                     trials platform focused on rare disease and underserved
-                    communities — translating patient lived experience into
+                    populations, translating lived patient experience into
                     engagement design, content, and outreach
                   </li>
                   <li>
-                    Owns editorial vision and production of pRxEngage newsletter
-                    (Brevo): two alternating monthly editions covering patient
-                    stories and medical innovation; structure, cadence, and
-                    &ldquo;3 E&apos;s&rdquo; framework (Engagement, Education,
-                    Empowerment)
+                    Lead editorial vision, outreach, and full production of the
+                    pRxTrialPort newsletter (Brevo), delivering two monthly
+                    editions highlighting patient and organization stories and
+                    medical innovation; built structure, cadence, and strategic
+                    direction while managing a team of three
                   </li>
                   <li>
-                    Building and structuring the Ambassador Program from the
-                    ground up — training materials, scripts/templates/talking
-                    points, community expectations, success metrics, and equity
-                    &amp; diversity focus; program grew to 4–5 members in first
-                    months
+                    Supporting the assessment and evolution of the Ambassador
+                    Program, contributing to training materials, messaging
+                    frameworks, community guidelines, and success metrics, with a
+                    focus on equity and representation
                   </li>
                   <li>
-                    Directs marketing strategy and execution alongside agency
-                    partner (Hopeful): social content (20 posts/month across IG
-                    and TikTok), mission-aligned messaging, real patient
-                    storytelling, and repurposable video series
+                    Lead marketing strategy and execution in partnership with
+                    agency (Hopeful), managing a team of four and overseeing ~20
+                    monthly social posts across Instagram and TikTok; currently
+                    driving a shift toward more authentic patient storytelling
+                    and scalable, higher impact video content
                   </li>
                   <li>
-                    Developing original video content series:{' '}
-                    <em>Walking Together</em> and a planned 5-minute patient
-                    story format
+                    Represented pRxTrialPort as a patient speaker at the Patient
+                    Centricity and Collaboration World Congress (London, Feb
+                    2026) and Worldwide Clinical Trials event, presenting on
+                    access barriers, trust, and inclusive trial design;
+                    co-paneled with CEO Keith Berelowitz
                   </li>
                   <li>
-                    Represented pRxEngage at Worldwide Clinical Trials global
-                    event in London (Feb 2026) as patient speaker; spoke on
-                    barriers to access, trust, and inclusive trial design;
-                    co-paneled with founder Keith Berelowitz
-                  </li>
-                  <li>
-                    Scope expanded from 10 hrs/month to 8 hrs/week (Jan 2026
-                    contract addendum), reflecting demonstrated impact and
-                    strategic leadership growth
+                    Bring patient voice into clinical trial conversations through
+                    podcast contributions and collaborations, translating lived
+                    experience into accessible insights for research, industry,
+                    and community audiences
                   </li>
                 </ul>
               </div>
@@ -203,34 +211,56 @@ export default function WorkWithCaleigh() {
                 </div>
                 <div className="r-eo">
                   Cystic Fibrosis Foundation &middot; UCLA Health &middot;
-                  Global Genes &middot; Various
+                  Global Genes &middot; LifeSciences &middot; Various
                 </div>
                 <ul className="r-eb">
                   <li>
-                    Featured keynote at CFF Beach, Brews &amp; BBQ (OC Chapter,
-                    Newport Beach) — 2018 and 2019; fundraising speeches
-                    supporting CFF&apos;s drug development pipeline
+                    Panelist, Patient Centricity &amp; Collaboration World
+                    Congress (Feb 2026) — contributed to discussions on patient
+                    engagement, trust, and patient-centered research
                   </li>
                   <li>
-                    Patient panelist &amp; speaker, UCLA Health Lung Transplant
-                    Patient Education Symposium (Nov 2018)
+                    Speaker, Worldwide Clinical Trials Global Event (London, Feb
+                    2026) — delivered patient perspective on cystic fibrosis,
+                    rare disease, and inclusive clinical trial design
                   </li>
                   <li>
-                    Speaker, Global Genes — Love and Relationship panel +
-                    presentation (Sept 2018)
+                    Speaker, Global Genes (Sept 2018) — presented on love,
+                    relationships, and living with chronic illness
                   </li>
                   <li>
-                    Speaker, American Lung Association awareness &amp;
-                    fundraising event (Nov 2018)
+                    Panelist &amp; Speaker, UCLA Health Lung Transplant Patient
+                    Education Symposium (Nov 2018)
                   </li>
                   <li>
-                    Speaker, Worldwide Clinical Trials global event, London (Feb
-                    2026) — patient perspective on CF, rare disease, and
-                    inclusive trial design
+                    Speaker, American Lung Association Awareness &amp;
+                    Fundraising Event (Nov 2018)
                   </li>
                   <li>
-                    Upcoming: Transperfect Life Sciences (May 2026); Patient
-                    Centricity &amp; Collaboration Conference 2026
+                    Keynote Speaker, Cystic Fibrosis Foundation &ldquo;Beach,
+                    Brews &amp; BBQ&rdquo; (2018, 2019) — delivered fundraising
+                    speeches supporting drug development initiatives
+                  </li>
+                  <li>
+                    Speaker, Cystic Fibrosis Foundation &ldquo;Great
+                    Strides&rdquo; (2013–2016, 2018) — pre-event speaker driving
+                    awareness and community engagement
+                  </li>
+                  <li>
+                    Speaker, Make-A-Wish Foundation Events:
+                    <ul className="r-eb r-eb-nested">
+                      <li>
+                        Diamonds &amp; Ice Gala (Aug 2019) — fundraising for
+                        children with life-threatening illnesses
+                      </li>
+                      <li>
+                        School Engagement Event — spoke to 2,500+ students to
+                        drive awareness and participation in wish programs
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Upcoming: TransPerfect Life Sciences (May 2026)
                   </li>
                 </ul>
               </div>
@@ -271,11 +301,11 @@ export default function WorkWithCaleigh() {
                     <td>
                       <span className="r-media-pill r-mp-pod">Podcast</span>
                     </td>
-                    <td>CF and Patient Leadership</td>
+                    <td>CF &amp; Patient Leadership</td>
                     <td>2026</td>
                   </tr>
                   <tr>
-                    <td>CF Roundtable Publication</td>
+                    <td>CF Roundtable</td>
                     <td>
                       <span className="r-media-pill r-mp-pub">Publication</span>
                     </td>
@@ -283,7 +313,7 @@ export default function WorkWithCaleigh() {
                     <td>2025</td>
                   </tr>
                   <tr>
-                    <td>American Lung Association</td>
+                    <td>American Lung Assoc.</td>
                     <td>
                       <span className="r-media-pill r-mp-pub">Feature</span>
                     </td>
@@ -295,7 +325,7 @@ export default function WorkWithCaleigh() {
                     <td>
                       <span className="r-media-pill r-mp-pod">Podcast</span>
                     </td>
-                    <td>Moving abroad with a chronic illness</td>
+                    <td>Chronic illness abroad</td>
                     <td>2025</td>
                   </tr>
                   <tr>
@@ -311,15 +341,15 @@ export default function WorkWithCaleigh() {
                     <td>
                       <span className="r-media-pill r-mp-pub">Campaign</span>
                     </td>
-                    <td>Lung Health Campaign contributor</td>
+                    <td>Lung Health Campaign</td>
                     <td>2020</td>
                   </tr>
                   <tr>
-                    <td>Jairek Robbins Podcast</td>
+                    <td>Jairek Robbins</td>
                     <td>
                       <span className="r-media-pill r-mp-pod">Podcast</span>
                     </td>
-                    <td>What the world needs more of</td>
+                    <td>What the world needs</td>
                     <td>2018</td>
                   </tr>
                   <tr>
@@ -331,6 +361,14 @@ export default function WorkWithCaleigh() {
                     <td>2018</td>
                   </tr>
                   <tr>
+                    <td>CF News Today</td>
+                    <td>
+                      <span className="r-media-pill r-mp-pub">Feature</span>
+                    </td>
+                    <td>Not Your Average Rose</td>
+                    <td>2017</td>
+                  </tr>
+                  <tr>
                     <td>CFF Blog</td>
                     <td>
                       <span className="r-media-pill r-mp-content">
@@ -339,14 +377,6 @@ export default function WorkWithCaleigh() {
                     </td>
                     <td>Multiple posts</td>
                     <td>2016</td>
-                  </tr>
-                  <tr>
-                    <td>CF News Today</td>
-                    <td>
-                      <span className="r-media-pill r-mp-pub">Feature</span>
-                    </td>
-                    <td>Not Your Average Rose — Caleigh Haber</td>
-                    <td>2017</td>
                   </tr>
                   <tr>
                     <td>CF News Today</td>
@@ -400,6 +430,12 @@ export default function WorkWithCaleigh() {
                   <span className="r-t r-ta">Rare disease</span>
                   <span className="r-t r-ta">CF &amp; transplant</span>
                   <span className="r-t r-ta">Clinical trials</span>
+                  <span className="r-t">Genetic disorders</span>
+                  <span className="r-t">Chronic illness</span>
+                  <span className="r-t">Cystic fibrosis</span>
+                  <span className="r-t">Diabetes</span>
+                  <span className="r-t">Organ transplantation</span>
+                  <span className="r-t">AI health technologies</span>
                 </div>
               </div>
               <div className="r-tg">
@@ -409,25 +445,22 @@ export default function WorkWithCaleigh() {
                   <span className="r-t">Social media</span>
                   <span className="r-t">Podcasting</span>
                   <span className="r-t">Newsletter</span>
-                  <span className="r-t">Brand partnerships</span>
                   <span className="r-t">Storytelling</span>
-                </div>
-              </div>
-              <div className="r-tg">
-                <div className="r-tgl">Speaking</div>
-                <div className="r-tgs">
-                  <span className="r-t">Keynote</span>
-                  <span className="r-t">Panel speaker</span>
-                  <span className="r-t">Fundraising events</span>
-                  <span className="r-t">Medical conferences</span>
+                  <span className="r-t">Medical translator</span>
+                  <span className="r-t">Brand development &amp; direction</span>
+                  <span className="r-t">Marketing</span>
+                  <span className="r-t">Brand review &amp; design</span>
+                  <span className="r-t">Fundraising</span>
                 </div>
               </div>
               <div className="r-tg">
                 <div className="r-tgl">Programs</div>
                 <div className="r-tgs">
+                  <span className="r-t">Patient education</span>
                   <span className="r-t">Ambassador programs</span>
                   <span className="r-t">Community building</span>
-                  <span className="r-t">Patient education</span>
+                  <span className="r-t">Partnerships</span>
+                  <span className="r-t">Fundraising</span>
                 </div>
               </div>
             </div>
@@ -468,11 +501,14 @@ export default function WorkWithCaleigh() {
               <div className="r-sec-lbl">Affiliations</div>
               <div className="r-affiliations">
                 <span>Cystic Fibrosis Foundation</span>
-                <span>pRxEngage</span>
-                <span>Global Genes</span>
-                <span>Donate Life California</span>
                 <span>Make-A-Wish Foundation</span>
+                <span>Global Genes</span>
                 <span>American Lung Association</span>
+                <span>American Hospitals Association</span>
+                <span>Donate Life America</span>
+                <span>Rare Patient Voice</span>
+                <span>Cystic Fibrosis Research Inc.</span>
+                <span>pRxTrialPort</span>
               </div>
             </div>
 
