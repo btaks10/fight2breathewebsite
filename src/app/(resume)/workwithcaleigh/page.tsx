@@ -145,7 +145,7 @@ Thank you,
             <div className="r-sec">
               <div className="r-sec-lbl">Experience</div>
 
-              <details className="r-entry">
+              <details className="r-entry" open>
                 <summary>
                   <div className="r-eh">
                     <span className="r-er">
@@ -201,7 +201,7 @@ Thank you,
                 </ul>
               </details>
 
-              <details className="r-entry">
+              <details className="r-entry" open>
                 <summary>
                   <div className="r-eh">
                     <span className="r-er">
@@ -257,7 +257,7 @@ Thank you,
                 </ul>
               </details>
 
-              <details className="r-entry">
+              <details className="r-entry" open>
                 <summary>
                   <div className="r-eh">
                     <span className="r-er">
@@ -325,7 +325,7 @@ Thank you,
                 </ul>
               </details>
 
-              <details className="r-entry">
+              <details className="r-entry" open>
                 <summary>
                   <div className="r-eh">
                     <span className="r-er">Pastry Cook</span>
